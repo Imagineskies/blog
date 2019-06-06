@@ -1,0 +1,24 @@
+@font-face {
+  font-family:"Fa Brands";
+  src: url(../fonts/fa-brands-400.woff2);
+}
+@font-face {
+  font-family:"Fa Regular";
+  src: url(../fonts/fa-regular-400.woff2);
+}
+@font-face {
+  font-family:"Fa Solid";
+  src: url(../fonts/fa-solid-900.woff2);
+}
+@font-face {
+  font-family:Nunito;
+  src: url(../fonts/Nunito.woff2);
+}
+@font-face {
+  font-family:"Nunito bold";
+  src: url(../fonts/Nunito-bold.woff2);
+}
+@font-face {
+  font-family:"Varela Round";
+  src: url("../fonts/Varela Round.woff2");
+}
