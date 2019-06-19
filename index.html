@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="description" content="Welcome to the site of ImagineSkies. Here you will find all of her photography, videos, music, and more!">
+  <meta name="description" content="Welcome to my blog.">
   <meta name="author" content="Rayna Weeden">
   <meta name="keywords" content="blogs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,10 +19,6 @@
   <!-- Font/icon List -->
   <link href="css/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <!-- Animations  -->
-  <link href="css/animate.min.css" rel="stylesheet">
-  <!-- All @media Tags -->
-  <link href="css/media.css" rel="stylesheet">
 
 </head>
 
@@ -30,12 +26,12 @@
 
   <!-- Nav Bar -->
 
-  <nav id="menuTemp" class="navbar navbar-expand-xl navbar-togglable fixed-top navbar-dark">
+  <nav id="menuTemp" class="navbar navbar-expand-xl navbar-togglable fixed-top">
     <div class="container">
 
       <!-- Toggler -->
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars"></i>
       </button>
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -75,31 +71,71 @@
 
         <!-- Links -->
         <ul class="nav navbar-nav ml-auto custom-navbar">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Start
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarWelcome">
-              <a class="dropdown-item " href="welcome.html">
-                Welcome
-              </a>
-              <a class="dropdown-item " href="about.html">
-                About
-              </a>
-              <a class="dropdown-item " href="whatido.html">
-                What I Do
-              </a>
-              <a class="dropdown-item " href="contacts.html">
-                Contacts
-              </a>
-            </div>
-          </li>
-        
+
           <li class="nav-item-divider">
             <span class="nav-link">
               <span></span>
             </span>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#top">
+              Home
+            </a>
+          </li>
+
+
+          <!-- Dropdown -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Pages
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarPages">
+              <li>
+                <a class="dropdown-item " href="BlogPages/news.html">
+                  News
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " href="BlogPages/poems.html">
+                  Poems
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " href="BlogPages/games.html">
+                  Games
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " href="BlogPages/videos.html">
+                  Videos
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " href="BlogPages/music.html">
+                  Music
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Nav Divider -->
+
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+
+
+
         </ul>
 
       </div> <!-- / .navbar-collapse -->
@@ -123,69 +159,66 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis eget nunc lobortis mattis. Blandit libero volutpat sed cras ornare arcu dui. Sit amet volutpat consequat
-            mauris nunc congue nisi vitae. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Ligula ullamcorper malesuada proin libero nunc. Ultrices sagittis orci a scelerisque. At erat pellentesque adipiscing commodo.
-            Odio eu feugiat pretium nibh ipsum consequat nisl vel. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Tempus urna et pharetra pharetra massa massa ultricies. Risus quis varius quam quisque id diam vel. Sed arcu non odio
-            euismod lacinia at. Amet luctus venenatis lectus magna fringilla. Consequat mauris nunc congue nisi vitae suscipit tellus mauris.
-          </p>
-        </div>
-        <div class="col-lg-10 mx-auto">
-          <p>
-            Nunc lobortis mattis aliquam faucibus purus in massa tempor nec. Eu augue ut lectus arcu bibendum at varius vel. Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Euismod in pellentesque massa placerat duis ultricies lacus
-            sed turpis. Proin libero nunc consequat interdum varius sit amet mattis. Lacus sed viverra tellus in hac. Augue mauris augue neque gravida in fermentum et. Neque egestas congue quisque egestas diam in arcu. Molestie ac feugiat sed lectus
-            vestibulum mattis ullamcorper velit. Enim sed faucibus turpis in eu mi bibendum. Donec massa sapien faucibus et molestie ac feugiat sed lectus.
-          </p>
+        <div class="d-flex flex-row mx-auto">
+          <span id="buttonWelcome" class="btn active" onclick="onWelcome()">
+            Welcome
+          </span>
+          <span id="buttonAbout" class="btn " onclick="onAbout()">
+            About
+          </span>
+          <span id="buttonContacts" class="btn " onclick="onContacts()">
+            Contacts
+          </span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="about mx-auto">
+  <section id="sectionWelcome" class="welcome shown">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 mx-auto animate-slide-left">
-          <p class="animate-slide-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis eget nunc lobortis mattis. Blandit libero volutpat sed cras ornare arcu dui. Sit amet volutpat consequat
-            mauris nunc congue nisi vitae. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Ligula ullamcorper malesuada proin libero nunc. Ultrices sagittis orci a scelerisque. At erat pellentesque adipiscing commodo.
-            Odio eu feugiat pretium nibh ipsum consequat nisl vel. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Tempus urna et pharetra pharetra massa massa ultricies. Risus quis varius quam quisque id diam vel. Sed arcu non odio
-            euismod lacinia at. Amet luctus venenatis lectus magna fringilla. Consequat mauris nunc congue nisi vitae suscipit tellus mauris.
-          </p>
-        </div>
         <div class="col-lg-10 mx-auto">
-          <p class="animate-slide-left">
-            Nunc lobortis mattis aliquam faucibus purus in massa tempor nec. Eu augue ut lectus arcu bibendum at varius vel. Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Euismod in pellentesque massa placerat duis ultricies lacus
-            sed turpis. Proin libero nunc consequat interdum varius sit amet mattis. Lacus sed viverra tellus in hac. Augue mauris augue neque gravida in fermentum et. Neque egestas congue quisque egestas diam in arcu. Molestie ac feugiat sed lectus
-            vestibulum mattis ullamcorper velit. Enim sed faucibus turpis in eu mi bibendum. Donec massa sapien faucibus et molestie ac feugiat sed lectus.
+          <h1>Welcome to my blog!</h1>
+          <p>
+            Here you'll find everything I love and do. My hobbies include photography, music production, poetry, and anything that comes to my mind.
+            Have fun! An don't be a dick.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="about mx-auto">
+  <section id="sectionAbout" class="about hidden">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 mx-auto animate-slide-left">
-          <p class="animate-slide-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis eget nunc lobortis mattis. Blandit libero volutpat sed cras ornare arcu dui. Sit amet volutpat consequat
-            mauris nunc congue nisi vitae. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Ligula ullamcorper malesuada proin libero nunc. Ultrices sagittis orci a scelerisque. At erat pellentesque adipiscing commodo.
-            Odio eu feugiat pretium nibh ipsum consequat nisl vel. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Tempus urna et pharetra pharetra massa massa ultricies. Risus quis varius quam quisque id diam vel. Sed arcu non odio
-            euismod lacinia at. Amet luctus venenatis lectus magna fringilla. Consequat mauris nunc congue nisi vitae suscipit tellus mauris.
+        <div class="col-lg-10 mx-auto">
+          <h1>About</h1>
+          <p>
+            I go by Wonder. I'm a chill open minded girl and this is just a place where I can talk about things I find intresting. So if you want to stay, stay. If this isn't your thing, no pressure, no hard feelings.
           </p>
         </div>
         <div class="col-lg-10 mx-auto">
-          <p class="animate-slide-left">
-            Nunc lobortis mattis aliquam faucibus purus in massa tempor nec. Eu augue ut lectus arcu bibendum at varius vel. Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Euismod in pellentesque massa placerat duis ultricies lacus
-            sed turpis. Proin libero nunc consequat interdum varius sit amet mattis. Lacus sed viverra tellus in hac. Augue mauris augue neque gravida in fermentum et. Neque egestas congue quisque egestas diam in arcu. Molestie ac feugiat sed lectus
-            vestibulum mattis ullamcorper velit. Enim sed faucibus turpis in eu mi bibendum. Donec massa sapien faucibus et molestie ac feugiat sed lectus.
+          <p>
+            So to not give away too much, I'm 17, trans, and an artist. I have tons of poems that I think you'd like (or not like). Some of them are dark and some are uplifting. I use it to help me cope so anything I write about it just like a rant.
+            Me spilling myself. Some pictures that I have aren't mine and some are. The flowers you see at the top, I didn't take that picture but I have some that I did take. Every now and then I'll edit a video so you might see some of that and if
+            you see any music, not all of it is mine, but I'll let you know when it is!!!
           </p>
         </div>
       </div>
     </div>
   </section>
 
+  <section id="sectionContacts" class="contacts hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1>Contacts</h1>
+          <p>For business you can email me here: imagineskie@protonmail.com</p>
+          <p>I don't think I'll post my social media here yet. If you already know me then you have them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Bootstrap core JavaScript -->
   <script src="js/jquery.min.js"></script>

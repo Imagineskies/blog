@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Welcome to my blog.">
+  <meta name="author" content="Rayna Weeden">
+  <meta name="keywords" content="blogs">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/icon.jpg">
+
+  <title>Wonderful</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Style Css -->
+  <link href="../css/main.css" rel="stylesheet">
+  <!-- Font/icon List -->
+  <link href="../css/fonts.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <!-- Nav Bar -->
+
+  <nav id="menuTemp" class="hidden navbar navbar-expand-xl navbar-togglable fixed-top">
+    <div class="container">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Social -->
+        <ul class="nav navbar-nav mr-auto custom-navbar">
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fab fa-github"></i>
+              <span class="d-xl-none ml-2">
+                Github
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fab fa-twitter"></i>
+              <span class="d-xl-none ml-2">
+                Twitter
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fab fa-instagram"></i>
+              <span class="d-xl-none ml-2">
+                Instagram
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Links -->
+        <ul class="nav navbar-nav ml-auto custom-navbar">
+
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">
+              Home
+            </a>
+          </li>
+
+          <!-- Dropdown -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Pages
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarPages">
+              <a class="dropdown-item " href="news.html">
+                News
+              </a>
+              <a class="dropdown-item " href="poems.html">
+                Poems
+              </a>
+              <a class="dropdown-item active" href="games.html">
+                Games
+              </a>
+              <a class="dropdown-item " href="videos.html">
+                Videos
+              </a>
+              <a class="dropdown-item " href="music.html">
+                Music
+              </a>
+            </div>
+          </li>
+
+          <!-- Nav Divider -->
+
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+
+        </ul>
+
+      </div> <!-- / .navbar-collapse -->
+
+    </div> <!-- / .container -->
+  </nav>
+
+
+  <header class="masthead">
+    <div class="container">
+      <div class="row">
+        <div id="textOne" class="hidden col-lg-10 mx-auto textbox">
+          <h1>Wonder's Light</h1>
+          <br>
+          <p>Optimist: Day-dreamer more elegantly spelled. <br> Mark Twain</p>
+        </div>
+        <div id="textTwo" class="col-lg-10 mx-auto textbox">
+          <h1>Please Wait...The page is loading.</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div id="content" class="hidden">
+
+    <!-- Pages -->
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="mx-auto">
+            <div id="buttonDescription" class="btn active" onclick="onDescription()">
+              Welcome!
+            </div>
+            <div id="buttonHalo" class="btn " onclick="onHalo()">
+              Halo
+            </div>
+            <div id="buttonCallOfDuty" class="btn " onclick="onCallOfDuty()">
+              Call of Duty
+            </div>
+            <div id="buttonOverwatch" class="btn " onclick="onOverwatch()">
+              Overwatch
+            </div>
+            <div id="buttonBioShock" class="btn " onclick="onBioShock()">
+              BioShock
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sub-Pages -->
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+
+          <!-- Section Description -->
+
+          <div id="sectionDescription" class="description col-lg-10 mx-auto">
+            <h1>Welcome!</h1>
+            <p>Here is where I'll post different gaming content. From Walkthroughs to cool easter eggs, this is where I'll post all my favorites.</p>
+          </div>
+
+          <!-- Halo Section-->
+
+          <div id="sectionHalo" class="halo hidden col-xl-10 mx-auto">
+            <hr>
+
+            <!-- Halo Sub Menu -->
+
+            <div class="row">
+              <div class="mx-auto">
+                <div id="buttonHaloWalkthroughs" class="btn active" onclick="onHaloWalkthroughs()">
+                  Walkthroughs
+                </div>
+                <div id="buttonHaloMW" class="btn " onclick="onHaloMW()">
+                  Maps and Weapons
+                </div>
+                <div id="buttonHaloEtc" class="btn " onclick="onHaloEtc()">
+                  Etc
+                </div>
+              </div>
+            </div>
+
+            <!-- Halo Sub Sections -->
+
+              <!-- Halo Walkthroughs -->
+
+            <div id="sectionHaloWalkthroughs" class="shown col-xl-10 mx-auto ">
+              <h1>Walkthroughs</h1>
+              <h3>Halo 3</h3>
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLebpytFvkBzv62OlpisK__WPXYReiWE2A" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <h3>Halo 4</h3>
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLs1-UdHIwbo4FEVKI7R1mVLo_5SLyxUrl" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <h3>Halo 5</h3>
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLs1-UdHIwbo5Kn61AM3gAQnMPYDIOJvTR" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+              <!-- Halo Maps & Weapons -->
+
+            <div id="sectionHaloMW" class="hidden col-xl-10 mx-auto ">
+
+            </div>
+
+              <!-- Halo Etc -->
+
+            <div id="sectionHaloEtc" class="hidden col-xl-10 mx-auto ">
+
+            </div>
+
+          </div>
+
+          <!-- Call of Duty Section -->
+
+          <div id="sectionCallOfDuty" class="callofduty hidden col-xl-10 mx-auto">
+            <h1>Call of Duty</h1>
+          </div>
+
+          <!-- Overwatch Section -->
+
+          <div id="sectionOverwatch" class="overwatch hidden col-xl-10 mx-auto">
+            <h1>Overwatch</h1>
+          </div>
+
+          <!-- BioShock Section -->
+
+          <div id="sectionBioShock" class="overwatch hidden col-xl-10 mx-auto">
+            <h1>BioShock</h1>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../js/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/main.js"></script>
+
+  </div>
+</body>
+
+</html>

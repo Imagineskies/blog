@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Welcome to my blog.">
+  <meta name="author" content="Rayna Weeden">
+  <meta name="keywords" content="blogs">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/icon.jpg">
+
+  <title>Wonderful</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Style Css -->
+  <link href="css/main.css" rel="stylesheet">
+  <!-- Font/icon List -->
+  <link href="css/fonts.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <!-- Nav Bar -->
+
+  <nav id="menuTemp" class="navbar navbar-expand-xl navbar-togglable fixed-top">
+    <div class="container">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Social -->
+        <ul class="nav navbar-nav mr-auto custom-navbar">
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fab fa-github"></i>
+              <span class="d-xl-none ml-2">
+                Github
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fab fa-twitter"></i>
+              <span class="d-xl-none ml-2">
+                Twitter
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fab fa-instagram"></i>
+              <span class="d-xl-none ml-2">
+                Instagram
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Links -->
+        <ul class="nav navbar-nav ml-auto custom-navbar">
+
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#top">
+              Home
+            </a>
+          </li>
+
+
+          <!-- Dropdown -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Pages
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarPages">
+              <li>
+                <a class="dropdown-item " href="BlogPages/photography.html">
+                  Photography
+                </a>
+              </li>
+              <li class="dropleft">
+                <a class="dropdown-item dropdown-toggle" href="#" id="pagesPoems" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Poems
+                </a>
+                <ul class="dropdown-menu show" aria-labelledby="pagesPoems">
+                  <a class="dropdown-item " href="BlogPages/poems.html">
+                    Poem 1
+                  </a>
+                  <a class="dropdown-item " href="BlogPages/poems.html">
+                    Poem 2
+                  </a>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item " href="BlogPages/games.html">
+                  Games
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " href="BlogPages/videos.html">
+                  Videos
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " href="BlogPages/music.html">
+                  Music
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Nav Divider -->
+
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+
+
+
+        </ul>
+
+      </div> <!-- / .navbar-collapse -->
+
+    </div> <!-- / .container -->
+  </nav>
+
+
+  <header class="masthead">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto textbox">
+          <h1>Wonder's Light</h1>
+          <br>
+          <p>Optimist: Day-dreamer more elegantly spelled. <br> Mark Twain</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="d-flex flex-row mx-auto">
+          <span id="buttonWelcome" class="btn active" onclick="onWelcome()">
+            Welcome
+          </span>
+          <span id="buttonAbout" class="btn " onclick="onAbout()">
+            About
+          </span>
+          <span id="buttonContacts" class="btn " onclick="onContacts()">
+            Contacts
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sectionWelcome" class="welcome shown">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1>Welcome to my blog!</h1>
+          <p>
+            Here you'll find everything I love and do. My hobbies include photography, music production, poetry, and anything that comes to my mind.
+            Have fun! An don't be a dick.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sectionAbout" class="about hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1>About</h1>
+          <p>
+            I go by Wonder. I'm a chill open minded girl and this is just a place where I can talk about things I find intresting. So if you want to stay, stay. If this isn't your thing, no pressure, no hard feelings.
+          </p>
+        </div>
+        <div class="col-lg-10 mx-auto">
+          <p>
+            So to not give away too much, I'm 17, trans, and an artist. I have tons of poems that I think you'd like (or not like). Some of them are dark and some are uplifting. I use it to help me cope so anything I write about it just like a rant.
+            Me spilling myself. Some pictures that I have aren't mine and some are. The flowers you see at the top, I didn't take that picture but I have some that I did take. Every now and then I'll edit a video so you might see some of that and if
+            you see any music, not all of it is mine. But I'll let you know when it is!!!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sectionContacts" class="contacts hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1>Contacts</h1>
+          <p>For business you can email me here: imagineskie@protonmail.com</p>
+          <p>I don't think I'll post my social media here yet. If you already know me then you have them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

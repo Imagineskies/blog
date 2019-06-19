@@ -1,4 +1,4 @@
-body,html {
+body, html {
   width: 100%;
   height: 100%;
   background-color: #0D1313;
@@ -7,12 +7,17 @@ body,html {
 
 body {
   font-family: "Fa Brands", "Fa Regular", "fa Solid", "Nunito Bold", "Nunito", "Varela Round", Georgia, "Times New Roman", serif;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
 }
 
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-moz-scrollbar {
   width: 10px;
 }
@@ -21,6 +26,7 @@ body {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-moz-scrollbar-track {
   background: #f1f1f1;
 }
@@ -29,6 +35,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
+
 ::-moz-scrollbar-thumb {
   background: #888;
 }
@@ -37,25 +44,45 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+    body {
+      margin: 0;
+    }
+
 ::-moz-scrollbar-thumb:hover {
   background: #555;
 }
 
 .hidden {
   visibility: hidden;
+  display: none;
 }
+
 .shown {
   visibility: visible;
 }
+
 .overshown {
   overflow-y: scroll;
 }
+
 .overhidden {
   overflow: hidden;
 }
+.center {
+  align-self: center;
+  align-items: center;
+  text-align: center;
+}
+.dropdown-item:focus, .dropdown-item:hover, .dropdown-item.active, .dropdown-item:active {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa
+}
+
+/*____________________________________________________________________________________*/
 
 /* Header */
-
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
@@ -66,117 +93,251 @@ header.masthead {
   height: 100%;
   text-align: center;
 }
+
 header .textbox {
   background-color: #0D1313;
   width: 100%;
   height: auto;
   text-align: center;
   padding: 15px;
-  opacity: 0.99;
+  opacity: 0.95;
 }
+
 header h1 {
   margin-top: 25px;
   font-family: "Nunito Bold";
   font-size: 2rem;
   color: #833721;
 }
+
 header.masthead p {
   font-weight: 300;
   color: #833721;
 }
-hr {
-  width: 150px;
-  border-width: 3px;
-  border-color: #0D1313;
+/*____________________________________________________________________________________*/
+.welcome, .contacts, .about, .poetry {
+  text-align: center;
 }
-.navbar {
-  position: fixed;
-    background-color: #A8897D;
-    width: 100%;
-    height: auto;
-    padding: 15px;
+.poems {
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
 }
-/* Buttons */
-.btn {
-  color: #B4AA97;
-  background-color: #8e6417;
-  border-radius: 25px;
-  margin: 15px;
+.poems div {
+  display: inline-block;
+  vertical-align: middle;
+}
+/*____________________________________________________________________________________*/
+/* Games */
+article {
+  text-align: center;
+}
+#sectionHalo iframe, #sectionCallOfDuty iframe, #sectionOverwatch iframe, #sectionBioShock iframe{
+  margin: 25px auto;
+  width: 100%;
+  height: 550px;
 }
 
+/*____________________________________________________________________________________*/
+/* Halo Walkthroughs */
+
+#sectionHaloWalkthroughs{
+  text-align: center;
+}
+@media (max-width: 719px) {
+  #sectionHaloWalkthroughs iframe{
+    height: 320px;
+    width: 320px;
+  }
+}
+
+/*____________________________________________________________________________________*/
+
+#mainPoems, #main {
+  display: flex;
+  min-height: calc(100vh - 40vh);
+}
+
+#mainPoems>article, #main>article {
+  flex: 1;
+  overflow-wrap: break-word;
+}
+
+#mainPoems>nav, #main>nav, #mainPoems>aside, #main>aside {
+  flex: 0 0 20vw;
+}
+
+#mainPoems>nav, #main>nav {
+  order: -1;
+}
+header, footer, article, nav, aside {
+  padding: 1em;
+}
+/*____________________________________________________________________________________*/
+
+iframe {
+  border: 0;
+  margin: 15px;
+}
+hr {
+  border: none;
+  border-top: 5px double #A8897D;
+  color: #A8897D;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+@media (max-width: 719px) {
+  .poems div {
+    display: block;
+  }
+  iframe {
+    border: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+/*____________________________________________________________________________________*/
+
+section.welcome {
+  background-color: #0D1313;
+  color: #B4AA97;
+  text-align: center;
+}
+
+section .dropdown-item {
+  color: #A8897D;
+}
+
+/*____________________________________________________________________________________*/
+/* Top Menu */
+
+nav#menuTemp {
+  position: fixed;
+  background-color: #A8897D;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  color: #0D1313;
+}
+nav#menuTemp a {
+  color: #0D1313;
+}
+nav#menuTemp .dropdown-menu {
+  background-color: #A8897D;
+}
+
+nav#menuTemp .dropdown-item {
+  color: #0D1313;
+}
+/*____________________________________________________________________________________*/
+
+/* Buttons */
+.btn {
+  background-color: #0D1313;
+  color: #A8897D;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+}
+@media (max-width: 1023px) {
+  .btn {
+    background-color: #0D1313;
+    color: #A8897D;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+}
+.btn:hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+  padding: 15px;
+}
+button:focus {outline:0;}
+
+.btn.active {
+  background-color: #A8897D;
+  color: #0D1313;
+}
+/*____________________________________________________________________________________*/
 
 a {
   text-decoration: none;
-  color: inherit;
   font-size: 18px;
   text-align: inherit;
   float: none;
   background-color: transparent;
-  color: #9b8e75;
 }
+
 a:hover {
   color: #B4AA97;
 }
 
-a:not([href]):not([tabindex]) {
-  color: inherit;
-  text-decoration: none
-}
-
-a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-  color: inherit;
-  text-decoration: none
-}
-
-a:not([href]):not([tabindex]):focus {
-  outline: 0
-}
 .icon-rap {
-  background-color:#915e21;
+  background-color: #915e21;
   width: auto;
 }
+
 a.icon {
-    display: inline-block;
-    background-image:url(../img/social-media.png);
-    width: 100px;
-    height: 100px;
+  display: inline-block;
+  background-image: url(../img/social-media.png);
+  width: 100px;
+  height: 100px;
 }
+
 a.instagram {
   background-repeat: no-repeat;
   background-position: -115px -22px;
 }
+
 a.soundcloud {
   background-repeat: no-repeat;
   background-position: -115px -408px;
 }
+
 a.youtube {
   background-repeat: no-repeat;
   background-position: -410px -120px;
 }
+
 a.telegram {
   background-repeat: no-repeat;
   background-position: -107px -412px;
 }
+
 a.twitter {
   background-repeat: no-repeat;
   background-position: -508px -118px;
 }
+
 a.github {
   background-repeat: no-repeat;
   background-position: -107px -412px;
 }
+
 a.linkden {
   background-repeat: no-repeat;
   background-position: -107px -412px;
 }
+
 a.whatsapp {
   background-repeat: no-repeat;
   background-position: -107px -412px;
 }
+
 a.facebook {
   background-repeat: no-repeat;
   background-position: -7px -12px;
 }
+/*____________________________________________________________________________________*/
+
 p {
   margin: 16px 0px;
   font-size: 16px;
@@ -184,6 +345,7 @@ p {
   float: none;
   color: #B4AA97;
 }
+
 pre {
   text-align: center;
   margin: 16px 0px;
@@ -192,19 +354,27 @@ pre {
   float: none;
   color: #B4AA97;
 }
-.line {
-  margin-bottom: 10px;
-  padding: 0px;
-  width: 100%;
-  color: #212529;
+.wrapword {
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-wrap;       /* css-3 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+    word-break: break-all;
+    white-space: normal;
 }
+/*____________________________________________________________________________________*/
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   float: none;
   color: #B4AA97
 }
+
 h1, h2, h3, h4, h5, h6 {
   text-align: inherit;
 }
+
 .h1, h1 {
   font-size: 36px;
   text-align: center;
