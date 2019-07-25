@@ -106,39 +106,68 @@
   <div id="content">
     <div id="wrapperPoems">
 
-      <section id="mainPoems">
-
-        <div id="mainPoemsMenuLaptop">
-        <nav id="mainPoemsMenu">
-          <div id="buttonFear" class="btn active" onclick="onFear()">
-            Fear
-          </div>
-          <div id="buttonForgoten" class="btn " onclick="onForgoten()">
-            Forgoten
-          </div>
-          <div id="buttonGrief" class="btn " onclick="onGrief()">
-            Grief
-          </div>
-          <div id="buttonALife" class="btn " onclick="onALife()">
-            A Life
-          </div>
-          <div id="buttonSchool" class="btn " onclick="onSchool()">
-            School
-          </div>
-          <div id="buttonWork" class="btn " onclick="onWork()">
-            Work
-          </div>
-          <div id="buttonKyla" class="btn " onclick="onKyla()">
-            Kyla
-          </div>
-          <div id="buttonThingsToPainful" class="btn " onclick="onThingsToPainful()">
-            Things To Painful
-          </div>
-          <div id="buttonDearFutureSelf" class="btn " onclick="onDearFutureSelf()">
-            Dear Future Self
-          </div>
-        </nav>
+      <nav id="mainPoemsMenu" class="navbar">
+        <div class="container">
+          <div class="row">
+            <ul class="mx-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarPagesPoems" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Poems
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarPagesPoems" id="poemsDropDown">
+                  <li>
+                    <div id="buttonFear" class="btn active" onclick="onFear()">
+                      Fear
+                    </div>
+                  </li>
+                  <li>
+                    <div id="buttonForgoten" class="btn " onclick="onForgoten()">
+                      Forgoten
+                    </div>
+                  </li>
+                  <li>
+                    <div id="buttonGrief" class="btn " onclick="onGrief()">
+                      Grief
+                    </div>
+                  </li>
+                  <li>
+                    <div id="buttonALife" class="btn " onclick="onALife()">
+                      A Life
+                    </div>
+                  </li>
+                  <li>
+                    <div id="buttonSchool" class="btn " onclick="onSchool()">
+                      School
+                    </div>
+                  </li>
+                  <li>
+                    <div id="buttonWork" class="btn " onclick="onWork()">
+                      Work
+                    </div>
+                  </li>
+                  <li>
+                    <div id="buttonKyla" class="btn " onclick="onKyla()">
+                      Kyla
+                    </div>
+                  </li>
+                  <li>
+                    <div id="buttonThingsToPainful" class="btn " onclick="onThingsToPainful()">
+                      Things To Painful
+                    </div>
+                  </li>
+                  <li>
+                    <div id="buttonDearFutureSelf" class="btn " onclick="onDearFutureSelf()">
+                      Dear Future Self
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
       </div>
+      </nav>
+
+      <section id="mainPoems">
 
         <article id="mainPoemsBody">
           <div id="sectionFear" class=" fear ">
@@ -609,12 +638,11 @@
 
   <!-- Custom scripts for this template -->
   <script src="../js/main.js"></script>
-
   <script>
   $(document).ready(function(){
     var screenwidth = $(window).width();
-    if (screenwidth <= 720) {
-      window.location.href = 'poemsM.html';
+    if (screenwidth > 720) {
+      window.location.href = 'poems.html';
     }
   })
   </script>

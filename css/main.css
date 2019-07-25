@@ -112,6 +112,10 @@ header.masthead p {
   color: #833721;
 }
 /*____________________________________________________________________________________*/
+/* Hove over Social Media*/
+
+
+/*____________________________________________________________________________________*/
 .welcome, .contacts, .about, .poetry {
   text-align: center;
 }
@@ -150,10 +154,6 @@ article {
     width: 320px;
   }
 }
-/*____________________________________________________________________________________*/
-/* News */
-
-
 
 /*____________________________________________________________________________________*/
 
@@ -229,7 +229,7 @@ nav#menuTemp a {
 }
 nav#menuTemp .fab {
   font-size: 32px;
-  color:  #833721;
+  color:  #0D1313;
 }
 nav#menuTemp .dropdown-menu {
   background-color: #A8897D;
@@ -277,8 +277,123 @@ button:focus {outline:0;}
   color: #0D1313;
 }
 /*____________________________________________________________________________________*/
+/* Poems Page*/
+
+#navbarPagesPoems {
+  color: #833721;
+}
+#poemsDropDown{
+  background-color: #0D1313;
+}
+#mainPoemsMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#mainPoemsBody {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  margin-left: auto !important;
+  margin-right:  auto !important;
+}
+@media (max-width: 719px) {
+  #mainPoemsMenu {
+    z-index: 5;
+  }
+  #mainPoemsMenu .row {
+    width: 100%;
+    height: auto;
+  }
+  #navbarPagesPoems {
+    text-align: center;
+  }
+}
+/*____________________________________________________________________________________*/
+/* Music Side Menu */
+#menuMusicSide {
+  width: 150px;
+  height: auto;
+  background-color: #0D1313;
+  text-align: center;
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  z-index: 10;
+  opacity: .95;
+  padding: 0;
+  margin: 0;
+}
+#menuMusicSide a {
+  color: #833721;
+  font-size: 24px;
+}
+@media (max-height: 719px) {
+  #menuMusicSide {
+    display: none
+  }
+}
+
+/*____________________________________________________________________________________*/
+/* Subsections */
+
+.rowHome {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin: 50px 0;
+  background-color: #A8897D;
+  box-shadow: -1px 1px 25px 10px rgba(51%,38%,34%,0.50);
+}
+.rowHome div p {
+  color: #0D1313;
+}
+.colHome1 {
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.colHome1 img {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+}
+.colHome2 {
+  -ms-flex: 0 0 66.666667%;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+@media (max-width: 719px) {
+  .rowHome {
+    display: block;
+  }
+  .colHome1 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%
+  }
+  .colHome2 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%
+  }
+}
+
+/*____________________________________________________________________________________*/
+/* Some List Commands */
 
 a {
+  list-style-type: none;
   text-decoration: none;
   font-size: 18px;
   text-align: inherit;
@@ -289,63 +404,12 @@ a {
 a:hover {
   color: #B4AA97;
 }
-
+#mainPoemsMenu
 .icon-rap {
   background-color: #915e21;
   width: auto;
 }
 
-a.icon {
-  display: inline-block;
-  background-image: url(../img/social-media.png);
-  width: 100px;
-  height: 100px;
-}
-
-a.instagram {
-  background-repeat: no-repeat;
-  background-position: -115px -22px;
-}
-
-a.soundcloud {
-  background-repeat: no-repeat;
-  background-position: -115px -408px;
-}
-
-a.youtube {
-  background-repeat: no-repeat;
-  background-position: -410px -120px;
-}
-
-a.telegram {
-  background-repeat: no-repeat;
-  background-position: -107px -412px;
-}
-
-a.twitter {
-  background-repeat: no-repeat;
-  background-position: -508px -118px;
-}
-
-a.github {
-  background-repeat: no-repeat;
-  background-position: -107px -412px;
-}
-
-a.linkden {
-  background-repeat: no-repeat;
-  background-position: -107px -412px;
-}
-
-a.whatsapp {
-  background-repeat: no-repeat;
-  background-position: -107px -412px;
-}
-
-a.facebook {
-  background-repeat: no-repeat;
-  background-position: -7px -12px;
-}
 /*____________________________________________________________________________________*/
 
 p {
@@ -378,6 +442,8 @@ ul {
     white-space: normal;
 }
 /*____________________________________________________________________________________*/
+/* Icon Controls */
+
 #socialmedia {
   height: 250px;
   display: flex;
@@ -385,7 +451,41 @@ ul {
   justify-content: center;
 }
 #socialmedia a {
-  margin: 25px;
+  padding: 15px;
+  margin: 10px;
+  text-decoration: none;
+}
+@media (min-width: 719px){
+  .overlay {
+      visibility: hidden;
+      display: none;
+      color: #0D1313;
+      text-decoration: none;
+  }
+  #instagram, #twitter, #soundcloud {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    transition: height 2s ease, width 2s ease, background-color 2s;
+  }
+  #instagram:hover, #twitter:hover, #soundcloud:hover{
+    height: 250px;
+    width: 250px;
+    background-color: #A8897D;
+  }
+  #instagram:hover i, #twitter:hover i, #soundcloud:hover i {
+    color: #0D1313;
+  }
+  #instagram:hover .overlay, #twitter:hover .overlay, #soundcloud:hover .overlay {
+    visibility: visible;
+    display: block;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+  }
 }
 i.fab {
   font-size: 42px;
@@ -397,8 +497,7 @@ i.fab {
     height: auto;
   }
   i.fab {
-    font-size: 28px;
-    color: #B4AA97;
+    font-size: 36px;
   }
 }
 
@@ -409,6 +508,7 @@ a, ul, ol, li {
 
 /*____________________________________________________________________________________*/
 /* Text */
+
 .h1, .h2, .h3, .h4, .h5, .h6, .p, h1, h2, h3, h4, h5, h6, p {
   padding: 15px;
   margin: 10px;

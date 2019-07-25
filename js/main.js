@@ -1,3 +1,30 @@
+/* var fixmeTop = $('#mainPoemsMenu').offset().top;       // get initial position of the element
+
+$(window).scroll(function() {                  // assign scroll event listener
+
+    var currentScroll = $(window).scrollTop(); // get current position
+
+    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+        $('#mainPoemsMenu').css({                      // scroll to that element or below it
+            position: 'fixed'
+        });
+    } else {                                   // apply position: static
+        $('#mainPoemsMenu').css({                      // if you scroll above it
+            position: 'static'
+        });
+    }
+
+});
+
+*/
+
+$(".sliding-link").click(function(e) {
+    e.preventDefault();
+    var aid = $(this).attr("href");
+    console.log(aid)
+    $('html,body').animate({scrollTop: $(aid).offset().top - 100},1500);
+});
+
 window.onload = function() {
   var content = document.getElementById('content');
   var mainNav = document.getElementById('menuTemp');
@@ -8,6 +35,7 @@ window.onload = function() {
   textOne.classList.remove('hidden');
   textTwo.classList.add('hidden');
 }
+
 
 function onWelcome() {
   var welcome = document.getElementById('sectionWelcome');

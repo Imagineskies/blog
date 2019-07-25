@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <!-- Style Css -->
   <link href="css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.min.css">
   <!-- Font/icon List -->
   <link href="css/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -35,41 +36,8 @@
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
 
-        <!-- Social -->
-        <ul class="nav navbar-nav mr-auto custom-navbar">
-          <li class="nav-item-divider">
-            <span class="nav-link">
-              <span></span>
-            </span>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fab fa-github"></i>
-              <span class="d-xl-none ml-2">
-                Github
-              </span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fab fa-twitter"></i>
-              <span class="d-xl-none ml-2">
-                Twitter
-              </span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fab fa-instagram"></i>
-              <span class="d-xl-none ml-2">
-                Instagram
-              </span>
-            </a>
-          </li>
-        </ul>
-
         <!-- Links -->
-        <ul class="nav navbar-nav ml-auto custom-navbar">
+        <ul class="nav navbar-nav mx-auto custom-navbar">
 
           <li class="nav-item-divider">
             <span class="nav-link">
@@ -91,11 +59,6 @@
               Pages
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarPages">
-              <li>
-                <a class="dropdown-item " href="BlogPages/news.html">
-                  News
-                </a>
-              </li>
               <li>
                 <a class="dropdown-item " href="BlogPages/poems.html">
                   Poems
@@ -214,14 +177,17 @@
           <h1>Contacts</h1>
           <ul class="list-group list-group-flush">
               <li id="socialmedia">
-                <a href="https://instagram.com/imagineskies" target="_blank">
+                <a id="instagram" href="https://instagram.com/imagineskies" target="_blank">
                   <i class="fab fa-instagram"></i>
+                  <p class="overlay">This is where I'll post all the pictures I take.</p>
                 </a>
-                <a href="https://twitter.com/creativeiso" target="_blank">
+                <a id="twitter" href="https://twitter.com/creativeiso" target="_blank">
                   <i class="fab fa-twitter"></i>
+                  <p class="overlay">I don't use my twitter often, but every now and then I'll share something.</p>
                 </a>
-                <a href="https://soundcloud.com/imagineskies" target="_blank">
+                <a id="soundcloud" href="https://soundcloud.com/imagineskies" target="_blank">
                   <i class="fab fa-soundcloud"></i>
+                  <p class="overlay">All my music, you'll find on soundcloud.</p>
                 </a>
               </li>
             </ul>

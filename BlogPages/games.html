@@ -23,7 +23,6 @@
 </head>
 
 <body>
-
   <!-- Nav Bar -->
 
   <nav id="menuTemp" class="hidden navbar navbar-expand-xl navbar-togglable fixed-top">
@@ -36,41 +35,8 @@
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
 
-        <!-- Social -->
-        <ul class="nav navbar-nav mr-auto custom-navbar">
-          <li class="nav-item-divider">
-            <span class="nav-link">
-              <span></span>
-            </span>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fab fa-github"></i>
-              <span class="d-xl-none ml-2">
-                Github
-              </span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fab fa-twitter"></i>
-              <span class="d-xl-none ml-2">
-                Twitter
-              </span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fab fa-instagram"></i>
-              <span class="d-xl-none ml-2">
-                Instagram
-              </span>
-            </a>
-          </li>
-        </ul>
-
         <!-- Links -->
-        <ul class="nav navbar-nav ml-auto custom-navbar">
+        <ul class="nav navbar-nav mx-auto custom-navbar">
 
           <li class="nav-item-divider">
             <span class="nav-link">
@@ -91,9 +57,6 @@
               Pages
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarPages">
-              <a class="dropdown-item " href="news.html">
-                News
-              </a>
               <a class="dropdown-item " href="poems.html">
                 Poems
               </a>
@@ -130,8 +93,8 @@
       <div class="row">
         <div id="textOne" class="hidden col-lg-10 mx-auto textbox">
           <h2>Pulcherrimum Quaerere</h2>
-          <br>
           <p>"look beautiful"</p>
+          <h3>Games</h3>
         </div>
         <div id="textTwo" class="col-lg-10 mx-auto textbox">
           <h1>Please Wait...The page is loading.</h1>
@@ -238,7 +201,44 @@
           <!-- Call of Duty Section -->
 
           <div id="sectionCallOfDuty" class="callofduty hidden col-xl-10 mx-auto">
-            <h1>Call of Duty</h1>
+            <hr>
+
+            <!-- Call of Duty Sub Menu -->
+
+            <div class="row">
+              <div class="mx-auto">
+                <div id="buttonCallOfDutyWalkthroughs" class="btn active" onclick="onCallOfDutyWalkthroughs()">
+                  Walkthroughs
+                </div>
+                <div id="buttonCallOfDutyMW" class="btn " onclick="onCallOfDutyMW()">
+                  Maps and Weapons
+                </div>
+                <div id="buttonCallOfDutyEtc" class="btn " onclick="onCallOfDutyEtc()">
+                  Etc
+                </div>
+              </div>
+            </div>
+
+            <!-- Call of Duty Sub Sections -->
+
+              <!-- Call of Duty Walkthroughs -->
+
+              <div id="sectionCallOfDutyWalkthroughs" class="shown col-xl-10 mx-auto ">
+
+              </div>
+
+                <!-- Call of Duty Maps & Weapons -->
+
+              <div id="sectionCallOfDutyMW" class="hidden col-xl-10 mx-auto ">
+
+              </div>
+
+                <!-- Call of Duty Etc -->
+
+              <div id="sectionCallOfDutyEtc" class="hidden col-xl-10 mx-auto ">
+
+              </div>
+              
           </div>
 
           <!-- Overwatch Section -->
