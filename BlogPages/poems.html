@@ -109,36 +109,39 @@
       <section id="mainPoems">
 
         <div id="mainPoemsMenuLaptop">
-        <nav id="mainPoemsMenu">
-          <div id="buttonFear" class="btn active" onclick="onFear()">
-            Fear
-          </div>
-          <div id="buttonForgoten" class="btn " onclick="onForgoten()">
-            Forgoten
-          </div>
-          <div id="buttonGrief" class="btn " onclick="onGrief()">
-            Grief
-          </div>
-          <div id="buttonALife" class="btn " onclick="onALife()">
-            A Life
-          </div>
-          <div id="buttonSchool" class="btn " onclick="onSchool()">
-            School
-          </div>
-          <div id="buttonWork" class="btn " onclick="onWork()">
-            Work
-          </div>
-          <div id="buttonKyla" class="btn " onclick="onKyla()">
-            Kyla
-          </div>
-          <div id="buttonThingsToPainful" class="btn " onclick="onThingsToPainful()">
-            Things To Painful
-          </div>
-          <div id="buttonDearFutureSelf" class="btn " onclick="onDearFutureSelf()">
-            Dear Future Self
-          </div>
-        </nav>
-      </div>
+          <nav id="mainPoemsMenu">
+            <div id="buttonFear" class="btn active" onclick="onFear()">
+              Fear
+            </div>
+            <div id="buttonForgoten" class="btn " onclick="onForgoten()">
+              Forgoten
+            </div>
+            <div id="buttonGrief" class="btn " onclick="onGrief()">
+              Grief
+            </div>
+            <div id="buttonALife" class="btn " onclick="onALife()">
+              A Life
+            </div>
+            <div id="buttonSchool" class="btn " onclick="onSchool()">
+              School
+            </div>
+            <div id="buttonWork" class="btn " onclick="onWork()">
+              Work
+            </div>
+            <div id="buttonMe" class="btn " onclick="onMe()">
+              Me
+            </div>
+            <div id="buttonKyla" class="btn " onclick="onKyla()">
+              Kyla
+            </div>
+            <div id="buttonThingsToPainful" class="btn " onclick="onThingsToPainful()">
+              Things To Painful
+            </div>
+            <div id="buttonDearFutureSelf" class="btn " onclick="onDearFutureSelf()">
+              Dear Future Self
+            </div>
+          </nav>
+        </div>
 
         <article id="mainPoemsBody">
           <div id="sectionFear" class=" fear ">
@@ -423,6 +426,68 @@
               You don't know me.</p>
 
           </div>
+          <div id="sectionMe" class=" me hidden">
+            <h3>Me</h3>
+            <p>Me
+              <br>
+              It's weird.<br>
+              It's painful.<br>
+              People think you have to break a bone to feel pain, but that's simply not true. <br>
+              Bones, cuts, bruses, those heal. <br>
+              Some faster than others, but that will be fixed. <br>
+              It's the mental pain that lasts forever. <br>
+              I am a girl. <br>
+              Yet, unlike girls born one at birth, I don't have breasts, wide hips, a vagina. <br>
+              I can't give birth, my voice is deep, I have a Adams Apple. <br>
+              I'm built like a man but im not one. <br>
+              I know im not one. <br>
+              Yet everyday I can't help but be reminded of my pain. <br>
+              This was a mistake. <br>
+              I, was a mistake. <br>
+              By body doesn't match my mind. <br>
+              And as time goes on, the pain only gets worse, and worse, and worse. <br>
+              I don't shower like others. <br>
+              Once every week, every two weeks. <br>
+              I wear womens underwear, bra's, dresses, skirts, flannel shirts, cute tops and leggi<br>ngs.
+              I wear wigs with different styles and colors. <br>
+              Makeup and scents, time and time again, but it's not enough. <br>
+              It's not. <br>
+              You may think that calling me he, him, son, boy, RaKwan doesn't effect me. <br>
+              But for me, this is torture. <br>
+              This is pain. <br>
+              Overwhelming, distracting, depression inducing pain. <br>
+              People love to say, you're faking it or it's just a phase. <br>
+              And I don't care if you knew when you were 5 or 15. <br>
+              You know when you're trans. <br>
+              You get that feeling in your bones. <br>
+              That, feeling you get when you know bad things are comming.<br>
+              That strike of dysphoria that kills you when you walk, talk...when you awake. <br>
+              It makes you shake at the though of people assuming your gender from how you look or don't look. <br>
+              Cause I know im a girl, but that's not what I see, what my family see, even what strangers see. <br>
+              But the only thing that hurts worse is when you try your hardest to be yourself and everyone ignores that. <br>
+              People refuse to see your true self even when you scream it in there face. <br>
+              Is this karma? <br>
+              Is this payback for everything wrong I've done in life? <br>
+              I'll never know the answer. <br>
+              But regardless of a reason why, it doesn't go away. <br>
+              It stays. <br>
+              Life is hard, but when your self-respect is torn away and the weight of the world is then added, you break. <br>
+              Then it's up to you to put yourself back together again. <br>
+              Not fair is it? <br>
+              But yet I still get up, and work on my day the best that I can. <br>
+              It's painful, but I numb that pain with hope. <br>
+              Hope that one day i'll change this feeling. <br>
+              Hope that one day i'll look in the mirror and say to myself "This is me:' Without having to fake it. <br>
+              I'll take it. <br>
+              Take everything that life throws my way. <br>
+              Cause I've been on a war path and I'm just waiting for that day. <br>
+              My day. <br>
+              I know it will come to me. <br>
+              I know it can happen. <br>
+              It will happen. <br>
+              But in order for me to get the victory, I have to surpass the war. <br>
+            </p>
+          </div>
           <div id="sectionKyla" class=" thinking hidden">
             <h3>Kyla</h3>
             <p>There was A time where I remember your laught,
@@ -611,12 +676,12 @@
   <script src="../js/main.js"></script>
 
   <script>
-  $(document).ready(function(){
-    var screenwidth = $(window).width();
-    if (screenwidth <= 720) {
-      window.location.href = 'poemsM.html';
-    }
-  })
+    $(document).ready(function() {
+      var screenwidth = $(window).width();
+      if (screenwidth <= 720) {
+        window.location.href = 'poemsM.html';
+      }
+    })
   </script>
 
 </body>
