@@ -40,53 +40,26 @@ window.onload = function() {
 function onWelcome() {
   var welcome = document.getElementById('sectionWelcome');
   var about = document.getElementById('sectionAbout');
-  var contacts = document.getElementById('sectionContacts');
   var welcoalifeBtn = document.getElementById('buttonWelcome');
   var aboutBtn = document.getElementById('buttonAbout');
-  var contactsBtn = document.getElementById('buttonContacts');
   welcome.classList.add("shown");
   welcoalifeBtn.classList.add("active");
   welcome.classList.remove("hidden");
   about.classList.add("hidden");
   about.classList.remove("shown");
   aboutBtn.classList.remove("active");
-  contacts.classList.add("hidden");
-  contacts.classList.remove("shown");
-  contactsBtn.classList.remove("active");
 }
 function onAbout() {
   var welcome = document.getElementById('sectionWelcome');
   var about = document.getElementById('sectionAbout');
-  var contacts = document.getElementById('sectionContacts');
   var welcoalifeBtn = document.getElementById('buttonWelcome');
   var aboutBtn = document.getElementById('buttonAbout');
-  var contactsBtn = document.getElementById('buttonContacts');
   welcome.classList.add("hidden");
   welcome.classList.remove("shown");
   welcoalifeBtn.classList.remove("active");
   about.classList.add("shown");
   aboutBtn.classList.add("active");
   about.classList.remove("hidden");
-  contacts.classList.add("hidden");
-  contacts.classList.remove("shown");
-  contactsBtn.classList.remove("active");
-}
-function onContacts() {
-  var welcome = document.getElementById('sectionWelcome');
-  var about = document.getElementById('sectionAbout');
-  var contacts = document.getElementById('sectionContacts');
-  var welcoalifeBtn = document.getElementById('buttonWelcome');
-  var aboutBtn = document.getElementById('buttonAbout');
-  var contactsBtn = document.getElementById('buttonContacts');
-  welcome.classList.add("hidden");
-  welcome.classList.remove("shown");
-  welcoalifeBtn.classList.remove("active");
-  about.classList.add("hidden");
-  about.classList.remove("shown");
-  aboutBtn.classList.remove("active");
-  contacts.classList.add("shown");
-  contactsBtn.classList.add("active");
-  contacts.classList.remove("hidden");
 }
 function onFear() {
   var fear = document.getElementById('sectionFear');
