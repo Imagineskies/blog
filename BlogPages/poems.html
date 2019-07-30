@@ -8,7 +8,7 @@
   <meta name="author" content="Rayna Weeden">
   <meta name="keywords" content="blogs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="../img/icon.jpg">
+  <link rel="icon" href="../img/background.jpg">
 
   <title>Pulcherrimum Quaerere - Poems</title>
 
@@ -17,7 +17,9 @@
   <!-- Style Css -->
   <link href="../css/main.css" rel="stylesheet">
   <!-- Font/icon List -->
-  <link href="../css/fonts.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 </head>
@@ -26,7 +28,7 @@
 
   <!-- Nav Bar -->
 
-  <nav id="menuTemp" class="hidden navbar navbar-expand-xl navbar-togglable fixed-top">
+  <nav id="menuTemp" class="navbar navbar-expand-xl navbar-togglable fixed-top">
     <div class="container">
 
       <!-- Toggler -->
@@ -36,8 +38,15 @@
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
 
+        <!-- Heading -->
+        <ul class="nav navbar-nav mr-auto custom-navbar">
+          <li class="navbar navbar-light">
+            <span class="navbar-brand">Pulcherrimum Quaerere</span>
+          </li>
+        </ul>
+
         <!-- Links -->
-        <ul class="nav navbar-nav mx-auto custom-navbar">
+        <ul class="nav navbar-nav ml-auto custom-navbar">
 
           <li class="nav-item-divider">
             <span class="nav-link">
@@ -45,32 +54,72 @@
             </span>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="../index.html">
               Home
             </a>
           </li>
 
-          <!-- Dropdown -->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              About
+            </a>
+          </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pages
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPoems" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Poems
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarPages">
-              <a class="dropdown-item active" href="poems.html">
-                Poems
-              </a>
-              <a class="dropdown-item " href="games.html">
-                Games
-              </a>
-              <a class="dropdown-item " href="videos.html">
-                Videos
-              </a>
-              <a class="dropdown-item " href="music.html">
-                Music
-              </a>
+            <div id="mainPoemsMenu" class="dropdown-menu" aria-labelledby="navbarDropdownPoems">
+              <div id="buttonFear" class="dropdown-item btn active" onclick="onFear()">
+                Fear
+              </div>
+              <div id="buttonForgoten" class="dropdown-item btn " onclick="onForgoten()">
+                Forgoten
+              </div>
+              <div id="buttonGrief" class="dropdown-item btn " onclick="onGrief()">
+                Grief
+              </div>
+              <div id="buttonALife" class="dropdown-item btn " onclick="onALife()">
+                A Life
+              </div>
+              <div id="buttonSchool" class="dropdown-item btn " onclick="onSchool()">
+                School
+              </div>
+              <div id="buttonWork" class="dropdown-item btn " onclick="onWork()">
+                Work
+              </div>
+              <div id="buttonMe" class="dropdown-item btn " onclick="onMe()">
+                Me
+              </div>
+              <div id="buttonKyla" class="dropdown-item btn " onclick="onKyla()">
+                Kyla
+              </div>
+              <div id="buttonThingsToPainful" class="dropdown-item btn " onclick="onThingsToPainful()">
+                Things To Painful
+              </div>
+              <div id="buttonDearFutureSelf" class="dropdown-item btn " onclick="onDearFutureSelf()">
+                Dear Future Self
+              </div>
             </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="games.html">
+              Games
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="videos.html">
+              Videos
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="music.html">
+              Music
+            </a>
           </li>
 
           <!-- Nav Divider -->
@@ -92,12 +141,11 @@
     <div class="container">
       <div class="row">
         <div id="textOne" class="hidden col-lg-10 mx-auto textbox">
-          <h2>Pulcherrimum Quaerere</h2>
-          <p>"look beautiful"</p>
-          <h3>Poems</h3>
+          <h2>Poems</h2>
+          <p>I wrote all of these. Some older than others, but they're tought. They talk about sensitive topics and could be triggering for some. Take care of yourselves.</p>
         </div>
         <div id="textTwo" class="col-lg-10 mx-auto textbox">
-          <h1>Please Wait...The page is loading.</h1>
+          <h2>Please Wait...The page is loading.</h2>
         </div>
       </div>
     </div>
@@ -109,38 +157,6 @@
       <section id="mainPoems">
 
         <div id="mainPoemsMenuLaptop">
-          <nav id="mainPoemsMenu">
-            <div id="buttonFear" class="btn active" onclick="onFear()">
-              Fear
-            </div>
-            <div id="buttonForgoten" class="btn " onclick="onForgoten()">
-              Forgoten
-            </div>
-            <div id="buttonGrief" class="btn " onclick="onGrief()">
-              Grief
-            </div>
-            <div id="buttonALife" class="btn " onclick="onALife()">
-              A Life
-            </div>
-            <div id="buttonSchool" class="btn " onclick="onSchool()">
-              School
-            </div>
-            <div id="buttonWork" class="btn " onclick="onWork()">
-              Work
-            </div>
-            <div id="buttonMe" class="btn " onclick="onMe()">
-              Me
-            </div>
-            <div id="buttonKyla" class="btn " onclick="onKyla()">
-              Kyla
-            </div>
-            <div id="buttonThingsToPainful" class="btn " onclick="onThingsToPainful()">
-              Things To Painful
-            </div>
-            <div id="buttonDearFutureSelf" class="btn " onclick="onDearFutureSelf()">
-              Dear Future Self
-            </div>
-          </nav>
         </div>
 
         <article id="mainPoemsBody">
@@ -681,6 +697,7 @@
       }
     })
   </script>
+  <span id="mainPoemsMenuM"></span>
 
 </body>
 

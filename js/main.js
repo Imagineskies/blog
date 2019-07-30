@@ -1,22 +1,3 @@
-/* var fixmeTop = $('#mainPoemsMenu').offset().top;       // get initial position of the element
-
-$(window).scroll(function() {                  // assign scroll event listener
-
-    var currentScroll = $(window).scrollTop(); // get current position
-
-    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
-        $('#mainPoemsMenu').css({                      // scroll to that element or below it
-            position: 'fixed'
-        });
-    } else {                                   // apply position: static
-        $('#mainPoemsMenu').css({                      // if you scroll above it
-            position: 'static'
-        });
-    }
-
-});
-
-*/
 
 $(".sliding-link").click(function(e) {
     e.preventDefault();
@@ -36,32 +17,12 @@ window.onload = function() {
   textTwo.classList.add('hidden');
 }
 
+function OpenPoemsNav() {
+  document.getElementById("mainPoemsMenuM").style.width = "100%";
+}
 
-function onWelcome() {
-  var welcome = document.getElementById('sectionWelcome');
-  var about = document.getElementById('sectionAbout');
-  var welcoalifeBtn = document.getElementById('buttonWelcome');
-  var aboutBtn = document.getElementById('buttonAbout');
-  welcome.classList.add("shown");
-  welcoalifeBtn.classList.add("active");
-  welcome.classList.remove("hidden");
-  about.classList.add("hidden");
-  about.classList.remove("shown");
-  aboutBtn.classList.remove("active");
-}
-function onAbout() {
-  var welcome = document.getElementById('sectionWelcome');
-  var about = document.getElementById('sectionAbout');
-  var welcoalifeBtn = document.getElementById('buttonWelcome');
-  var aboutBtn = document.getElementById('buttonAbout');
-  welcome.classList.add("hidden");
-  welcome.classList.remove("shown");
-  welcoalifeBtn.classList.remove("active");
-  about.classList.add("shown");
-  aboutBtn.classList.add("active");
-  about.classList.remove("hidden");
-}
 function onFear() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
   var fear = document.getElementById('sectionFear');
   var forgoten = document.getElementById('sectionForgoten');
   var grief = document.getElementById('sectionGrief');
@@ -114,6 +75,7 @@ function onFear() {
   dearfutureselfBtn.classList.remove('active');
 }
 function onForgoten() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
   var fear = document.getElementById('sectionFear');
   var forgoten = document.getElementById('sectionForgoten');
   var grief = document.getElementById('sectionGrief');
@@ -166,6 +128,7 @@ function onForgoten() {
   dearfutureselfBtn.classList.remove('active');
 }
 function onGrief() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
   var fear = document.getElementById('sectionFear');
   var forgoten = document.getElementById('sectionForgoten');
   var grief = document.getElementById('sectionGrief');
@@ -218,6 +181,7 @@ function onGrief() {
   dearfutureselfBtn.classList.remove('active');
 }
 function onALife() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
   var fear = document.getElementById('sectionFear');
   var forgoten = document.getElementById('sectionForgoten');
   var grief = document.getElementById('sectionGrief');
@@ -270,6 +234,7 @@ function onALife() {
   dearfutureselfBtn.classList.remove('active');
 }
 function onSchool() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
   var fear = document.getElementById('sectionFear');
   var forgoten = document.getElementById('sectionForgoten');
   var grief = document.getElementById('sectionGrief');
@@ -322,6 +287,7 @@ function onSchool() {
   dearfutureselfBtn.classList.remove('active');
 }
 function onWork() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
   var fear = document.getElementById('sectionFear');
   var forgoten = document.getElementById('sectionForgoten');
   var grief = document.getElementById('sectionGrief');
@@ -374,6 +340,7 @@ function onWork() {
   dearfutureselfBtn.classList.remove('active');
 }
 function onMe() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
   var fear = document.getElementById('sectionFear');
   var forgoten = document.getElementById('sectionForgoten');
   var grief = document.getElementById('sectionGrief');
@@ -426,6 +393,7 @@ function onMe() {
   dearfutureselfBtn.classList.remove('active');
 }
 function onKyla() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
   var fear = document.getElementById('sectionFear');
   var forgoten = document.getElementById('sectionForgoten');
   var grief = document.getElementById('sectionGrief');
@@ -478,6 +446,7 @@ function onKyla() {
   dearfutureselfBtn.classList.remove('active');
 }
 function onThingsToPainful() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
   var fear = document.getElementById('sectionFear');
   var forgoten = document.getElementById('sectionForgoten');
   var grief = document.getElementById('sectionGrief');
@@ -530,6 +499,7 @@ function onThingsToPainful() {
   dearfutureselfBtn.classList.remove('active');
 }
 function onDearFutureSelf() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
   var fear = document.getElementById('sectionFear');
   var forgoten = document.getElementById('sectionForgoten');
   var grief = document.getElementById('sectionGrief');
@@ -582,48 +552,15 @@ function onDearFutureSelf() {
   dearfutureselfBtn.classList.add('active');
 }
 
-function onDescription() {
-  var description = document.getElementById('sectionDescription');
-  var halo = document.getElementById('sectionHalo');
-  var callofduty = document.getElementById('sectionCallOfDuty');
-  var overwatch = document.getElementById('sectionOverwatch');
-  var bioshock = document.getElementById('sectionBioShock');
-  var descriptionBtn = document.getElementById('buttonDescription');
-  var haloBtn = document.getElementById('buttonHalo');
-  var callofdutyBtn = document.getElementById('buttonCallOfDuty');
-  var overwatchBtn = document.getElementById('buttonOverwatch');
-  var bioshockBtn = document.getElementById('buttonBioShock');
-  description.classList.add('shown');
-  description.classList.remove('hidden');
-  descriptionBtn.classList.add('active');
-  halo.classList.add('hidden');
-  halo.classList.remove('shown');
-  haloBtn.classList.remove('active');
-  callofduty.classList.add('hidden');
-  callofduty.classList.remove('shown');
-  callofdutyBtn.classList.remove('active');
-  overwatch.classList.add('hidden');
-  overwatch.classList.remove('shown');
-  overwatchBtn.classList.remove('active');
-  bioshock.classList.add('hidden');
-  bioshock.classList.remove('shown');
-  bioshockBtn.classList.remove('active');
-
-}
 function onHalo() {
-  var description = document.getElementById('sectionDescription');
   var halo = document.getElementById('sectionHalo');
   var callofduty = document.getElementById('sectionCallOfDuty');
   var overwatch = document.getElementById('sectionOverwatch');
   var bioshock = document.getElementById('sectionBioShock');
-  var descriptionBtn = document.getElementById('buttonDescription');
   var haloBtn = document.getElementById('buttonHalo');
   var callofdutyBtn = document.getElementById('buttonCallOfDuty');
   var overwatchBtn = document.getElementById('buttonOverwatch');
   var bioshockBtn = document.getElementById('buttonBioShock');
-  description.classList.add('hidden');
-  description.classList.remove('shown');
-  descriptionBtn.classList.remove('active');
   halo.classList.add('shown');
   halo.classList.remove('hidden');
   haloBtn.classList.add('active');
@@ -638,19 +575,14 @@ function onHalo() {
   bioshockBtn.classList.remove('active');
 }
 function onCallOfDuty() {
-  var description = document.getElementById('sectionDescription');
   var halo = document.getElementById('sectionHalo');
   var callofduty = document.getElementById('sectionCallOfDuty');
   var overwatch = document.getElementById('sectionOverwatch');
   var bioshock = document.getElementById('sectionBioShock');
-  var descriptionBtn = document.getElementById('buttonDescription');
   var haloBtn = document.getElementById('buttonHalo');
   var callofdutyBtn = document.getElementById('buttonCallOfDuty');
   var overwatchBtn = document.getElementById('buttonOverwatch');
   var bioshockBtn = document.getElementById('buttonBioShock');
-  description.classList.add('hidden');
-  description.classList.remove('shown');
-  descriptionBtn.classList.remove('active');
   halo.classList.add('hidden');
   halo.classList.remove('shown');
   haloBtn.classList.remove('active');
@@ -665,19 +597,14 @@ function onCallOfDuty() {
   bioshockBtn.classList.remove('active');
 }
 function onOverwatch() {
-  var description = document.getElementById('sectionDescription');
   var halo = document.getElementById('sectionHalo');
   var callofduty = document.getElementById('sectionCallOfDuty');
   var overwatch = document.getElementById('sectionOverwatch');
   var bioshock = document.getElementById('sectionBioShock');
-  var descriptionBtn = document.getElementById('buttonDescription');
   var haloBtn = document.getElementById('buttonHalo');
   var callofdutyBtn = document.getElementById('buttonCallOfDuty');
   var overwatchBtn = document.getElementById('buttonOverwatch');
   var bioshockBtn = document.getElementById('buttonBioShock');
-  description.classList.add('hidden');
-  description.classList.remove('shown');
-  descriptionBtn.classList.remove('active');
   halo.classList.add('hidden');
   halo.classList.remove('shown');
   haloBtn.classList.remove('active');
@@ -692,19 +619,14 @@ function onOverwatch() {
   bioshockBtn.classList.remove('active');
 }
 function onBioShock() {
-  var description = document.getElementById('sectionDescription');
   var halo = document.getElementById('sectionHalo');
   var callofduty = document.getElementById('sectionCallOfDuty');
   var overwatch = document.getElementById('sectionOverwatch');
   var bioshock = document.getElementById('sectionBioShock');
-  var descriptionBtn = document.getElementById('buttonDescription');
   var haloBtn = document.getElementById('buttonHalo');
   var callofdutyBtn = document.getElementById('buttonCallOfDuty');
   var overwatchBtn = document.getElementById('buttonOverwatch');
   var bioshockBtn = document.getElementById('buttonBioShock');
-  description.classList.add('hidden');
-  description.classList.remove('shown');
-  descriptionBtn.classList.remove('active');
   halo.classList.add('hidden');
   halo.classList.remove('shown');
   haloBtn.classList.remove('active');

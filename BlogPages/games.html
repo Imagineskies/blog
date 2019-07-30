@@ -8,7 +8,7 @@
   <meta name="author" content="Rayna Weeden">
   <meta name="keywords" content="blogs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="img/icon.jpg">
+  <link rel="icon" href="../img/background.jpg">
 
   <title>Pulcherrimum Quaerere - Games</title>
 
@@ -17,7 +17,9 @@
   <!-- Style Css -->
   <link href="../css/main.css" rel="stylesheet">
   <!-- Font/icon List -->
-  <link href="../css/fonts.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 </head>
@@ -25,7 +27,7 @@
 <body>
   <!-- Nav Bar -->
 
-  <nav id="menuTemp" class="hidden navbar navbar-expand-xl navbar-togglable fixed-top">
+  <nav id="menuTemp" class="navbar navbar-expand-xl navbar-togglable fixed-top">
     <div class="container">
 
       <!-- Toggler -->
@@ -35,8 +37,15 @@
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
 
+        <!-- Heading -->
+        <ul class="nav navbar-nav mr-auto custom-navbar">
+          <li class="navbar navbar-light">
+            <span class="navbar-brand">Pulcherrimum Quaerere</span>
+          </li>
+        </ul>
+
         <!-- Links -->
-        <ul class="nav navbar-nav mx-auto custom-navbar">
+        <ul class="nav navbar-nav ml-auto custom-navbar">
 
           <li class="nav-item-divider">
             <span class="nav-link">
@@ -44,32 +53,40 @@
             </span>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="../index.html">
               Home
             </a>
           </li>
 
-          <!-- Dropdown -->
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pages
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              About
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarPages">
-              <a class="dropdown-item " href="poems.html">
-                Poems
-              </a>
-              <a class="dropdown-item active" href="games.html">
-                Games
-              </a>
-              <a class="dropdown-item " href="videos.html">
-                Videos
-              </a>
-              <a class="dropdown-item " href="music.html">
-                Music
-              </a>
-            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="poems.html">
+              Poems
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="games.html">
+              Games
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="videos.html">
+              Videos
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="music.html">
+              Music
+            </a>
           </li>
 
           <!-- Nav Divider -->
@@ -92,12 +109,12 @@
     <div class="container">
       <div class="row">
         <div id="textOne" class="hidden col-lg-10 mx-auto textbox">
-          <h2>Pulcherrimum Quaerere</h2>
-          <p>"look beautiful"</p>
-          <h3>Games</h3>
+          <h2>Gaming Page</h2>
+          <p>Here is where I'll post different gaming content. From Walkthroughs to cool easter eggs, this is where I'll post all my favorites.</p>
+          <p>This will have alot of content. I'm always working on the site, but I'm the only one. So bare with me while everything gets in order.</p>
         </div>
         <div id="textTwo" class="col-lg-10 mx-auto textbox">
-          <h1>Please Wait...The page is loading.</h1>
+          <h2>Please Wait...The page is loading.</h2>
         </div>
       </div>
     </div>
@@ -112,10 +129,7 @@
       <div class="container">
         <div class="row">
           <div class="mx-auto">
-            <div id="buttonDescription" class="btn active" onclick="onDescription()">
-              Welcome!
-            </div>
-            <div id="buttonHalo" class="btn " onclick="onHalo()">
+            <div id="buttonHalo" class="btn active" onclick="onHalo()">
               Halo
             </div>
             <div id="buttonCallOfDuty" class="btn " onclick="onCallOfDuty()">
@@ -141,17 +155,9 @@
       <div class="container">
         <div class="row">
 
-          <!-- Section Description -->
-
-          <div id="sectionDescription" class="description col-lg-10 mx-auto">
-            <h1>Welcome!</h1>
-            <p>Here is where I'll post different gaming content. From Walkthroughs to cool easter eggs, this is where I'll post all my favorites.</p>
-            <p>This will have alot of content. I'm always working on the site, but I'm the only one. So bare with me while everything gets in order.</p>
-          </div>
-
           <!-- Halo Section-->
 
-          <div id="sectionHalo" class="halo hidden col-xl-10 mx-auto">
+          <div id="sectionHalo" class="halo col-xl-10 mx-auto">
             <hr>
 
             <!-- Halo Sub Menu -->
@@ -172,7 +178,7 @@
 
             <!-- Halo Sub Sections -->
 
-              <!-- Halo Walkthroughs -->
+            <!-- Halo Walkthroughs -->
 
             <div id="sectionHaloWalkthroughs" class="shown col-xl-10 mx-auto ">
               <h1>Walkthroughs</h1>
@@ -184,13 +190,13 @@
               <iframe src="https://www.youtube.com/embed/videoseries?list=PLs1-UdHIwbo5Kn61AM3gAQnMPYDIOJvTR" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
 
-              <!-- Halo Maps & Weapons -->
+            <!-- Halo Maps & Weapons -->
 
             <div id="sectionHaloMW" class="hidden col-xl-10 mx-auto ">
 
             </div>
 
-              <!-- Halo Etc -->
+            <!-- Halo Etc -->
 
             <div id="sectionHaloEtc" class="hidden col-xl-10 mx-auto ">
 
@@ -221,24 +227,24 @@
 
             <!-- Call of Duty Sub Sections -->
 
-              <!-- Call of Duty Walkthroughs -->
+            <!-- Call of Duty Walkthroughs -->
 
-              <div id="sectionCallOfDutyWalkthroughs" class="shown col-xl-10 mx-auto ">
+            <div id="sectionCallOfDutyWalkthroughs" class="shown col-xl-10 mx-auto ">
 
-              </div>
+            </div>
 
-                <!-- Call of Duty Maps & Weapons -->
+            <!-- Call of Duty Maps & Weapons -->
 
-              <div id="sectionCallOfDutyMW" class="hidden col-xl-10 mx-auto ">
+            <div id="sectionCallOfDutyMW" class="hidden col-xl-10 mx-auto ">
 
-              </div>
+            </div>
 
-                <!-- Call of Duty Etc -->
+            <!-- Call of Duty Etc -->
 
-              <div id="sectionCallOfDutyEtc" class="hidden col-xl-10 mx-auto ">
+            <div id="sectionCallOfDutyEtc" class="hidden col-xl-10 mx-auto ">
 
-              </div>
-              
+            </div>
+
           </div>
 
           <!-- Overwatch Section -->

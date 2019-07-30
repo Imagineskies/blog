@@ -6,17 +6,16 @@ body, html {
 }
 
 body {
-  font-family: "Fa Brands", "Fa Regular", "fa Solid", "Nunito Bold", "Nunito", "Varela Round", Georgia, "Times New Roman", serif;
   margin: 0;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 ::-moz-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
@@ -41,10 +40,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-    body {
-      margin: 0;
-    }
 
 ::-moz-scrollbar-thumb:hover {
   background: #555;
@@ -97,9 +92,8 @@ header .textbox {
   height: auto;
   text-align: center;
   padding: 15px;
-  opacity: 0.95;
+  opacity: 0.98;
 }
-
 @media (max-width: 719px) {
   header h2 {
     font-size: 38px
@@ -108,8 +102,8 @@ header .textbox {
 
 header.masthead p {
   font-weight: 300;
-  font-size: 32px;
-  color: #833721;
+  font-size: 18px;
+  color: #B4AA97;
 }
 /*____________________________________________________________________________________*/
 /* Hove over Social Media*/
@@ -130,6 +124,7 @@ header.masthead p {
 }
 /*____________________________________________________________________________________*/
 /* Games */
+
 #sectionDescription {
   text-align: center;
 }
@@ -156,6 +151,7 @@ article {
 }
 
 /*____________________________________________________________________________________*/
+/* Poem Menu */
 
 #mainPoems, #main, #blogNews {
   display: flex;
@@ -219,6 +215,7 @@ section .dropdown-item {
 nav#menuTemp {
   position: fixed;
   background-color: #A8897D;
+  font-family: 'Allerta Stencil', sans-serif;
   width: 100%;
   height: auto;
   padding: 15px;
@@ -279,16 +276,72 @@ button:focus {outline:0;}
 /*____________________________________________________________________________________*/
 /* Poems Page*/
 
+  /* Poems Menu */
+
+  #mainPoemsMenu .btn {
+    background-color: #A8897D;
+    color: #0D1313;
+    padding: 15px;
+    margin: 0;
+  }
+  #mainPoemsMenu .btn:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+    padding: 15px;
+  }
+  #mainPoemsMenu .btn.active {
+    background-color: #0D1313;
+    color: #A8897D;
+  }
+
+  /* Second Menu Poem */
+
+    #mainPoemsMenuM {
+    margin-top: 50px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #0D1313;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  #mainPoemsContentM {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  #mainPoemsContentM div {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #B4AA97;
+    display: block;
+    transition: 0.3s;
+  }
+  #buttonOpenPoemsNav {
+    margin-top: 15px;
+    font-size:30px;
+    text-align: center;
+  }
+  #mainPoemsMenuM .btn.active {
+    background-color: #A8897D;
+    color: #0D1313;
+  }
+
+
+
+
 #navbarPagesPoems {
   color: #833721;
 }
 #poemsDropDown{
   background-color: #0D1313;
-}
-#mainPoemsMenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 #mainPoemsBody {
   flex: 0 0 83.333333%;
@@ -309,29 +362,7 @@ button:focus {outline:0;}
   }
 }
 /*____________________________________________________________________________________*/
-/* Music Side Menu */
-#menuMusicSide {
-  width: 150px;
-  height: auto;
-  background-color: #0D1313;
-  text-align: center;
-  position: fixed;
-  right: 10px;
-  top: 50%;
-  z-index: 10;
-  opacity: .95;
-  padding: 0;
-  margin: 0;
-}
-#menuMusicSide a {
-  color: #833721;
-  font-size: 24px;
-}
-@media (max-height: 719px) {
-  #menuMusicSide {
-    display: none
-  }
-}
+
 
 /*____________________________________________________________________________________*/
 /* Subsections */
@@ -520,7 +551,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 25px;
-  font-family: "Nunito Bold";
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
   color: #833721;
 }
 
@@ -550,4 +582,5 @@ h1, h2, h3, h4, h5, h6 {
 
 .p, p {
   font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
 }

@@ -7,7 +7,7 @@
   <meta name="description" content="Welcome to my blog.">
   <meta name="author" content="Rayna Weeden">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="img/icon.jpg">
+  <link rel="icon" href="img/background.jpg">
 
   <title>Pulcherrimum Quaerere</title>
 
@@ -17,7 +17,9 @@
   <link href="css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="css/animate.min.css">
   <!-- Font/icon List -->
-  <link href="css/fonts.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 </head>
@@ -36,8 +38,15 @@
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
 
+        <!-- Heading -->
+        <ul class="nav navbar-nav mr-auto custom-navbar">
+          <li class="navbar navbar-light">
+            <span class="navbar-brand">Pulcherrimum Quaerere</span>
+          </li>
+        </ul>
+
         <!-- Links -->
-        <ul class="nav navbar-nav mx-auto custom-navbar">
+        <ul class="nav navbar-nav ml-auto custom-navbar">
 
           <li class="nav-item-divider">
             <span class="nav-link">
@@ -45,41 +54,40 @@
             </span>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#top">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
               Home
             </a>
           </li>
 
-
-          <!-- Dropdown -->
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pages
+          <li class="nav-item">
+            <a class="nav-link" href="BlogPages/about.html">
+              About
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarPages">
-              <li>
-                <a class="dropdown-item " href="BlogPages/poems.html">
-                  Poems
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item " href="BlogPages/games.html">
-                  Games
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item " href="BlogPages/videos.html">
-                  Videos
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item " href="BlogPages/music.html">
-                  Music
-                </a>
-              </li>
-            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="BlogPages/poems.html">
+              Poems
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="BlogPages/games.html">
+              Games
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="BlogPages/videos.html">
+              Videos
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="BlogPages/music.html">
+              Music
+            </a>
           </li>
 
           <!-- Nav Divider -->
@@ -89,14 +97,6 @@
               <span></span>
             </span>
           </li>
-
-          <li class="nav-item-divider">
-            <span class="nav-link">
-              <span></span>
-            </span>
-          </li>
-
-
 
         </ul>
 
@@ -110,34 +110,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto textbox">
-          <h2>Pulcherrimum Quaerere</h2>
-          <br>
-          <p>"look beautiful"</p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="d-flex flex-row mx-auto">
-          <span id="buttonWelcome" class="btn active" onclick="onWelcome()">
-            Welcome
-          </span>
-          <span id="buttonAbout" class="btn " onclick="onAbout()">
-            About
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="sectionWelcome" class="welcome shown">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <h1>Welcome to my blog!</h1>
+          <h2>Welcome to my blog!</h2>
           <p>
             Here you'll find everything I love and do. My hobbies include photography, music production, poetry, and anything that comes to my mind.
             Have fun! An don't be a dick.
@@ -145,27 +118,7 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="sectionAbout" class="about hidden">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <h1>About</h1>
-          <p>
-            I go by Rayna. I'm a chill open minded girl and this is just a place where I can talk about things I find intresting. So if you want to stay, stay. If this isn't your thing, no pressure, no hard feelings.
-          </p>
-        </div>
-        <div class="col-lg-10 mx-auto">
-          <p>
-            So to not give away too much, I'm 17, trans, and an artist. I have tons of poems that I think you'd like (or not like). Some of them are dark and some are uplifting. I use it to help me cope so anything I write about it just like a rant.
-            Me spilling myself. Some pictures that I have aren't mine and some are. The flowers you see at the top, I didn't take that picture but I have some that I did take. Every now and then I'll edit a video so you might see some of that and if
-            you see any music, not all of it is mine, but I'll let you know when it is!!!
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </header>
 
 
   <!-- Bootstrap core JavaScript -->
