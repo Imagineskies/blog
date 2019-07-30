@@ -298,7 +298,6 @@ button:focus {outline:0;}
   /* Second Menu Poem */
 
     #mainPoemsMenuM {
-    margin-top: 50px;
     height: 100%;
     width: 0;
     position: fixed;
@@ -306,7 +305,7 @@ button:focus {outline:0;}
     top: 0;
     left: 0;
     background-color: #0D1313;
-    overflow-x: hidden;
+    overflow: hidden;
     transition: 0.5s;
   }
 
@@ -319,7 +318,7 @@ button:focus {outline:0;}
   #mainPoemsContentM div {
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 24px;
     color: #B4AA97;
     display: block;
     transition: 0.3s;
