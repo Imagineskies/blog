@@ -66,42 +66,10 @@
             </a>
           </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPoems" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="OpenPoemsNav()">
               Poems
             </a>
-            <div id="mainPoemsMenu" class="dropdown-menu" aria-labelledby="navbarDropdownPoems">
-              <div id="buttonFear" class="dropdown-item btn active" onclick="onFear()">
-                Fear
-              </div>
-              <div id="buttonForgoten" class="dropdown-item btn " onclick="onForgoten()">
-                Forgoten
-              </div>
-              <div id="buttonGrief" class="dropdown-item btn " onclick="onGrief()">
-                Grief
-              </div>
-              <div id="buttonALife" class="dropdown-item btn " onclick="onALife()">
-                A Life
-              </div>
-              <div id="buttonSchool" class="dropdown-item btn " onclick="onSchool()">
-                School
-              </div>
-              <div id="buttonWork" class="dropdown-item btn " onclick="onWork()">
-                Work
-              </div>
-              <div id="buttonMe" class="dropdown-item btn " onclick="onMe()">
-                Me
-              </div>
-              <div id="buttonKyla" class="dropdown-item btn " onclick="onKyla()">
-                Kyla
-              </div>
-              <div id="buttonThingsToPainful" class="dropdown-item btn " onclick="onThingsToPainful()">
-                Things To Painful
-              </div>
-              <div id="buttonDearFutureSelf" class="dropdown-item btn " onclick="onDearFutureSelf()">
-                Dear Future Self
-              </div>
-            </div>
           </li>
 
           <li class="nav-item">
@@ -143,6 +111,7 @@
         <div id="textOne" class="hidden col-lg-10 mx-auto textbox">
           <h2>Poems</h2>
           <p>I wrote all of these. Some older than others, but they're tought. They talk about sensitive topics and could be triggering for some. Take care of yourselves.</p>
+          <p>To switch poems just click the button down below or on the navbar.</p>
         </div>
         <div id="textTwo" class="col-lg-10 mx-auto textbox">
           <h2>Please Wait...The page is loading.</h2>
@@ -154,10 +123,52 @@
   <div id="content">
     <div id="wrapperPoems">
 
-      <section id="mainPoems">
-
-        <div id="mainPoemsMenuLaptop">
+      <div id="mainPoemsMenuM">
+        <div id="mainPoemsContentM">
+            <div class="btn" onclick="exitPoemsMenu()">
+              &otimes;
+            </div>
+            <div id="buttonFear" class="btn active" onclick="onFear()">
+              Fear
+            </div>
+            <div id="buttonForgoten" class="btn " onclick="onForgoten()">
+              Forgoten
+            </div>
+            <div id="buttonGrief" class="btn " onclick="onGrief()">
+              Grief
+            </div>
+            <div id="buttonALife" class="btn " onclick="onALife()">
+              A Life
+            </div>
+            <div id="buttonSchool" class="btn " onclick="onSchool()">
+              School
+            </div>
+            <div id="buttonWork" class="btn " onclick="onWork()">
+              Work
+            </div>
+            <div id="buttonMe" class="btn " onclick="onMe()">
+              Me
+            </div>
+            <div id="buttonKyla" class="btn " onclick="onKyla()">
+              Kyla
+            </div>
+            <div id="buttonThingsToPainful" class="btn " onclick="onThingsToPainful()">
+              Things To Painful
+            </div>
+            <div id="buttonDearFutureSelf" class="btn " onclick="onDearFutureSelf()">
+              Dear Future Self
+            </div>
         </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div id="buttonOpenPoemsNav" class="col-6 mx-auto" onclick="OpenPoemsNav()"><i class="fas fa-book-open"></i> Poems</div>
+        </div>
+      </div>
+
+
+      <section id="mainPoems">
 
         <article id="mainPoemsBody">
           <div id="sectionFear" class=" fear ">
@@ -689,15 +700,16 @@
   <!-- Custom scripts for this template -->
   <script src="../js/main.js"></script>
 
+  <!--
   <script>
     $(document).ready(function() {
       var screenwidth = $(window).width();
-      if (screenwidth <= 720) {
-        window.location.href = 'poemsM.html';
+      if (screenwidth > 720) {
+        window.location.href = 'poems.html';
       }
     })
   </script>
-  <span id="mainPoemsMenuM"></span>
+  -->
 
 </body>
 

@@ -220,6 +220,7 @@ nav#menuTemp {
   height: auto;
   padding: 15px;
   color: #0D1313;
+  z-index: 10;
 }
 nav#menuTemp a {
   color: #0D1313;
@@ -301,24 +302,26 @@ button:focus {outline:0;}
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 11;
     top: 0;
     left: 0;
     background-color: #0D1313;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     transition: 0.5s;
   }
-
   #mainPoemsContentM {
     position: relative;
-    top: 50px;
+    opacity: 0;
+    top: 10px;
     width: 100%;
     text-align: center;
+    transition: 0.6s ease;
   }
   #mainPoemsContentM div {
     padding: 8px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 32px;
     color: #B4AA97;
     display: block;
     transition: 0.3s;
@@ -327,8 +330,14 @@ button:focus {outline:0;}
     margin-top: 15px;
     font-size:30px;
     text-align: center;
+    border: 2px solid #A8897D;
+    border-radius: 25px;
   }
   #mainPoemsMenuM .btn.active {
+    background-color: #A8897D;
+    color: #0D1313;
+  }
+  #mainPoemsMenuM .btn:hover {
     background-color: #A8897D;
     color: #0D1313;
   }
