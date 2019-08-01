@@ -16,6 +16,18 @@ window.onload = function() {
   textOne.classList.remove('hidden');
   textTwo.classList.add('hidden');
 }
+function isHover(e) {
+  return (e.parentElement.querySelector(':hover') === e);
+}
+
+document.addEventListener('mousemove', function checkHover() {
+  var hovered = isHover.document.getElementById('mydiv');
+  if (hovered !== checkHover.hovered) {
+    console.log(hovered ? 'hovered' : 'not hovered');
+    checkHover.hovered = hovered;
+  }
+});
+
 
 function OpenPoemsNav() {
   var screenwidth = $(window).width();
@@ -44,6 +56,7 @@ function onFear() {
   var work = document.getElementById('sectionWork');
   var me = document.getElementById('sectionMe');
   var kyla = document.getElementById('sectionKyla');
+  var malnourished = document.getElementById('sectionMalnourished');
   var thingstopainful = document.getElementById('sectionThingsToPainful');
   var dearfutureself = document.getElementById('sectionDearFutureSelf');
   var fearBtn = document.getElementById('buttonFear');
@@ -54,6 +67,7 @@ function onFear() {
   var workBtn = document.getElementById('buttonWork');
   var meBtn = document.getElementById('buttonMe');
   var kylaBtn = document.getElementById('buttonKyla');
+  var malnourishedBtn = document.getElementById('buttonMalnourished');
   var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
   var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('shown');
@@ -80,6 +94,9 @@ function onFear() {
   kyla.classList.add('hidden');
   kyla.classList.remove('shown');
   kylaBtn.classList.remove('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
@@ -97,6 +114,7 @@ function onForgoten() {
   var work = document.getElementById('sectionWork');
   var me = document.getElementById('sectionMe');
   var kyla = document.getElementById('sectionKyla');
+  var malnourished = document.getElementById('sectionMalnourished');
   var thingstopainful = document.getElementById('sectionThingsToPainful');
   var dearfutureself = document.getElementById('sectionDearFutureSelf');
   var fearBtn = document.getElementById('buttonFear');
@@ -107,6 +125,7 @@ function onForgoten() {
   var workBtn = document.getElementById('buttonWork');
   var meBtn = document.getElementById('buttonMe');
   var kylaBtn = document.getElementById('buttonKyla');
+  var malnourishedBtn = document.getElementById('buttonMalnourished');
   var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
   var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
@@ -133,6 +152,9 @@ function onForgoten() {
   kyla.classList.add('hidden');
   kyla.classList.remove('shown');
   kylaBtn.classList.remove('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
@@ -150,6 +172,7 @@ function onGrief() {
   var work = document.getElementById('sectionWork');
   var me = document.getElementById('sectionMe');
   var kyla = document.getElementById('sectionKyla');
+  var malnourished = document.getElementById('sectionMalnourished');
   var thingstopainful = document.getElementById('sectionThingsToPainful');
   var dearfutureself = document.getElementById('sectionDearFutureSelf');
   var fearBtn = document.getElementById('buttonFear');
@@ -160,6 +183,7 @@ function onGrief() {
   var workBtn = document.getElementById('buttonWork');
   var meBtn = document.getElementById('buttonMe');
   var kylaBtn = document.getElementById('buttonKyla');
+  var malnourishedBtn = document.getElementById('buttonMalnourished');
   var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
   var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
@@ -186,6 +210,9 @@ function onGrief() {
   kyla.classList.add('hidden');
   kyla.classList.remove('shown');
   kylaBtn.classList.remove('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
@@ -203,6 +230,7 @@ function onALife() {
   var work = document.getElementById('sectionWork');
   var me = document.getElementById('sectionMe');
   var kyla = document.getElementById('sectionKyla');
+  var malnourished = document.getElementById('sectionMalnourished');
   var thingstopainful = document.getElementById('sectionThingsToPainful');
   var dearfutureself = document.getElementById('sectionDearFutureSelf');
   var fearBtn = document.getElementById('buttonFear');
@@ -213,6 +241,7 @@ function onALife() {
   var workBtn = document.getElementById('buttonWork');
   var meBtn = document.getElementById('buttonMe');
   var kylaBtn = document.getElementById('buttonKyla');
+  var malnourishedBtn = document.getElementById('buttonMalnourished');
   var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
   var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
@@ -239,6 +268,9 @@ function onALife() {
   kyla.classList.add('hidden');
   kyla.classList.remove('shown');
   kylaBtn.classList.remove('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
@@ -256,6 +288,7 @@ function onSchool() {
   var work = document.getElementById('sectionWork');
   var me = document.getElementById('sectionMe');
   var kyla = document.getElementById('sectionKyla');
+  var malnourished = document.getElementById('sectionMalnourished');
   var thingstopainful = document.getElementById('sectionThingsToPainful');
   var dearfutureself = document.getElementById('sectionDearFutureSelf');
   var fearBtn = document.getElementById('buttonFear');
@@ -266,6 +299,7 @@ function onSchool() {
   var workBtn = document.getElementById('buttonWork');
   var meBtn = document.getElementById('buttonMe');
   var kylaBtn = document.getElementById('buttonKyla');
+  var malnourishedBtn = document.getElementById('buttonMalnourished');
   var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
   var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
@@ -292,6 +326,9 @@ function onSchool() {
   kyla.classList.add('hidden');
   kyla.classList.remove('shown');
   kylaBtn.classList.remove('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
@@ -309,6 +346,7 @@ function onWork() {
   var work = document.getElementById('sectionWork');
   var me = document.getElementById('sectionMe');
   var kyla = document.getElementById('sectionKyla');
+  var malnourished = document.getElementById('sectionMalnourished');
   var thingstopainful = document.getElementById('sectionThingsToPainful');
   var dearfutureself = document.getElementById('sectionDearFutureSelf');
   var fearBtn = document.getElementById('buttonFear');
@@ -319,6 +357,7 @@ function onWork() {
   var workBtn = document.getElementById('buttonWork');
   var meBtn = document.getElementById('buttonMe');
   var kylaBtn = document.getElementById('buttonKyla');
+  var malnourishedBtn = document.getElementById('buttonMalnourished');
   var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
   var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
@@ -345,6 +384,9 @@ function onWork() {
   kyla.classList.add('hidden');
   kyla.classList.remove('shown');
   kylaBtn.classList.remove('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
@@ -362,6 +404,7 @@ function onMe() {
   var work = document.getElementById('sectionWork');
   var me = document.getElementById('sectionMe');
   var kyla = document.getElementById('sectionKyla');
+  var malnourished = document.getElementById('sectionMalnourished');
   var thingstopainful = document.getElementById('sectionThingsToPainful');
   var dearfutureself = document.getElementById('sectionDearFutureSelf');
   var fearBtn = document.getElementById('buttonFear');
@@ -372,6 +415,7 @@ function onMe() {
   var workBtn = document.getElementById('buttonWork');
   var meBtn = document.getElementById('buttonMe');
   var kylaBtn = document.getElementById('buttonKyla');
+  var malnourishedBtn = document.getElementById('buttonMalnourished');
   var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
   var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
@@ -398,6 +442,9 @@ function onMe() {
   kyla.classList.add('hidden');
   kyla.classList.remove('shown');
   kylaBtn.classList.remove('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
@@ -415,6 +462,7 @@ function onKyla() {
   var work = document.getElementById('sectionWork');
   var me = document.getElementById('sectionMe');
   var kyla = document.getElementById('sectionKyla');
+  var malnourished = document.getElementById('sectionMalnourished');
   var thingstopainful = document.getElementById('sectionThingsToPainful');
   var dearfutureself = document.getElementById('sectionDearFutureSelf');
   var fearBtn = document.getElementById('buttonFear');
@@ -425,6 +473,7 @@ function onKyla() {
   var workBtn = document.getElementById('buttonWork');
   var meBtn = document.getElementById('buttonMe');
   var kylaBtn = document.getElementById('buttonKyla');
+  var malnourishedBtn = document.getElementById('buttonMalnourished');
   var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
   var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
@@ -451,6 +500,9 @@ function onKyla() {
   kyla.classList.add('shown');
   kyla.classList.remove('hidden');
   kylaBtn.classList.add('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
@@ -526,6 +578,7 @@ function onThingsToPainful() {
   var work = document.getElementById('sectionWork');
   var me = document.getElementById('sectionMe');
   var kyla = document.getElementById('sectionKyla');
+  var malnourished = document.getElementById('sectionMalnourished');
   var thingstopainful = document.getElementById('sectionThingsToPainful');
   var dearfutureself = document.getElementById('sectionDearFutureSelf');
   var fearBtn = document.getElementById('buttonFear');
@@ -536,6 +589,7 @@ function onThingsToPainful() {
   var workBtn = document.getElementById('buttonWork');
   var meBtn = document.getElementById('buttonMe');
   var kylaBtn = document.getElementById('buttonKyla');
+  var malnourishedBtn = document.getElementById('buttonMalnourished');
   var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
   var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
@@ -562,6 +616,9 @@ function onThingsToPainful() {
   kyla.classList.add('hidden');
   kyla.classList.remove('shown');
   kylaBtn.classList.remove('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
   thingstopainful.classList.add('shown');
   thingstopainful.classList.remove('hidden');
   thingstopainfulBtn.classList.add('active');
@@ -579,6 +636,7 @@ function onDearFutureSelf() {
   var work = document.getElementById('sectionWork');
   var me = document.getElementById('sectionMe');
   var kyla = document.getElementById('sectionKyla');
+  var malnourished = document.getElementById('sectionMalnourished');
   var thingstopainful = document.getElementById('sectionThingsToPainful');
   var dearfutureself = document.getElementById('sectionDearFutureSelf');
   var fearBtn = document.getElementById('buttonFear');
@@ -589,6 +647,7 @@ function onDearFutureSelf() {
   var workBtn = document.getElementById('buttonWork');
   var meBtn = document.getElementById('buttonMe');
   var kylaBtn = document.getElementById('buttonKyla');
+  var malnourishedBtn = document.getElementById('buttonMalnourished');
   var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
   var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
@@ -615,6 +674,9 @@ function onDearFutureSelf() {
   kyla.classList.add('hidden');
   kyla.classList.remove('shown');
   kylaBtn.classList.remove('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');

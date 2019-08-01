@@ -442,7 +442,83 @@ button:focus {outline:0;}
     max-width: 83.333333%
   }
 }
+/*____________________________________________________________________________________*/
+/* Star System */
 
+#rating-system {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#star1, #star2, #star3, #star4, #star5 {
+  padding: 10px;
+}
+
+#star1 .fa-star {
+  visibility: visible;
+  display: flex;
+}
+#star1 .fa-star-half-alt {
+  visibility: hidden;
+  display: none;
+}
+#star1 .fas {
+  visibility: hidden;
+  display: none;
+}
+
+#star2 .fa-star {
+  visibility: visible;
+  display: flex;
+}
+#star2 .fa-star-half-alt {
+  visibility: hidden;
+  display: none;
+}
+#star2 .fas {
+  visibility: hidden;
+  display: none;
+}
+
+#star3 .fa-star {
+  visibility: visible;
+  display: flex;
+}
+#star3 .fa-star-half-alt {
+  visibility: hidden;
+  display: none;
+}
+#star3 .fas {
+  visibility: hidden;
+  display: none;
+}
+
+#star4 .fa-star {
+  visibility: visible;
+  display: flex;
+}
+#star4 .fa-star-half-alt {
+  visibility: hidden;
+  display: none;
+}
+#star4 .fas {
+  visibility: hidden;
+  display: none;
+}
+
+#star5 .fa-star {
+  visibility: visible;
+  display: flex;
+}
+#star5 .fa-star-half-alt {
+  visibility: hidden;
+  display: none;
+}
+#star5 .fas {
+  visibility: hidden;
+  display: none;
+}
 /*____________________________________________________________________________________*/
 /* Some List Commands */
 
@@ -590,7 +666,11 @@ h1, h2, h3, h4, h5, h6 {
 .h3, h3 {
   font-size: 48px;
 }
-
+@media (max-width: 719px) {
+  .h3, h3 {
+    font-size: 34px;
+  }
+}
 .h4, h4 {
   font-size: 36px;
 }
