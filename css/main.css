@@ -370,7 +370,12 @@ button:focus {outline:0;}
   }
 }
 /*____________________________________________________________________________________*/
+/* Videos Page*/
 
+.youtube-player {
+  width: 560px !important;
+  height: 315px !important;
+}
 
 /*____________________________________________________________________________________*/
 /* Subsections */
@@ -387,6 +392,9 @@ button:focus {outline:0;}
   margin-right: -15px;
   margin-left: -15px;
   margin: 50px 0;
+  border: 5px solid #A8897D;
+}
+.musicTitleBox {
   background-color: #A8897D;
   box-shadow: -1px 1px 25px 10px rgba(51%,38%,34%,0.50);
 }
@@ -394,23 +402,30 @@ button:focus {outline:0;}
   color: #0D1313;
 }
 .colHome1 {
-  -ms-flex: 0 0 33.333333%;
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
 }
-.colHome1 img {
-  width: 100%;
-  height: auto;
-  padding: 15px;
+.rowHome div iframe {
+  padding-bottom: 15px;
 }
 .colHome2 {
-  -ms-flex: 0 0 66.666667%;
-  flex: 0 0 66.666667%;
-  max-width: 66.666667%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%
+}
+@media (min-width: 719px) {
+  .rowHome {
+    height: 350px;
+  }
 }
 @media (max-width: 719px) {
   .rowHome {
     display: block;
+  }
+  .rowHome div iframe {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   .colHome1 {
     margin-left: auto !important;
