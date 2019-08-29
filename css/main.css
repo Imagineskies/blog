@@ -52,6 +52,7 @@ body {
 
 .shown {
   visibility: visible;
+  display: block;
 }
 
 .overshown {
@@ -60,6 +61,9 @@ body {
 
 .overhidden {
   overflow: hidden;
+}
+.backgroundfix {
+  background-attachment: fixed !important;
 }
 .center {
   align-self: center;
@@ -173,6 +177,58 @@ article {
 header, footer, article, nav, aside {
   padding: 1em;
 }
+/*____________________________________________________________________________________*/
+/* Number Silde */
+
+.numberSlideTextBox {
+  width: 100%;
+  font-size: inherit;
+}
+
+.numberslide {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 30px;
+  background: #A8897D;
+  transition: opacity .2s;
+}
+
+.numberslide::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #833721;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.numberslide::-moz-range-thumb {
+  background: #833721;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+#thumb {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 28px;
+  border-radius: 25px;
+  background-color: #A8897D;
+  color: #0D1313;;
+}
+
+@media (max-width: 719px) {
+  .numberSlideTextBox {
+    font-size: 18px;
+  }
+}
+
+
 /*____________________________________________________________________________________*/
 
 iframe {
@@ -455,69 +511,54 @@ button:focus {outline:0;}
   padding: 10px;
 }
 
-#star1 .fa-star {
+/*
+ Far = Empty
+ Fas = Full
+*/
+
+#star1 .far {
   visibility: visible;
-  display: flex;
-}
-#star1 .fa-star-half-alt {
-  visibility: hidden;
-  display: none;
+  display: block
 }
 #star1 .fas {
   visibility: hidden;
-  display: none;
+  display: none
 }
 
-#star2 .fa-star {
+#star2 .far {
   visibility: visible;
-  display: flex;
-}
-#star2 .fa-star-half-alt {
-  visibility: hidden;
-  display: none;
+  display: block
 }
 #star2 .fas {
   visibility: hidden;
-  display: none;
+  display: none
 }
 
-#star3 .fa-star {
+#star3 .far {
   visibility: visible;
-  display: flex;
-}
-#star3 .fa-star-half-alt {
-  visibility: hidden;
-  display: none;
+  display: block
 }
 #star3 .fas {
   visibility: hidden;
-  display: none;
+  display: none
 }
 
-#star4 .fa-star {
+#star4 .far {
   visibility: visible;
-  display: flex;
-}
-#star4 .fa-star-half-alt {
-  visibility: hidden;
-  display: none;
+  display: block
 }
 #star4 .fas {
   visibility: hidden;
-  display: none;
+  display: none
 }
 
-#star5 .fa-star {
+#star5 .far {
   visibility: visible;
-  display: flex;
-}
-#star5 .fa-star-half-alt {
-  visibility: hidden;
-  display: none;
+  display: block
 }
 #star5 .fas {
   visibility: hidden;
-  display: none;
+  display: none
 }
 /*____________________________________________________________________________________*/
 /* Some List Commands */
