@@ -1,10 +1,4 @@
-
-$(".sliding-link").click(function(e) {
-    e.preventDefault();
-    var aid = $(this).attr("href");
-    console.log(aid)
-    $('html,body').animate({scrollTop: $(aid).offset().top - 100},1500);
-});
+/* Top Priority */
 
 window.onload = function() {
   var content = document.getElementById('content');
@@ -16,18 +10,69 @@ window.onload = function() {
   textOne.classList.remove('hidden');
   textTwo.classList.add('hidden');
 }
-function isHover(e) {
-  return (e.parentElement.querySelector(':hover') === e);
-}
 
-document.addEventListener('mousemove', function checkHover() {
-  var hovered = isHover.document.getElementById('mydiv');
-  if (hovered !== checkHover.hovered) {
-    console.log(hovered ? 'hovered' : 'not hovered');
-    checkHover.hovered = hovered;
-  }
+/* Var */
+var fear = document.getElementById('sectionFear');
+var forgoten = document.getElementById('sectionForgoten');
+var grief = document.getElementById('sectionGrief');
+var alife = document.getElementById('sectionALife');
+var school = document.getElementById('sectionSchool');
+var work = document.getElementById('sectionWork');
+var me = document.getElementById('sectionMe');
+var kyla = document.getElementById('sectionKyla');
+var malnourished = document.getElementById('sectionMalnourished');
+var thingstopainful = document.getElementById('sectionThingsToPainful');
+var dearfutureself = document.getElementById('sectionDearFutureSelf');
+var fearBtn = document.getElementById('buttonFear');
+var forgotenBtn = document.getElementById('buttonForgoten');
+var griefBtn = document.getElementById('buttonGrief');
+var alifeBtn = document.getElementById('buttonALife');
+var schoolBtn = document.getElementById('buttonSchool');
+var workBtn = document.getElementById('buttonWork');
+var meBtn = document.getElementById('buttonMe');
+var kylaBtn = document.getElementById('buttonKyla');
+var malnourishedBtn = document.getElementById('buttonMalnourished');
+var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
+var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
+var halo = document.getElementById('sectionHalo');
+var callofduty = document.getElementById('sectionCallOfDuty');
+var overwatch = document.getElementById('sectionOverwatch');
+var bioshock = document.getElementById('sectionBioShock');
+var haloBtn = document.getElementById('buttonHalo');
+var callofdutyBtn = document.getElementById('buttonCallOfDuty');
+var overwatchBtn = document.getElementById('buttonOverwatch');
+var bioshockBtn = document.getElementById('buttonBioShock');
+var walkthroughs = document.getElementById('sectionHaloWalkthroughs');
+var mapweapons = document.getElementById('sectionHaloMW');
+var haloetc = document.getElementById('sectionHaloEtc');
+var walkthroughsBtn = document.getElementById('buttonHaloWalkthroughs');
+var mapweaponsBtn = document.getElementById('buttonHaloMW');
+var haloetcBtn = document.getElementById('buttonHaloEtc');
+var numberSlideRange = $("#numberSlide").val();
+
+$(".sliding-link").click(function(e) {
+    e.preventDefault();
+    var aid = $(this).attr("href");
+    console.log(aid)
+    $('html,body').animate({scrollTop: $(aid).offset().top - 100},1500);
 });
 
+function makeid(length) {
+   var result           = '';
+   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+   var charactersLength = characters.length;
+   for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+
+function slideRange() {
+  var numberSlideRange = $("#numberSlide").val();
+  document.getElementById("thumb").innerHTML = numberSlideRange;
+  document.getElementById("numberSlideTextBox").value = makeid(numberSlideRange);
+  console.log(makeid(numberSlideRange));
+}
 
 function OpenPoemsNav() {
   var screenwidth = $(window).width();
@@ -48,28 +93,6 @@ function exitPoemsMenu() {
 function onFear() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   document.getElementById("mainPoemsContentM").style.opacity = 0;
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('shown');
   fear.classList.remove('hidden');
   fearBtn.classList.add('active');
@@ -106,28 +129,6 @@ function onFear() {
 }
 function onForgoten() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
   fear.classList.remove('shown');
   fearBtn.classList.remove('active');
@@ -164,28 +165,6 @@ function onForgoten() {
 }
 function onGrief() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
   fear.classList.remove('shown');
   fearBtn.classList.remove('active');
@@ -222,28 +201,6 @@ function onGrief() {
 }
 function onALife() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
   fear.classList.remove('shown');
   fearBtn.classList.remove('active');
@@ -280,28 +237,6 @@ function onALife() {
 }
 function onSchool() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
   fear.classList.remove('shown');
   fearBtn.classList.remove('active');
@@ -338,28 +273,6 @@ function onSchool() {
 }
 function onWork() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
   fear.classList.remove('shown');
   fearBtn.classList.remove('active');
@@ -396,28 +309,6 @@ function onWork() {
 }
 function onMe() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
   fear.classList.remove('shown');
   fearBtn.classList.remove('active');
@@ -454,28 +345,6 @@ function onMe() {
 }
 function onKyla() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
   fear.classList.remove('shown');
   fearBtn.classList.remove('active');
@@ -512,28 +381,6 @@ function onKyla() {
 }
 function onMalnourished() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
   fear.classList.remove('shown');
   fearBtn.classList.remove('active');
@@ -570,28 +417,6 @@ function onMalnourished() {
 }
 function onThingsToPainful() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
   fear.classList.remove('shown');
   fearBtn.classList.remove('active');
@@ -628,28 +453,6 @@ function onThingsToPainful() {
 }
 function onDearFutureSelf() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
-  var fear = document.getElementById('sectionFear');
-  var forgoten = document.getElementById('sectionForgoten');
-  var grief = document.getElementById('sectionGrief');
-  var alife = document.getElementById('sectionALife');
-  var school = document.getElementById('sectionSchool');
-  var work = document.getElementById('sectionWork');
-  var me = document.getElementById('sectionMe');
-  var kyla = document.getElementById('sectionKyla');
-  var malnourished = document.getElementById('sectionMalnourished');
-  var thingstopainful = document.getElementById('sectionThingsToPainful');
-  var dearfutureself = document.getElementById('sectionDearFutureSelf');
-  var fearBtn = document.getElementById('buttonFear');
-  var forgotenBtn = document.getElementById('buttonForgoten');
-  var griefBtn = document.getElementById('buttonGrief');
-  var alifeBtn = document.getElementById('buttonALife');
-  var schoolBtn = document.getElementById('buttonSchool');
-  var workBtn = document.getElementById('buttonWork');
-  var meBtn = document.getElementById('buttonMe');
-  var kylaBtn = document.getElementById('buttonKyla');
-  var malnourishedBtn = document.getElementById('buttonMalnourished');
-  var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
-  var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
   fear.classList.add('hidden');
   fear.classList.remove('shown');
   fearBtn.classList.remove('active');
@@ -686,14 +489,6 @@ function onDearFutureSelf() {
 }
 
 function onHalo() {
-  var halo = document.getElementById('sectionHalo');
-  var callofduty = document.getElementById('sectionCallOfDuty');
-  var overwatch = document.getElementById('sectionOverwatch');
-  var bioshock = document.getElementById('sectionBioShock');
-  var haloBtn = document.getElementById('buttonHalo');
-  var callofdutyBtn = document.getElementById('buttonCallOfDuty');
-  var overwatchBtn = document.getElementById('buttonOverwatch');
-  var bioshockBtn = document.getElementById('buttonBioShock');
   halo.classList.add('shown');
   halo.classList.remove('hidden');
   haloBtn.classList.add('active');
@@ -708,14 +503,6 @@ function onHalo() {
   bioshockBtn.classList.remove('active');
 }
 function onCallOfDuty() {
-  var halo = document.getElementById('sectionHalo');
-  var callofduty = document.getElementById('sectionCallOfDuty');
-  var overwatch = document.getElementById('sectionOverwatch');
-  var bioshock = document.getElementById('sectionBioShock');
-  var haloBtn = document.getElementById('buttonHalo');
-  var callofdutyBtn = document.getElementById('buttonCallOfDuty');
-  var overwatchBtn = document.getElementById('buttonOverwatch');
-  var bioshockBtn = document.getElementById('buttonBioShock');
   halo.classList.add('hidden');
   halo.classList.remove('shown');
   haloBtn.classList.remove('active');
@@ -730,14 +517,6 @@ function onCallOfDuty() {
   bioshockBtn.classList.remove('active');
 }
 function onOverwatch() {
-  var halo = document.getElementById('sectionHalo');
-  var callofduty = document.getElementById('sectionCallOfDuty');
-  var overwatch = document.getElementById('sectionOverwatch');
-  var bioshock = document.getElementById('sectionBioShock');
-  var haloBtn = document.getElementById('buttonHalo');
-  var callofdutyBtn = document.getElementById('buttonCallOfDuty');
-  var overwatchBtn = document.getElementById('buttonOverwatch');
-  var bioshockBtn = document.getElementById('buttonBioShock');
   halo.classList.add('hidden');
   halo.classList.remove('shown');
   haloBtn.classList.remove('active');
@@ -752,14 +531,6 @@ function onOverwatch() {
   bioshockBtn.classList.remove('active');
 }
 function onBioShock() {
-  var halo = document.getElementById('sectionHalo');
-  var callofduty = document.getElementById('sectionCallOfDuty');
-  var overwatch = document.getElementById('sectionOverwatch');
-  var bioshock = document.getElementById('sectionBioShock');
-  var haloBtn = document.getElementById('buttonHalo');
-  var callofdutyBtn = document.getElementById('buttonCallOfDuty');
-  var overwatchBtn = document.getElementById('buttonOverwatch');
-  var bioshockBtn = document.getElementById('buttonBioShock');
   halo.classList.add('hidden');
   halo.classList.remove('shown');
   haloBtn.classList.remove('active');
@@ -774,12 +545,6 @@ function onBioShock() {
   bioshockBtn.classList.add('active');
 }
 function onHaloWalkthroughs() {
-  var walkthroughs = document.getElementById('sectionHaloWalkthroughs');
-  var mapweapons = document.getElementById('sectionHaloMW');
-  var haloetc = document.getElementById('sectionHaloEtc');
-  var walkthroughsBtn = document.getElementById('buttonHaloWalkthroughs');
-  var mapweaponsBtn = document.getElementById('buttonHaloMW');
-  var haloetcBtn = document.getElementById('buttonHaloEtc');
   walkthroughs.classList.add('shown');
   walkthroughs.classList.remove('hidden');
   walkthroughsBtn.classList.add('active');
@@ -792,12 +557,6 @@ function onHaloWalkthroughs() {
 
 }
 function onHaloMW() {
-  var walkthroughs = document.getElementById('sectionHaloWalkthroughs');
-  var mapweapons = document.getElementById('sectionHaloMW');
-  var haloetc = document.getElementById('sectionHaloEtc');
-  var walkthroughsBtn = document.getElementById('buttonHaloWalkthroughs');
-  var mapweaponsBtn = document.getElementById('buttonHaloMW');
-  var haloetcBtn = document.getElementById('buttonHaloEtc');
   walkthroughs.classList.add('hidden');
   walkthroughs.classList.remove('shown');
   walkthroughsBtn.classList.remove('active');
@@ -809,12 +568,6 @@ function onHaloMW() {
   haloetcBtn.classList.remove('active');
 }
 function onHaloEtc() {
-  var walkthroughs = document.getElementById('sectionHaloWalkthroughs');
-  var mapweapons = document.getElementById('sectionHaloMW');
-  var haloetc = document.getElementById('sectionHaloEtc');
-  var walkthroughsBtn = document.getElementById('buttonHaloWalkthroughs');
-  var mapweaponsBtn = document.getElementById('buttonHaloMW');
-  var haloetcBtn = document.getElementById('buttonHaloEtc');
   walkthroughs.classList.add('hidden');
   walkthroughs.classList.remove('shown');
   walkthroughsBtn.classList.remove('active');
