@@ -264,6 +264,90 @@ section.welcome {
 section .dropdown-item {
   color: #A8897D;
 }
+/*____________________________________________________________________________________*/
+/* Tech */
+
+#tech {
+  display: flex;
+}
+
+@media (min-width: 719px) {
+  #techMenuTemp {
+    position: fixed;
+    transition: none;
+    height: 100%
+  }
+  #techMenuTempToggle {
+    display: none !important;
+  }
+}
+
+
+
+#techMenuTemp {
+  position: relative;
+  background-color: #A8897D;
+  font-family: 'Allerta Stencil', sans-serif;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  color: #0D1313;
+  flex: 0;
+  z-index: 4;
+}
+
+#techMenuTempToggle {
+  display: block;
+}
+#navbarCollapse {
+  transition: width 1s ease-in-out, height 1s ease-in-out;
+}
+#techMenuTemp a {
+  color: #0D1313;
+}
+#techMenuTempToggle i {
+  font-size: 32px;
+  font-weight: 900;
+  color: #0D1313;
+}
+#techMenuTemp .dropdown-menu {
+  background-color: #A8897D;
+}
+
+#techMenuTemp .dropdown-item {
+  color: #0D1313;
+}
+
+#techBody {
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+  background-image: url(../img/background.jpg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+#navLinks1, #navLinks2 {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+#techBody header {
+  background-color: #833721;
+  color: #A8897D;
+  height: auto;
+  display: block;
+}
+
+.techbox {
+  background-color: #0D1313;
+  opacity: .90;
+  width: 94.44444444444444%;
+  margin: 25px 10px;
+
+}
 
 /*____________________________________________________________________________________*/
 /* Top Menu */

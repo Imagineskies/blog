@@ -96,6 +96,12 @@
             </div>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="tech.html">
+              Tech
+            </a>
+          </li>
+
           <!-- Nav Divider -->
 
           <li class="nav-item-divider">
@@ -298,6 +304,19 @@
 
   <!-- Custom scripts for this template -->
   <script src="../js/main.js"></script>
+
+  <script>
+    window.onload = function() {
+      var content = document.getElementById('content');
+      var mainNav = document.getElementById('menuTemp');
+      var textOne = document.getElementById('textOne');
+      var textTwo = document.getElementById('textTwo');
+      content.classList.remove('hidden');
+      mainNav.classList.remove('hidden');
+      textOne.classList.remove('hidden');
+      textTwo.classList.add('hidden');
+    }
+  </script>
 </body>
 
 </html>

@@ -1,16 +1,3 @@
-/* Top Priority */
-
-window.onload = function() {
-  var content = document.getElementById('content');
-  var mainNav = document.getElementById('menuTemp');
-  var textOne = document.getElementById('textOne');
-  var textTwo = document.getElementById('textTwo');
-  content.classList.remove('hidden');
-  mainNav.classList.remove('hidden');
-  textOne.classList.remove('hidden');
-  textTwo.classList.add('hidden');
-}
-
 /* Var */
 var fear = document.getElementById('sectionFear');
 var forgoten = document.getElementById('sectionForgoten');
@@ -49,6 +36,9 @@ var walkthroughsBtn = document.getElementById('buttonHaloWalkthroughs');
 var mapweaponsBtn = document.getElementById('buttonHaloMW');
 var haloetcBtn = document.getElementById('buttonHaloEtc');
 var numberSlideRange = $("#numberSlide").val();
+var techMenuTemp = document.getElementById('techMenuTemp');
+var techMenuValue = 0;
+
 
 $(".sliding-link").click(function(e) {
     e.preventDefault();
@@ -88,6 +78,18 @@ function OpenPoemsNav() {
 
 function exitPoemsMenu() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
+}
+
+function techMenuTempDisply() {
+  if (techMenuValue === 0) {
+    techMenuValue = 1;
+    techMenuTemp.style.display = "block" ;
+    console.log(techMenuValue)
+  } else {
+    techMenuValue = 0;
+    techMenuTemp.style.display = "none";
+    console.log(techMenuValue)
+  }
 }
 
 function onFear() {
