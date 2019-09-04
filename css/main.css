@@ -538,13 +538,13 @@ button:focus {outline:0;}
   background-color: #A8897D;
   box-shadow: -1px 1px 25px 10px rgba(51%,38%,34%,0.50);
 }
-.rowHome div p {
-  color: #0D1313;
-}
 .colHome1 {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
+}
+.colHome1 video {
+  padding-left: 15px;
 }
 .rowHome div iframe {
   padding-bottom: 15px;
@@ -552,7 +552,11 @@ button:focus {outline:0;}
 .colHome2 {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
-  max-width: 50%
+  max-width: 50%;
+}
+.colHome2 p,.colHome2 a {
+  color: #833721;
+  font-size: 24px;
 }
 @media (min-width: 719px) {
   .rowHome {
@@ -650,7 +654,6 @@ button:focus {outline:0;}
 a {
   list-style-type: none;
   text-decoration: none;
-  font-size: 18px;
   text-align: inherit;
   float: none;
   background-color: transparent;
