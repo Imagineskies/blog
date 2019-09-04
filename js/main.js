@@ -6,7 +6,7 @@ var alife = document.getElementById('sectionALife');
 var school = document.getElementById('sectionSchool');
 var work = document.getElementById('sectionWork');
 var me = document.getElementById('sectionMe');
-var kyla = document.getElementById('sectionKyla');
+var kyla = document.getElementById('sectionSomeone');
 var malnourished = document.getElementById('sectionMalnourished');
 var thingstopainful = document.getElementById('sectionThingsToPainful');
 var dearfutureself = document.getElementById('sectionDearFutureSelf');
@@ -17,7 +17,7 @@ var alifeBtn = document.getElementById('buttonALife');
 var schoolBtn = document.getElementById('buttonSchool');
 var workBtn = document.getElementById('buttonWork');
 var meBtn = document.getElementById('buttonMe');
-var kylaBtn = document.getElementById('buttonKyla');
+var kylaBtn = document.getElementById('buttonSomeone');
 var malnourishedBtn = document.getElementById('buttonMalnourished');
 var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
 var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
@@ -345,7 +345,7 @@ function onMe() {
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
 }
-function onKyla() {
+function onSomeone() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   fear.classList.add('hidden');
   fear.classList.remove('shown');
