@@ -6,7 +6,6 @@ var alife = document.getElementById('sectionALife');
 var school = document.getElementById('sectionSchool');
 var work = document.getElementById('sectionWork');
 var me = document.getElementById('sectionMe');
-var kyla = document.getElementById('sectionSomeone');
 var malnourished = document.getElementById('sectionMalnourished');
 var thingstopainful = document.getElementById('sectionThingsToPainful');
 var dearfutureself = document.getElementById('sectionDearFutureSelf');
@@ -17,7 +16,6 @@ var alifeBtn = document.getElementById('buttonALife');
 var schoolBtn = document.getElementById('buttonSchool');
 var workBtn = document.getElementById('buttonWork');
 var meBtn = document.getElementById('buttonMe');
-var kylaBtn = document.getElementById('buttonSomeone');
 var malnourishedBtn = document.getElementById('buttonMalnourished');
 var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
 var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
@@ -38,23 +36,26 @@ var haloetcBtn = document.getElementById('buttonHaloEtc');
 var numberSlideRange = $("#numberSlide").val();
 var techMenuTemp = document.getElementById('techMenuTemp');
 var techMenuValue = 0;
+var poemBody = document.getElementById('poemBody');
 
 
 $(".sliding-link").click(function(e) {
-    e.preventDefault();
-    var aid = $(this).attr("href");
-    console.log(aid)
-    $('html,body').animate({scrollTop: $(aid).offset().top - 100},1500);
+  e.preventDefault();
+  var aid = $(this).attr("href");
+  console.log(aid)
+  $('html,body').animate({
+    scrollTop: $(aid).offset().top - 100
+  }, 1500);
 });
 
 function makeid(length) {
-   var result           = '';
-   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
-   var charactersLength = characters.length;
-   for ( var i = 0; i < length; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
-   return result;
+  var result = '';
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+  var charactersLength = characters.length;
+  for (var i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
 }
 
 function slideRange() {
@@ -62,6 +63,10 @@ function slideRange() {
   document.getElementById("thumb").innerHTML = numberSlideRange;
   document.getElementById("numberSlideTextBox").value = makeid(numberSlideRange);
   console.log(makeid(numberSlideRange));
+}
+
+function exitPoemsMenu() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
 }
 
 function OpenPoemsNav() {
@@ -73,17 +78,12 @@ function OpenPoemsNav() {
     document.getElementById("mainPoemsMenuM").style.width = "40%";
     document.getElementById("mainPoemsContentM").style.opacity = 1;
   }
-
-}
-
-function exitPoemsMenu() {
-  document.getElementById("mainPoemsMenuM").style.width = "0%";
 }
 
 function techMenuTempDisply() {
   if (techMenuValue === 0) {
     techMenuValue = 1;
-    techMenuTemp.style.display = "block" ;
+    techMenuTemp.style.display = "block";
     console.log(techMenuValue)
   } else {
     techMenuValue = 0;
@@ -116,9 +116,6 @@ function onFear() {
   me.classList.add('hidden');
   me.classList.remove('active');
   meBtn.classList.remove('active');
-  kyla.classList.add('hidden');
-  kyla.classList.remove('shown');
-  kylaBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
   malnourishedBtn.classList.remove('active');
@@ -129,6 +126,7 @@ function onFear() {
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
 }
+
 function onForgoten() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   fear.classList.add('hidden');
@@ -152,9 +150,6 @@ function onForgoten() {
   me.classList.add('hidden');
   me.classList.remove('active');
   meBtn.classList.remove('active');
-  kyla.classList.add('hidden');
-  kyla.classList.remove('shown');
-  kylaBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
   malnourishedBtn.classList.remove('active');
@@ -165,6 +160,7 @@ function onForgoten() {
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
 }
+
 function onGrief() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   fear.classList.add('hidden');
@@ -188,9 +184,6 @@ function onGrief() {
   me.classList.add('hidden');
   me.classList.remove('active');
   meBtn.classList.remove('active');
-  kyla.classList.add('hidden');
-  kyla.classList.remove('shown');
-  kylaBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
   malnourishedBtn.classList.remove('active');
@@ -201,6 +194,7 @@ function onGrief() {
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
 }
+
 function onALife() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   fear.classList.add('hidden');
@@ -224,9 +218,6 @@ function onALife() {
   me.classList.add('hidden');
   me.classList.remove('active');
   meBtn.classList.remove('active');
-  kyla.classList.add('hidden');
-  kyla.classList.remove('shown');
-  kylaBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
   malnourishedBtn.classList.remove('active');
@@ -237,6 +228,7 @@ function onALife() {
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
 }
+
 function onSchool() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   fear.classList.add('hidden');
@@ -260,9 +252,6 @@ function onSchool() {
   me.classList.add('hidden');
   me.classList.remove('active');
   meBtn.classList.remove('active');
-  kyla.classList.add('hidden');
-  kyla.classList.remove('shown');
-  kylaBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
   malnourishedBtn.classList.remove('active');
@@ -273,6 +262,7 @@ function onSchool() {
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
 }
+
 function onWork() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   fear.classList.add('hidden');
@@ -296,9 +286,6 @@ function onWork() {
   me.classList.add('hidden');
   me.classList.remove('active');
   meBtn.classList.remove('active');
-  kyla.classList.add('hidden');
-  kyla.classList.remove('shown');
-  kylaBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
   malnourishedBtn.classList.remove('active');
@@ -309,6 +296,7 @@ function onWork() {
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
 }
+
 function onMe() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   fear.classList.add('hidden');
@@ -332,9 +320,6 @@ function onMe() {
   me.classList.add('shown');
   me.classList.remove('hidden');
   meBtn.classList.add('active');
-  kyla.classList.add('hidden');
-  kyla.classList.remove('shown');
-  kylaBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
   malnourishedBtn.classList.remove('active');
@@ -345,42 +330,7 @@ function onMe() {
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
 }
-function onSomeone() {
-  document.getElementById("mainPoemsMenuM").style.width = "0%";
-  fear.classList.add('hidden');
-  fear.classList.remove('shown');
-  fearBtn.classList.remove('active');
-  forgoten.classList.add('hidden');
-  forgoten.classList.remove('shown');
-  forgotenBtn.classList.remove('active');
-  grief.classList.add('hidden');
-  grief.classList.remove('shown');
-  griefBtn.classList.remove('active');
-  alife.classList.add('hidden');
-  alife.classList.remove('shown');
-  alifeBtn.classList.remove('active');
-  school.classList.add('hidden');
-  school.classList.remove('shown');
-  schoolBtn.classList.remove('active');
-  work.classList.add('hidden');
-  work.classList.remove('shown');
-  workBtn.classList.remove('active');
-  me.classList.add('hidden');
-  me.classList.remove('active');
-  meBtn.classList.remove('active');
-  kyla.classList.add('shown');
-  kyla.classList.remove('hidden');
-  kylaBtn.classList.add('active');
-  malnourished.classList.add('hidden');
-  malnourished.classList.remove('shown');
-  malnourishedBtn.classList.remove('active');
-  thingstopainful.classList.add('hidden');
-  thingstopainful.classList.remove('shown');
-  thingstopainfulBtn.classList.remove('active');
-  dearfutureself.classList.add('hidden');
-  dearfutureself.classList.remove('shown');
-  dearfutureselfBtn.classList.remove('active');
-}
+
 function onMalnourished() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   fear.classList.add('hidden');
@@ -404,9 +354,6 @@ function onMalnourished() {
   me.classList.add('hidden');
   me.classList.remove('active');
   meBtn.classList.remove('active');
-  kyla.classList.add('hidden');
-  kyla.classList.remove('shown');
-  kylaBtn.classList.remove('active');
   malnourished.classList.add('shown');
   malnourished.classList.remove('hidden');
   malnourishedBtn.classList.add('active');
@@ -417,6 +364,7 @@ function onMalnourished() {
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
 }
+
 function onThingsToPainful() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   fear.classList.add('hidden');
@@ -440,9 +388,6 @@ function onThingsToPainful() {
   me.classList.add('hidden');
   me.classList.remove('active');
   meBtn.classList.remove('active');
-  kyla.classList.add('hidden');
-  kyla.classList.remove('shown');
-  kylaBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
   malnourishedBtn.classList.remove('active');
@@ -453,6 +398,7 @@ function onThingsToPainful() {
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
 }
+
 function onDearFutureSelf() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
   fear.classList.add('hidden');
@@ -476,9 +422,6 @@ function onDearFutureSelf() {
   me.classList.add('hidden');
   me.classList.remove('active');
   meBtn.classList.remove('active');
-  kyla.classList.add('hidden');
-  kyla.classList.remove('shown');
-  kylaBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
   malnourishedBtn.classList.remove('active');
@@ -504,6 +447,7 @@ function onHalo() {
   bioshock.classList.remove('shown');
   bioshockBtn.classList.remove('active');
 }
+
 function onCallOfDuty() {
   halo.classList.add('hidden');
   halo.classList.remove('shown');
@@ -518,6 +462,7 @@ function onCallOfDuty() {
   bioshock.classList.remove('shown');
   bioshockBtn.classList.remove('active');
 }
+
 function onOverwatch() {
   halo.classList.add('hidden');
   halo.classList.remove('shown');
@@ -532,6 +477,7 @@ function onOverwatch() {
   bioshock.classList.remove('shown');
   bioshockBtn.classList.remove('active');
 }
+
 function onBioShock() {
   halo.classList.add('hidden');
   halo.classList.remove('shown');
@@ -546,6 +492,7 @@ function onBioShock() {
   bioshock.classList.remove('hidden');
   bioshockBtn.classList.add('active');
 }
+
 function onHaloWalkthroughs() {
   walkthroughs.classList.add('shown');
   walkthroughs.classList.remove('hidden');
@@ -558,6 +505,7 @@ function onHaloWalkthroughs() {
   haloetcBtn.classList.remove('active');
 
 }
+
 function onHaloMW() {
   walkthroughs.classList.add('hidden');
   walkthroughs.classList.remove('shown');
@@ -569,6 +517,7 @@ function onHaloMW() {
   haloetc.classList.remove('shown');
   haloetcBtn.classList.remove('active');
 }
+
 function onHaloEtc() {
   walkthroughs.classList.add('hidden');
   walkthroughs.classList.remove('shown');
