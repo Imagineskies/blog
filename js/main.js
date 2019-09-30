@@ -19,25 +19,12 @@ var meBtn = document.getElementById('buttonMe');
 var malnourishedBtn = document.getElementById('buttonMalnourished');
 var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
 var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
-var halo = document.getElementById('sectionHalo');
-var callofduty = document.getElementById('sectionCallOfDuty');
-var overwatch = document.getElementById('sectionOverwatch');
-var bioshock = document.getElementById('sectionBioShock');
-var haloBtn = document.getElementById('buttonHalo');
-var callofdutyBtn = document.getElementById('buttonCallOfDuty');
-var overwatchBtn = document.getElementById('buttonOverwatch');
-var bioshockBtn = document.getElementById('buttonBioShock');
-var walkthroughs = document.getElementById('sectionHaloWalkthroughs');
-var mapweapons = document.getElementById('sectionHaloMW');
-var haloetc = document.getElementById('sectionHaloEtc');
-var walkthroughsBtn = document.getElementById('buttonHaloWalkthroughs');
-var mapweaponsBtn = document.getElementById('buttonHaloMW');
-var haloetcBtn = document.getElementById('buttonHaloEtc');
 var numberSlideRange = $("#numberSlide").val();
 var techMenuTemp = document.getElementById('techMenuTemp');
 var techMenuValue = 0;
 var poemBody = document.getElementById('poemBody');
 var formRecTextbox = document.getElementById('formRecTextbox');
+
 
 $(".sliding-link").click(function(e) {
   e.preventDefault();
@@ -114,7 +101,7 @@ function onFear() {
   work.classList.remove('shown');
   workBtn.classList.remove('active');
   me.classList.add('hidden');
-  me.classList.remove('active');
+  me.classList.remove('shown');
   meBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
@@ -148,7 +135,7 @@ function onForgoten() {
   work.classList.remove('shown');
   workBtn.classList.remove('active');
   me.classList.add('hidden');
-  me.classList.remove('active');
+  me.classList.remove('shown');
   meBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
@@ -182,7 +169,7 @@ function onGrief() {
   work.classList.remove('shown');
   workBtn.classList.remove('active');
   me.classList.add('hidden');
-  me.classList.remove('active');
+  me.classList.remove('shown');
   meBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
@@ -216,7 +203,7 @@ function onALife() {
   work.classList.remove('shown');
   workBtn.classList.remove('active');
   me.classList.add('hidden');
-  me.classList.remove('active');
+  me.classList.remove('shown');
   meBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
@@ -250,7 +237,7 @@ function onSchool() {
   work.classList.remove('shown');
   workBtn.classList.remove('active');
   me.classList.add('hidden');
-  me.classList.remove('active');
+  me.classList.remove('shown');
   meBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
@@ -284,7 +271,7 @@ function onWork() {
   work.classList.remove('hidden');
   workBtn.classList.add('active');
   me.classList.add('hidden');
-  me.classList.remove('active');
+  me.classList.remove('shown');
   meBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
@@ -352,7 +339,7 @@ function onMalnourished() {
   work.classList.remove('shown');
   workBtn.classList.remove('active');
   me.classList.add('hidden');
-  me.classList.remove('active');
+  me.classList.remove('shown');
   meBtn.classList.remove('active');
   malnourished.classList.add('shown');
   malnourished.classList.remove('hidden');
@@ -386,7 +373,7 @@ function onThingsToPainful() {
   work.classList.remove('shown');
   workBtn.classList.remove('active');
   me.classList.add('hidden');
-  me.classList.remove('active');
+  me.classList.remove('shown');
   meBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
@@ -420,7 +407,7 @@ function onDearFutureSelf() {
   work.classList.remove('shown');
   workBtn.classList.remove('active');
   me.classList.add('hidden');
-  me.classList.remove('active');
+  me.classList.remove('shown');
   meBtn.classList.remove('active');
   malnourished.classList.add('hidden');
   malnourished.classList.remove('shown');
@@ -431,101 +418,4 @@ function onDearFutureSelf() {
   dearfutureself.classList.add('shown');
   dearfutureself.classList.remove('hidden');
   dearfutureselfBtn.classList.add('active');
-}
-
-function onHalo() {
-  halo.classList.add('shown');
-  halo.classList.remove('hidden');
-  haloBtn.classList.add('active');
-  callofduty.classList.add('hidden');
-  callofduty.classList.remove('shown');
-  callofdutyBtn.classList.remove('active');
-  overwatch.classList.add('hidden');
-  overwatch.classList.remove('shown');
-  overwatchBtn.classList.remove('active');
-  bioshock.classList.add('hidden');
-  bioshock.classList.remove('shown');
-  bioshockBtn.classList.remove('active');
-}
-
-function onCallOfDuty() {
-  halo.classList.add('hidden');
-  halo.classList.remove('shown');
-  haloBtn.classList.remove('active');
-  callofduty.classList.add('shown');
-  callofduty.classList.remove('hidden');
-  callofdutyBtn.classList.add('active');
-  overwatch.classList.add('hidden');
-  overwatch.classList.remove('shown');
-  overwatchBtn.classList.remove('active');
-  bioshock.classList.add('hidden');
-  bioshock.classList.remove('shown');
-  bioshockBtn.classList.remove('active');
-}
-
-function onOverwatch() {
-  halo.classList.add('hidden');
-  halo.classList.remove('shown');
-  haloBtn.classList.remove('active');
-  callofduty.classList.add('hidden');
-  callofduty.classList.remove('shown');
-  callofdutyBtn.classList.remove('active');
-  overwatch.classList.add('shown');
-  overwatch.classList.remove('hidden');
-  overwatchBtn.classList.add('active');
-  bioshock.classList.add('hidden');
-  bioshock.classList.remove('shown');
-  bioshockBtn.classList.remove('active');
-}
-
-function onBioShock() {
-  halo.classList.add('hidden');
-  halo.classList.remove('shown');
-  haloBtn.classList.remove('active');
-  callofduty.classList.add('hidden');
-  callofduty.classList.remove('shown');
-  callofdutyBtn.classList.remove('active');
-  overwatch.classList.add('hidden');
-  overwatch.classList.remove('shown');
-  overwatchBtn.classList.remove('active');
-  bioshock.classList.add('shown');
-  bioshock.classList.remove('hidden');
-  bioshockBtn.classList.add('active');
-}
-
-function onHaloWalkthroughs() {
-  walkthroughs.classList.add('shown');
-  walkthroughs.classList.remove('hidden');
-  walkthroughsBtn.classList.add('active');
-  mapweapons.classList.add('hidden');
-  mapweapons.classList.remove('shown');
-  mapweaponsBtn.classList.remove('active');
-  haloetc.classList.add('hidden');
-  haloetc.classList.remove('shown');
-  haloetcBtn.classList.remove('active');
-
-}
-
-function onHaloMW() {
-  walkthroughs.classList.add('hidden');
-  walkthroughs.classList.remove('shown');
-  walkthroughsBtn.classList.remove('active');
-  mapweapons.classList.add('shown');
-  mapweapons.classList.remove('hidden');
-  mapweaponsBtn.classList.add('active');
-  haloetc.classList.add('hidden');
-  haloetc.classList.remove('shown');
-  haloetcBtn.classList.remove('active');
-}
-
-function onHaloEtc() {
-  walkthroughs.classList.add('hidden');
-  walkthroughs.classList.remove('shown');
-  walkthroughsBtn.classList.remove('active');
-  mapweapons.classList.add('hidden');
-  mapweapons.classList.remove('shown');
-  mapweaponsBtn.classList.remove('active');
-  haloetc.classList.add('shown');
-  haloetc.classList.remove('hidden');
-  haloetcBtn.classList.add('active');
 }
