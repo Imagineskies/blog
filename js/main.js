@@ -37,7 +37,7 @@ var numberSlideRange = $("#numberSlide").val();
 var techMenuTemp = document.getElementById('techMenuTemp');
 var techMenuValue = 0;
 var poemBody = document.getElementById('poemBody');
-
+var formRecTextbox = document.getElementById('formRecTextbox');
 
 $(".sliding-link").click(function(e) {
   e.preventDefault();

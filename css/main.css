@@ -62,14 +62,17 @@ body {
 .overhidden {
   overflow: hidden;
 }
+
 .backgroundfix {
   background-attachment: fixed !important;
 }
+
 .center {
   align-self: center;
   align-items: center;
   text-align: center;
 }
+
 .dropdown-item:focus, .dropdown-item:hover, .dropdown-item.active, .dropdown-item:active {
   color: #16181b;
   text-decoration: none;
@@ -77,7 +80,6 @@ body {
 }
 
 /*____________________________________________________________________________________*/
-
 /* Header */
 header.masthead {
   padding-top: 10rem;
@@ -90,6 +92,23 @@ header.masthead {
   text-align: center;
 }
 
+header.gameMasthead {
+  padding-top: 8rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: url(../img/background.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+@media (max-width: 719px) {
+  header.gameMasthead {
+    height: auto;
+  }
+}
+
 header .textbox {
   background-color: #0D1313;
   width: 100%;
@@ -98,6 +117,7 @@ header .textbox {
   padding: 15px;
   opacity: 0.98;
 }
+
 @media (max-width: 719px) {
   header h2 {
     font-size: 38px
@@ -109,54 +129,155 @@ header.masthead p {
   font-size: 18px;
   color: #B4AA97;
 }
+
+@media (min-width: 719px) {
+  header.gameMasthead {
+    padding-top: 12rem;
+  }
+}
+
 /*____________________________________________________________________________________*/
 /* Hove over Social Media*/
-
-
 /*____________________________________________________________________________________*/
 .welcome, .contacts, .about, .poetry {
   text-align: center;
 }
+
 .poems {
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
 }
+
 .poems div {
   display: inline-block;
   vertical-align: middle;
 }
-/*____________________________________________________________________________________*/
-/* Games */
 
-#sectionDescription {
+/*____________________________________________________________________________________*/
+/* Games First Page*/
+
+/* Some parts from w3schools */
+
+#gameIcon {
+  margin: 25px 0;
+}
+
+#gameIcon .col-sm-4{
+  position: relative;
+  width: 50%;
+}
+
+#gameIcon .col-sm-4:hover .gameOverlay {
+  opacity: 1;
+}
+
+img.gameIcon {
+  width: 380px;
+  height: 380px;
+}
+
+.gameTitle {
+  display: none;
+}
+
+.gameOverlayTitle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
-article {
-  text-align: center;
-}
-#sectionHalo iframe, #sectionCallOfDuty iframe, #sectionOverwatch iframe, #sectionBioShock iframe{
-  margin: 25px auto;
+
+.gameOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  right: 0;
+  height: 100%;
   width: 100%;
-  height: 550px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.80);
 }
 
-/*____________________________________________________________________________________*/
-/* Halo Walkthroughs */
-
-#sectionHaloWalkthroughs{
-  text-align: center;
-}
 @media (max-width: 719px) {
-  #sectionHaloWalkthroughs iframe{
-    height: 320px;
+  img.gameIcon {
     width: 320px;
+    height: 320px;
+  }
+  #gameIcon .col-sm-4 {
+    position: static;
+    display: block;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .gameTitle {
+    display: block;
+  }
+  .gameOverlay {
+    display: none;
+  }
+}
+/*____________________________________________________________________________________*/
+/* Individual Game Pages */
+
+/* Laptops/Tablets width above and/or @ 719px */
+
+@media (max-width: 719px) {
+  #gameSubMenuTop {
+    display: flex;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+  #gameSubMenuSide {
+    display: none;
+  }
+  #gameWikiBody {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 1000px;
+  }
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 86px;
+    z-index: 1020
+  }
+}
+
+/* Tablets/Phones width below 719px  */
+
+@media (min-width: 719px) {
+  #gameSubMenuTop {
+    display: none;
+  }
+  #gameSubMenuSide {
+    display: flex;
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%
+  }
+  #gameWikiBody {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+    height: 1000px;
+  }
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 86px;
+    z-index: 1020
   }
 }
 
 /*____________________________________________________________________________________*/
 /* Poem Menu */
-
 #mainPoems, #main, #blogNews {
   display: flex;
   min-height: calc(100vh - 40vh);
@@ -174,12 +295,13 @@ article {
 #mainPoems>nav, #main>nav, #blogNews>nav {
   order: -1;
 }
+
 header, footer, article, nav, aside {
   padding: 1em;
 }
+
 /*____________________________________________________________________________________*/
 /* Number Silde */
-
 .numberSlideTextBox {
   width: 100%;
   font-size: inherit;
@@ -202,13 +324,13 @@ header, footer, article, nav, aside {
   border-radius: 50%;
   cursor: pointer;
 }
+
 .numberslide::-moz-range-thumb {
   background: #833721;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
-
 }
 
 #thumb {
@@ -219,7 +341,8 @@ header, footer, article, nav, aside {
   font-size: 28px;
   border-radius: 25px;
   background-color: #A8897D;
-  color: #0D1313;;
+  color: #0D1313;
+  ;
 }
 
 @media (max-width: 719px) {
@@ -228,13 +351,12 @@ header, footer, article, nav, aside {
   }
 }
 
-
 /*____________________________________________________________________________________*/
-
 iframe {
   border: 0;
   margin: 15px;
 }
+
 hr {
   border: none;
   border-top: 5px double #A8897D;
@@ -243,18 +365,20 @@ hr {
   text-align: center;
   height: 5px;
 }
+
 @media (max-width: 719px) {
   .poems div {
     display: block;
   }
+
   iframe {
     border: 0;
     margin-top: 15px;
     margin-bottom: 15px;
   }
 }
-/*____________________________________________________________________________________*/
 
+/*____________________________________________________________________________________*/
 section.welcome {
   background-color: #0D1313;
   color: #B4AA97;
@@ -264,9 +388,9 @@ section.welcome {
 section .dropdown-item {
   color: #A8897D;
 }
+
 /*____________________________________________________________________________________*/
 /* Tech */
-
 #tech {
   display: flex;
 }
@@ -277,12 +401,11 @@ section .dropdown-item {
     transition: none;
     height: 100%
   }
+
   #techMenuTempToggle {
     display: none !important;
   }
 }
-
-
 
 #techMenuTemp {
   position: relative;
@@ -299,17 +422,21 @@ section .dropdown-item {
 #techMenuTempToggle {
   display: block;
 }
+
 #navbarCollapse {
   transition: width 1s ease-in-out, height 1s ease-in-out;
 }
+
 #techMenuTemp a {
   color: #0D1313;
 }
+
 #techMenuTempToggle i {
   font-size: 32px;
   font-weight: 900;
   color: #0D1313;
 }
+
 #techMenuTemp .dropdown-menu {
   background-color: #A8897D;
 }
@@ -334,6 +461,7 @@ section .dropdown-item {
   justify-content: center;
   margin: 15px;
 }
+
 #techBody header {
   background-color: #833721;
   color: #A8897D;
@@ -346,12 +474,10 @@ section .dropdown-item {
   opacity: .90;
   width: 94.44444444444444%;
   margin: 25px 10px;
-
 }
 
 /*____________________________________________________________________________________*/
 /* Top Menu */
-
 nav#menuTemp {
   position: fixed;
   background-color: #A8897D;
@@ -362,13 +488,16 @@ nav#menuTemp {
   color: #0D1313;
   z-index: 10;
 }
+
 nav#menuTemp a {
   color: #0D1313;
 }
+
 nav#menuTemp .fab {
   font-size: 32px;
-  color:  #0D1313;
+  color: #0D1313;
 }
+
 nav#menuTemp .dropdown-menu {
   background-color: #A8897D;
 }
@@ -376,8 +505,8 @@ nav#menuTemp .dropdown-menu {
 nav#menuTemp .dropdown-item {
   color: #0D1313;
 }
-/*____________________________________________________________________________________*/
 
+/*____________________________________________________________________________________*/
 /* Buttons */
 .btn {
   background-color: #0D1313;
@@ -389,6 +518,7 @@ nav#menuTemp .dropdown-item {
   height: auto;
   text-decoration: none;
 }
+
 @media (max-width: 1023px) {
   .btn {
     background-color: #0D1313;
@@ -402,116 +532,127 @@ nav#menuTemp .dropdown-item {
     text-decoration: none
   }
 }
+
 .btn:hover {
   color: #16181b;
   text-decoration: none;
   background-color: #f8f9fa;
   padding: 15px;
 }
-button:focus {outline:0;}
+
+button:focus {
+  outline: 0;
+}
 
 .btn.active {
   background-color: #A8897D;
   color: #0D1313;
 }
+
 /*____________________________________________________________________________________*/
 /* Poems Page*/
+/* Poems Menu */
+#mainPoemsMenu .btn {
+  background-color: #A8897D;
+  color: #0D1313;
+  padding: 15px;
+  margin: 0;
+}
 
-  /* Poems Menu */
+#mainPoemsMenu .btn:hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+  padding: 15px;
+}
 
-  #mainPoemsMenu .btn {
-    background-color: #A8897D;
-    color: #0D1313;
-    padding: 15px;
-    margin: 0;
-  }
-  #mainPoemsMenu .btn:hover {
-    color: #16181b;
-    text-decoration: none;
-    background-color: #f8f9fa;
-    padding: 15px;
-  }
-  #mainPoemsMenu .btn.active {
-    background-color: #0D1313;
-    color: #A8897D;
-  }
+#mainPoemsMenu .btn.active {
+  background-color: #0D1313;
+  color: #A8897D;
+}
 
-  /* Second Menu Poem */
+/* Second Menu Poem */
+#mainPoemsMenuM {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  background-color: #0D1313;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
 
-    #mainPoemsMenuM {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 11;
-    top: 0;
-    left: 0;
-    background-color: #0D1313;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    transition: 0.5s;
-  }
-  #mainPoemsContentM {
-    position: relative;
-    opacity: 0;
-    top: 10px;
-    width: 100%;
-    text-align: center;
-    transition: 0.6s ease;
-  }
-  #mainPoemsContentM div {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 32px;
-    color: #B4AA97;
-    display: block;
-    transition: 0.3s;
-  }
-  #buttonOpenPoemsNav {
-    margin-top: 15px;
-    font-size:30px;
-    text-align: center;
-    border: 2px solid #A8897D;
-    border-radius: 25px;
-  }
-  #mainPoemsMenuM .btn.active {
-    background-color: #A8897D;
-    color: #0D1313;
-  }
-  #mainPoemsMenuM .btn:hover {
-    background-color: #A8897D;
-    color: #0D1313;
-  }
+#mainPoemsContentM {
+  position: relative;
+  opacity: 0;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  transition: 0.6s ease;
+}
 
+#mainPoemsContentM div {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 32px;
+  color: #B4AA97;
+  display: block;
+  transition: 0.3s;
+}
 
+#buttonOpenPoemsNav {
+  margin-top: 15px;
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid #A8897D;
+  border-radius: 25px;
+}
 
+#mainPoemsMenuM .btn.active {
+  background-color: #A8897D;
+  color: #0D1313;
+}
+
+#mainPoemsMenuM .btn:hover {
+  background-color: #A8897D;
+  color: #0D1313;
+}
 
 #navbarPagesPoems {
   color: #833721;
 }
-#poemsDropDown{
+
+#poemsDropDown {
   background-color: #0D1313;
 }
+
 #mainPoemsBody {
   flex: 0 0 83.333333%;
   max-width: 83.333333%;
   margin-left: auto !important;
-  margin-right:  auto !important;
+  margin-right: auto !important;
 }
+
 @media (max-width: 719px) {
   #mainPoemsMenu {
     z-index: 5;
   }
+
   #mainPoemsMenu .row {
     width: 100%;
     height: auto;
   }
+
   #navbarPagesPoems {
     text-align: center;
   }
 }
+
 /*____________________________________________________________________________________*/
 /* Videos Page*/
-
 .youtube-player {
   width: 560px !important;
   height: 315px !important;
@@ -519,7 +660,6 @@ button:focus {outline:0;}
 
 /*____________________________________________________________________________________*/
 /* Subsections */
-
 .rowHome {
   display: -ms-flexbox;
   display: flex;
@@ -534,43 +674,53 @@ button:focus {outline:0;}
   margin: 50px 0;
   border: 5px solid #A8897D;
 }
+
 .musicTitleBox {
   background-color: #A8897D;
-  box-shadow: -1px 1px 25px 10px rgba(51%,38%,34%,0.50);
+  box-shadow: -1px 1px 25px 10px rgba(51%, 38%, 34%, 0.50);
 }
+
 .colHome1 {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
 }
+
 .colHome1 video {
   padding-left: 15px;
 }
+
 .rowHome div iframe {
   padding-bottom: 15px;
 }
+
 .colHome2 {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
 }
-.colHome2 p,.colHome2 a {
+
+.colHome2 p, .colHome2 a {
   color: #833721;
   font-size: 24px;
 }
+
 @media (min-width: 719px) {
   .rowHome {
     height: 350px;
   }
 }
+
 @media (max-width: 719px) {
   .rowHome {
     display: block;
   }
+
   .rowHome div iframe {
     margin-left: auto !important;
     margin-right: auto !important;
   }
+
   .colHome1 {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -578,6 +728,7 @@ button:focus {outline:0;}
     flex: 0 0 83.333333%;
     max-width: 83.333333%
   }
+
   .colHome2 {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -586,9 +737,9 @@ button:focus {outline:0;}
     max-width: 83.333333%
   }
 }
+
 /*____________________________________________________________________________________*/
 /* Star System */
-
 #rating-system {
   display: flex;
   flex-direction: row;
@@ -603,11 +754,11 @@ button:focus {outline:0;}
  Far = Empty
  Fas = Full
 */
-
 #star1 .far {
   visibility: visible;
   display: block
 }
+
 #star1 .fas {
   visibility: hidden;
   display: none
@@ -617,6 +768,7 @@ button:focus {outline:0;}
   visibility: visible;
   display: block
 }
+
 #star2 .fas {
   visibility: hidden;
   display: none
@@ -626,6 +778,7 @@ button:focus {outline:0;}
   visibility: visible;
   display: block
 }
+
 #star3 .fas {
   visibility: hidden;
   display: none
@@ -635,6 +788,7 @@ button:focus {outline:0;}
   visibility: visible;
   display: block
 }
+
 #star4 .fas {
   visibility: hidden;
   display: none
@@ -644,13 +798,14 @@ button:focus {outline:0;}
   visibility: visible;
   display: block
 }
+
 #star5 .fas {
   visibility: hidden;
   display: none
 }
+
 /*____________________________________________________________________________________*/
 /* Some List Commands */
-
 a {
   list-style-type: none;
   text-decoration: none;
@@ -662,14 +817,13 @@ a {
 a:hover {
   color: #B4AA97;
 }
-#mainPoemsMenu
-.icon-rap {
+
+#mainPoemsMenu .icon-rap {
   background-color: #915e21;
   width: auto;
 }
 
 /*____________________________________________________________________________________*/
-
 p {
   margin: 16px 0px;
   font-size: 16px;
@@ -686,54 +840,68 @@ pre {
   float: none;
   color: #B4AA97;
 }
+
 ul {
   text-decoration: none;
 }
+
 .wrapword {
-    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    white-space: pre-wrap;       /* css-3 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
-    white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
-    word-break: break-all;
-    white-space: normal;
+  white-space: -moz-pre-wrap !important;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  white-space: pre-wrap;
+  /* css-3 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap;
+  /* Newer versions of Chrome/Safari*/
+  word-break: break-all;
+  white-space: normal;
 }
+
 /*____________________________________________________________________________________*/
 /* Icon Controls */
-
 #socialmedia {
   height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 #socialmedia a {
   padding: 15px;
   margin: 10px;
   text-decoration: none;
 }
-@media (min-width: 719px){
+
+@media (min-width: 719px) {
   .overlay {
-      visibility: hidden;
-      display: none;
-      color: #0D1313;
-      text-decoration: none;
+    visibility: hidden;
+    display: none;
+    color: #0D1313;
+    text-decoration: none;
   }
+
   #instagram, #twitter, #soundcloud {
     border-radius: 50%;
     height: 50px;
     width: 50px;
     transition: height 2s ease, width 2s ease, background-color 2s;
   }
-  #instagram:hover, #twitter:hover, #soundcloud:hover{
+
+  #instagram:hover, #twitter:hover, #soundcloud:hover {
     height: 250px;
     width: 250px;
     background-color: #A8897D;
   }
+
   #instagram:hover i, #twitter:hover i, #soundcloud:hover i {
     color: #0D1313;
   }
+
   #instagram:hover .overlay, #twitter:hover .overlay, #soundcloud:hover .overlay {
     visibility: visible;
     display: block;
@@ -745,6 +913,7 @@ ul {
     -webkit-animation-timing-function: ease-in-out;
   }
 }
+
 i.fab {
   font-size: 42px;
   color: #B4AA97;
@@ -754,11 +923,15 @@ i.fab {
   #socialmedia {
     height: auto;
   }
+
   i.fab {
     font-size: 36px;
   }
 }
 
+a {
+  color: #A8897D;
+}
 a, ul, ol, li {
   text-decoration: none;
   list-style-type: none;
@@ -766,7 +939,6 @@ a, ul, ol, li {
 
 /*____________________________________________________________________________________*/
 /* Text */
-
 .h1, .h2, .h3, .h4, .h5, .h6, .p, h1, h2, h3, h4, h5, h6, p {
   padding: 15px;
   margin: 10px;
@@ -794,11 +966,13 @@ h1, h2, h3, h4, h5, h6 {
 .h3, h3 {
   font-size: 48px;
 }
+
 @media (max-width: 719px) {
   .h3, h3 {
     font-size: 34px;
   }
 }
+
 .h4, h4 {
   font-size: 36px;
 }
