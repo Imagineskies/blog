@@ -111,15 +111,38 @@
     </div> <!-- / .container -->
   </nav>
 
-  <header class="masthead backgroundfix">
+  <header class="testHeader masthead backgroundfix">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto textbox">
-          <h2>PW Gen</h2>
-          <div id="diff"></div>
-          <input type="text" id="numberSlideTextBox" class="numberSlideTextBox">
-          <input type="range" id="numberSlide" min="8" max="64" value="20" class="numberslide" oninput="slideRange()" onchange="slideRange()">
-          <div id="thumb" class="mx-auto">20</div>
+      <div class="textbox">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2>PW Gen</h2>
+            <div id="pdwCopy" class="btn-inverted col-lg-1 mx-auto">Copy</div>
+            <label id="numberSlideTextBoxLabel"></label>
+            <input type="text" id="numberSlideTextBox" aria-labelledby="numberSlideTextBoxLabel" class="numberSlideTextBox">
+            <input type="range" id="numberSlide" min="8" max="64" value="20" class="numberslide" oninput="slideRange()" onchange="slideRange()">
+            <div id="thumb" class="mx-auto">20</div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="checkBox">
+            <div class="col-lg-3">
+              <div id="checkMarkOne" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel1"></div>
+              <p id="checkMarkEmptyLabel1">Upper Case Letters</p>
+            </div>
+            <div class="col-lg-3">
+              <div id="checkMarkTwo" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel2"></div>
+              <p id="checkMarkEmptyLabel2">Lower Case Letters</p>
+            </div>
+            <div class="col-lg-3">
+              <div id="checkMarkThree" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel3"></div>
+              <p id="checkMarkEmptyLabel3">Numbers</p>
+            </div>
+            <div class="col-lg-3">
+              <div id="checkMarkFour" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel4"></div>
+              <p id="checkMarkEmptyLabel4">Special characters</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -127,11 +150,11 @@
 
   <section>
     <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto textbox">
-            <h2>Untitled</h2>
-          </div>
+      <div class="row">
+        <div class="col-lg-10 mx-auto textbox">
+          <h2>Untitled</h2>
         </div>
+      </div>
     </div>
   </section>
 
@@ -148,9 +171,7 @@
   <script src="../js/main.js"></script>
 
   <script>
-  window.onload = function() {
-    slideRange()
-  }
+    window.onload = function() {}
   </script>
 </body>
 

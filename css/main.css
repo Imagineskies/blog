@@ -107,15 +107,17 @@ header.gameMasthead {
   header.gameMasthead {
     height: auto;
   }
+  header.testHeader {
+    height: auto;
+  }
 }
 
 header .textbox {
-  background-color: #0D1313;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAE0lEQVQYV2PkFRb+xYAGGGkgCABebgXnHnM+YQAAAABJRU5ErkJggg==") repeat;
   width: 100%;
   height: auto;
   text-align: center;
   padding: 15px;
-  opacity: 0.98;
 }
 
 @media (max-width: 719px) {
@@ -136,8 +138,46 @@ header.masthead p {
   }
 }
 
+#checkBox {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
 /*____________________________________________________________________________________*/
-/* Hove over Social Media*/
+/* Check Box */
+#checkBox p{
+    padding: 0;
+    margin: 0;
+}
+
+.checkMarkEmpty {
+  height: 35px;
+  background-image: url(../img/square-regular.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkMarkFull {
+  height: 35px;
+  background-image: url(../img/check-square-regular.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 719px) {
+  #checkBox {
+    display: block
+  }
+}
+
 /*____________________________________________________________________________________*/
 .welcome, .contacts, .about, .poetry {
   text-align: center;
@@ -156,14 +196,12 @@ header.masthead p {
 
 /*____________________________________________________________________________________*/
 /* Games First Page*/
-
 /* Some parts from w3schools */
-
 #gameIcon {
   margin: 25px 0;
 }
 
-#gameIcon .col-sm-4{
+#gameIcon .col-sm-4 {
   position: relative;
   width: 50%;
 }
@@ -207,6 +245,7 @@ img.gameIcon {
     width: 320px;
     height: 320px;
   }
+
   #gameIcon .col-sm-4 {
     position: static;
     display: block;
@@ -214,18 +253,19 @@ img.gameIcon {
     margin-left: auto !important;
     margin-right: auto !important;
   }
+
   .gameTitle {
     display: block;
   }
+
   .gameOverlay {
     display: none;
   }
 }
+
 /*____________________________________________________________________________________*/
 /* Individual Game Pages */
-
 /* Laptops/Tablets width above and/or @ 719px */
-
 @media (max-width: 719px) {
   #gameSubMenuTop {
     display: flex;
@@ -233,15 +273,18 @@ img.gameIcon {
     flex: 0 0 100%;
     max-width: 100%
   }
+
   #gameSubMenuSide {
     display: none;
   }
+
   #gameWikiBody {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
     height: 1000px;
   }
+
   .sticky-top {
     position: -webkit-sticky;
     position: sticky;
@@ -251,23 +294,25 @@ img.gameIcon {
 }
 
 /* Tablets/Phones width below 719px  */
-
 @media (min-width: 719px) {
   #gameSubMenuTop {
     display: none;
   }
+
   #gameSubMenuSide {
     display: flex;
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
     max-width: 16.666667%
   }
+
   #gameWikiBody {
     -ms-flex: 0 0 83.333333%;
     flex: 0 0 83.333333%;
     max-width: 83.333333%;
     height: 1000px;
   }
+
   .sticky-top {
     position: -webkit-sticky;
     position: sticky;
@@ -519,20 +564,6 @@ nav#menuTemp .dropdown-item {
   text-decoration: none;
 }
 
-@media (max-width: 1023px) {
-  .btn {
-    background-color: #0D1313;
-    color: #A8897D;
-    padding: 15px;
-    margin: 5px 0;
-    border-radius: 0;
-    width: auto;
-    height: auto;
-    display: block;
-    text-decoration: none
-  }
-}
-
 .btn:hover {
   color: #16181b;
   text-decoration: none;
@@ -540,13 +571,52 @@ nav#menuTemp .dropdown-item {
   padding: 15px;
 }
 
-button:focus {
-  outline: 0;
-}
-
 .btn.active {
   background-color: #A8897D;
   color: #0D1313;
+}
+
+.dropdown-menu {
+  background-color: inherit;
+}
+
+.btn-inverted {
+  background-color: #A8897D;
+  color: #0D1313;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+}
+
+.btn-inverted:hover {
+  background-color: #16181b;
+  color: #f8f9fa !important;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.btn-inverted.active {
+  background-color: #0D1313;
+  color: #A8897D;
+}
+
+@media (max-width: 1023px) {
+  .btn {
+    display: block;
+  }
+
+  #bioshockGameDropdown {
+    padding: 0
+  }
+}
+
+.btn:focus, .btn:active {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 /*____________________________________________________________________________________*/
@@ -932,6 +1002,7 @@ i.fab {
 a {
   color: #A8897D;
 }
+
 a, ul, ol, li {
   text-decoration: none;
   list-style-type: none;

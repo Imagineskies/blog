@@ -1,4 +1,5 @@
-/* Var */
+'use strict';
+// Variable
 var fear = document.getElementById('sectionFear');
 var forgoten = document.getElementById('sectionForgoten');
 var grief = document.getElementById('sectionGrief');
@@ -19,12 +20,30 @@ var meBtn = document.getElementById('buttonMe');
 var malnourishedBtn = document.getElementById('buttonMalnourished');
 var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
 var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
+var pdwCopyBtn = document.getElementById('pdwCopy');
 var numberSlideRange = $("#numberSlide").val();
 var techMenuTemp = document.getElementById('techMenuTemp');
 var techMenuValue = 0;
 var poemBody = document.getElementById('poemBody');
 var formRecTextbox = document.getElementById('formRecTextbox');
+const checkMarkOne = document.querySelector('#checkMarkOne');
+const checkMarkTwo = document.querySelector('#checkMarkTwo');
+const checkMarkThree = document.querySelector('#checkMarkThree');
+const checkMarkFour = document.querySelector('#checkMarkFour');
+var checkMarkOnePlace = 'unclicked';
+var checkMarkTwoPlace = 'unclicked';
+var checkMarkThreePlace = 'unclicked';
+var checkMarkFourPlace = 'unclicked';
+var upperCase = "";
+var lowerCase = "";
+var numbers = "";
+var special = "";
 
+/*
+____________________________________________________________________________________
+Functions
+____________________________________________________________________________________
+*/
 
 $(".sliding-link").click(function(e) {
   e.preventDefault();
@@ -35,12 +54,44 @@ $(".sliding-link").click(function(e) {
   }, 1500);
 });
 
+function clearBox(elementID){
+  document.getElementById(elementID).innerHTML = "";
+}
+
+function removeCheck(i) {
+  i.classList.add('checkMarkEmpty');
+  i.classList.remove('checkMarkFull');
+}
+
+function addCheck(i) {
+  i.classList.add('checkMarkFull');
+  i.classList.remove('checkMarkEmpty');
+}
+
+function adLCL() {
+  var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+}
+
+function addSN() {
+  var numbers = '0123456789';
+}
+
+function addNB() {
+  var special = '!@#$%^&*()';
+}
+
 function makeid(length) {
-  var result = '';
-  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
-  var charactersLength = characters.length;
-  for (var i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  var characterTotal = upperCase + lowerCase + numbers + special;
+  console.log(characterTotal)
+  if (characterTotal == "") {
+    document.getElementById("numberSlideTextBoxLabel").innerHTML = "You must make a selection for this to work.";
+  } else {
+    var result = '';
+    document.getElementById("numberSlideTextBoxLabel").innerHTML = "";
+    var charactersLength = characterTotal.length;
+    for (var i = 0; i < length; i++) {
+      result += characterTotal.charAt(Math.floor(Math.random() * charactersLength));
+    }
   }
   return result;
 }
@@ -48,11 +99,11 @@ function makeid(length) {
 function slideRange() {
   var numberSlideRange = $("#numberSlide").val();
   document.getElementById("thumb").innerHTML = numberSlideRange;
+  document.getElementById("numberSlideTextBox").value = "";
   document.getElementById("numberSlideTextBox").value = makeid(numberSlideRange);
-  console.log(makeid(numberSlideRange));
 }
 
-function exitPoemsMenu() {
+ function exitPoemsMenu() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
 }
 
@@ -419,3 +470,73 @@ function onDearFutureSelf() {
   dearfutureself.classList.remove('hidden');
   dearfutureselfBtn.classList.add('active');
 }
+
+/*
+____________________________________________________________________________________
+Event Listeners
+____________________________________________________________________________________
+*/
+
+checkMarkOne.addEventListener('click', function() {
+  if (checkMarkOnePlace == 'unclicked') {
+    addCheck(checkMarkOne);
+    upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    checkMarkOnePlace = 'clicked';
+    console.log('True')
+  } else {
+    removeCheck(checkMarkOne);
+    upperCase = "";
+    checkMarkOnePlace = 'unclicked';
+    console.log('False')
+  }
+});
+
+checkMarkTwo.addEventListener('click', function() {
+  if (checkMarkTwoPlace == 'unclicked') {
+    addCheck(checkMarkTwo);
+    lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+    checkMarkTwoPlace = 'clicked';
+    console.log('True')
+  } else {
+    removeCheck(checkMarkTwo);
+    lowerCase = "";
+    checkMarkTwoPlace = 'unclicked';
+    console.log('False')
+  }
+});
+
+checkMarkThree.addEventListener('click', function() {
+  if (checkMarkThreePlace == 'unclicked') {
+    addCheck(checkMarkThree);
+    numbers = '0123456789';
+    checkMarkThreePlace = 'clicked';
+    console.log('True')
+  } else {
+    removeCheck(checkMarkThree);
+    numbers = "";
+    checkMarkThreePlace = 'unclicked';
+    console.log('False')
+  }
+});
+
+checkMarkFour.addEventListener('click', function() {
+  if (checkMarkFourPlace == 'unclicked') {
+    addCheck(checkMarkFour);
+    special = '!@#$%^&*()';
+    checkMarkFourPlace = 'clicked';
+    console.log('True')
+  } else {
+    removeCheck(checkMarkFour);
+    special = "";
+    checkMarkFourPlace = 'unclicked';
+    console.log('False')
+  }
+});
+
+pdwCopyBtn.addEventListener('click', function() {
+  var nubContent = document.getElementById("numberSlideTextBox");
+  nubContent.select();
+  nubContent.setSelectionRange(0, 256)
+  document.execCommand("copy", );
+  alert('Text has been coppied!');
+});
