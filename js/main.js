@@ -30,12 +30,21 @@ const checkMarkOne = document.querySelector('#checkMarkOne');
 const checkMarkTwo = document.querySelector('#checkMarkTwo');
 const checkMarkThree = document.querySelector('#checkMarkThree');
 const checkMarkFour = document.querySelector('#checkMarkFour');
-var checkMarkOnePlace = 'unclicked';
-var checkMarkTwoPlace = 'unclicked';
+const checkMarkFive = document.querySelector('#checkMarkFive');
+const checkMarkSix = document.querySelector('#checkMarkSix');
+const base64ConvertBtn = document.getElementById('base64ConvertButton');
+const base64Title = document.getElementById('base64Title');
+const base64Output = document.getElementById("base64EncodeTextBoxEnd");
+const base64Input = document.getElementById("base64EncodeTextBoxStart");
+var checkMarkOnePlace = 'clicked';
+var checkMarkTwoPlace = 'clicked';
 var checkMarkThreePlace = 'unclicked';
 var checkMarkFourPlace = 'unclicked';
-var upperCase = "";
-var lowerCase = "";
+var checkMarkFivePlace = 'unclicked';
+var checkMarkSixPlace = 'unclicked';
+var base64Place = 'encode';
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "";
 var special = "";
 
@@ -101,6 +110,16 @@ function slideRange() {
   document.getElementById("thumb").innerHTML = numberSlideRange;
   document.getElementById("numberSlideTextBox").value = "";
   document.getElementById("numberSlideTextBox").value = makeid(numberSlideRange);
+}
+
+function base64Convertion() {
+  if (base64Place == 'encode') {
+    // Encodes text to base64
+    base64Output.value = btoa(base64Input.value);
+  } else {
+    // Decodes text to base64
+    base64Output.value = atob(base64Input.value);
+  }
 }
 
  function exitPoemsMenu() {
@@ -531,6 +550,26 @@ checkMarkFour.addEventListener('click', function() {
     checkMarkFourPlace = 'unclicked';
     console.log('False')
   }
+});
+
+// 5 is encode, 6 is decode
+
+checkMarkFive.addEventListener('click', function() {
+  checkMarkSix.classList.remove('checkMarkFull');
+  checkMarkSix.classList.add('checkMarkEmpty');
+  checkMarkFive.classList.add('checkMarkFull');
+  checkMarkFive.classList.remove('checkMarkEmpty');
+  base64Title.innerHTML = 'Base 64 Encoder';
+  base64Place = 'encode';
+});
+
+checkMarkSix.addEventListener('click', function() {
+  checkMarkSix.classList.add('checkMarkFull');
+  checkMarkSix.classList.remove('checkMarkEmpty');
+  checkMarkFive.classList.remove('checkMarkFull');
+  checkMarkFive.classList.add('checkMarkEmpty');
+  base64Title.innerHTML = 'Base 64 Decoder';
+  base64Place = 'decode';
 });
 
 pdwCopyBtn.addEventListener('click', function() {

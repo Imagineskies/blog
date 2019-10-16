@@ -73,12 +73,6 @@ body {
   text-align: center;
 }
 
-.dropdown-item:focus, .dropdown-item:hover, .dropdown-item.active, .dropdown-item:active {
-  color: #16181b;
-  text-decoration: none;
-  background-color: #f8f9fa
-}
-
 /*____________________________________________________________________________________*/
 /* Header */
 header.masthead {
@@ -138,7 +132,10 @@ header.masthead p {
   }
 }
 
-#checkBox {
+/*____________________________________________________________________________________*/
+/* Check Box */
+
+.checkBox {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -149,11 +146,15 @@ header.masthead p {
   max-width: 100%;
 }
 
-/*____________________________________________________________________________________*/
-/* Check Box */
-#checkBox p{
+.checkBox p{
     padding: 0;
     margin: 0;
+}
+
+#pdwCopy {
+  width: 100%;
+  font-size: 28px;
+  text-align: center;
 }
 
 .checkMarkEmpty {
@@ -177,6 +178,17 @@ header.masthead p {
     display: block
   }
 }
+/*____________________________________________________________________________________*/
+/* Base 64 Converter */
+
+#base64EncodeTextBoxStart, #base64EncodeTextBoxEnd, #base64DecodeTextBoxStart, #base64DecodeTextBoxEnd {
+  width: 100%;
+  height: auto;
+}
+#base64EncodeTextBoxEnd, #base64DecodeTextBoxEnd {
+  margin-top: 10px;
+}
+
 
 /*____________________________________________________________________________________*/
 .welcome, .contacts, .about, .poetry {
@@ -432,6 +444,37 @@ section.welcome {
 
 section .dropdown-item {
   color: #A8897D;
+}
+
+/*____________________________________________________________________________________*/
+/* New-PI-Game */
+
+#pios_game {
+  height: auto;
+  width: 100%;
+  align-items: center;
+}
+#pios_gameScreenWrapper {
+  border: thick solid #833721;
+  margin-top: 10px;
+}
+#pios_gameScreenWrapper h4{
+  margin: 0;
+  padding: 0;
+}
+#pios_gameScreen {
+  height: 400px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+#pios_gamePlayerInput {
+  width: 100%;
+  margin: 15px 0;
+}
+
+#pios_gamePlayerInputWrapper {
+  border: thick solid #833721;
 }
 
 /*____________________________________________________________________________________*/
