@@ -9,6 +9,7 @@ var work = document.getElementById('sectionWork');
 var me = document.getElementById('sectionMe');
 var malnourished = document.getElementById('sectionMalnourished');
 var thingstopainful = document.getElementById('sectionThingsToPainful');
+var nudity = document.getElementById('sectionNudity');
 var dearfutureself = document.getElementById('sectionDearFutureSelf');
 var fearBtn = document.getElementById('buttonFear');
 var forgotenBtn = document.getElementById('buttonForgoten');
@@ -19,6 +20,7 @@ var workBtn = document.getElementById('buttonWork');
 var meBtn = document.getElementById('buttonMe');
 var malnourishedBtn = document.getElementById('buttonMalnourished');
 var thingstopainfulBtn = document.getElementById('buttonThingsToPainful');
+var nudityBtn = document.getElementById('buttonNudity');
 var dearfutureselfBtn = document.getElementById('buttonDearFutureSelf');
 var pdwCopyBtn = document.getElementById('pdwCopy');
 var numberSlideRange = $("#numberSlide").val();
@@ -26,16 +28,6 @@ var techMenuTemp = document.getElementById('techMenuTemp');
 var techMenuValue = 0;
 var poemBody = document.getElementById('poemBody');
 var formRecTextbox = document.getElementById('formRecTextbox');
-const checkMarkOne = document.querySelector('#checkMarkOne');
-const checkMarkTwo = document.querySelector('#checkMarkTwo');
-const checkMarkThree = document.querySelector('#checkMarkThree');
-const checkMarkFour = document.querySelector('#checkMarkFour');
-const checkMarkFive = document.querySelector('#checkMarkFive');
-const checkMarkSix = document.querySelector('#checkMarkSix');
-const base64ConvertBtn = document.getElementById('base64ConvertButton');
-const base64Title = document.getElementById('base64Title');
-const base64Output = document.getElementById("base64EncodeTextBoxEnd");
-const base64Input = document.getElementById("base64EncodeTextBoxStart");
 var checkMarkOnePlace = 'clicked';
 var checkMarkTwoPlace = 'clicked';
 var checkMarkThreePlace = 'unclicked';
@@ -47,6 +39,19 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "";
 var special = "";
+
+// Constants
+const checkMarkOne = document.querySelector('#checkMarkOne');
+const checkMarkTwo = document.querySelector('#checkMarkTwo');
+const checkMarkThree = document.querySelector('#checkMarkThree');
+const checkMarkFour = document.querySelector('#checkMarkFour');
+const checkMarkFive = document.querySelector('#checkMarkFive');
+const checkMarkSix = document.querySelector('#checkMarkSix');
+var gameSubMenuTop = document.getElementById('#gameSubMenuTop')
+const base64ConvertBtn = document.getElementById('base64ConvertButton');
+const base64Title = document.getElementById('base64Title');
+const base64Output = document.getElementById("base64EncodeTextBoxEnd");
+const base64Input = document.getElementById("base64EncodeTextBoxStart");
 
 /*
 ____________________________________________________________________________________
@@ -122,6 +127,8 @@ function base64Convertion() {
   }
 }
 
+
+
  function exitPoemsMenu() {
   document.getElementById("mainPoemsMenuM").style.width = "0%";
 }
@@ -179,6 +186,9 @@ function onFear() {
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
+  nudity.classList.add('hidden');
+  nudity.classList.remove('shown');
+  nudityBtn.classList.remove('active');
   dearfutureself.classList.add('hidden');
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
@@ -213,6 +223,9 @@ function onForgoten() {
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
+  nudity.classList.add('hidden');
+  nudity.classList.remove('shown');
+  nudityBtn.classList.remove('active');
   dearfutureself.classList.add('hidden');
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
@@ -247,6 +260,9 @@ function onGrief() {
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
+  nudity.classList.add('hidden');
+  nudity.classList.remove('shown');
+  nudityBtn.classList.remove('active');
   dearfutureself.classList.add('hidden');
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
@@ -281,6 +297,9 @@ function onALife() {
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
+  nudity.classList.add('hidden');
+  nudity.classList.remove('shown');
+  nudityBtn.classList.remove('active');
   dearfutureself.classList.add('hidden');
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
@@ -315,6 +334,9 @@ function onSchool() {
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
+  nudity.classList.add('hidden');
+  nudity.classList.remove('shown');
+  nudityBtn.classList.remove('active');
   dearfutureself.classList.add('hidden');
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
@@ -349,6 +371,9 @@ function onWork() {
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
+  nudity.classList.add('hidden');
+  nudity.classList.remove('shown');
+  nudityBtn.classList.remove('active');
   dearfutureself.classList.add('hidden');
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
@@ -383,6 +408,9 @@ function onMe() {
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
+  nudity.classList.add('hidden');
+  nudity.classList.remove('shown');
+  nudityBtn.classList.remove('active');
   dearfutureself.classList.add('hidden');
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
@@ -417,6 +445,9 @@ function onMalnourished() {
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
+  nudity.classList.add('hidden');
+  nudity.classList.remove('shown');
+  nudityBtn.classList.remove('active');
   dearfutureself.classList.add('hidden');
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
@@ -451,6 +482,46 @@ function onThingsToPainful() {
   thingstopainful.classList.add('shown');
   thingstopainful.classList.remove('hidden');
   thingstopainfulBtn.classList.add('active');
+  nudity.classList.add('hidden');
+  nudity.classList.remove('shown');
+  nudityBtn.classList.remove('active');
+  dearfutureself.classList.add('hidden');
+  dearfutureself.classList.remove('shown');
+  dearfutureselfBtn.classList.remove('active');
+}
+
+function onNudity() {
+  document.getElementById("mainPoemsMenuM").style.width = "0%";
+  fear.classList.add('hidden');
+  fear.classList.remove('shown');
+  fearBtn.classList.remove('active');
+  forgoten.classList.add('hidden');
+  forgoten.classList.remove('shown');
+  forgotenBtn.classList.remove('active');
+  grief.classList.add('hidden');
+  grief.classList.remove('shown');
+  griefBtn.classList.remove('active');
+  alife.classList.add('hidden');
+  alife.classList.remove('shown');
+  alifeBtn.classList.remove('active');
+  school.classList.add('hidden');
+  school.classList.remove('shown');
+  schoolBtn.classList.remove('active');
+  work.classList.add('hidden');
+  work.classList.remove('shown');
+  workBtn.classList.remove('active');
+  me.classList.add('hidden');
+  me.classList.remove('shown');
+  meBtn.classList.remove('active');
+  malnourished.classList.add('hidden');
+  malnourished.classList.remove('shown');
+  malnourishedBtn.classList.remove('active');
+  thingstopainful.classList.add('hidden');
+  thingstopainful.classList.remove('shown');
+  thingstopainfulBtn.classList.remove('active');
+  nudity.classList.add('shown');
+  nudity.classList.remove('hidden');
+  nudityBtn.classList.add('active');
   dearfutureself.classList.add('hidden');
   dearfutureself.classList.remove('shown');
   dearfutureselfBtn.classList.remove('active');
@@ -485,6 +556,9 @@ function onDearFutureSelf() {
   thingstopainful.classList.add('hidden');
   thingstopainful.classList.remove('shown');
   thingstopainfulBtn.classList.remove('active');
+  nudity.classList.add('hidden');
+  nudity.classList.remove('shown');
+  nudityBtn.classList.remove('active');
   dearfutureself.classList.add('shown');
   dearfutureself.classList.remove('hidden');
   dearfutureselfBtn.classList.add('active');
@@ -495,6 +569,24 @@ ________________________________________________________________________________
 Event Listeners
 ____________________________________________________________________________________
 */
+
+
+// https://stackoverflow.com/a/31223774
+var lastScrollTop = 0;
+// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+   var st = window.pageYOffset; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+   if (st >= 850){
+     gameSubMenuTop.classList.add('position-fixed');
+     gameSubMenuTop.ClassList.remove('sticky-top');
+     console.log('Below')
+   } else {
+     gameSubMenuTop.classList.add('sticky-top');
+     gameSubMenuTop.ClassList.remove('position-fixed');
+     console.log('Above')
+   }
+   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false);
 
 checkMarkOne.addEventListener('click', function() {
   if (checkMarkOnePlace == 'unclicked') {
