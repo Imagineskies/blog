@@ -435,6 +435,11 @@ hr {
   }
 }
 
+.list-group-item {
+  background-color: rgba(0, 0, 0, 0.0);
+  text-align: center;
+}
+
 /*____________________________________________________________________________________*/
 section.welcome {
   background-color: #0D1313;
