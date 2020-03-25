@@ -585,7 +585,7 @@ section .dropdown-item {
 }
 
 #navbarCollapse {
-  transition: width 1s ease-in-out, height 1s ease-in-out;
+  transition: width .5s ease-in-out, height .5s ease-in-out;
 }
 
 #techMenuTemp a {
