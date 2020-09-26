@@ -34,11 +34,16 @@ var checkMarkThreePlace = 'unclicked';
 var checkMarkFourPlace = 'unclicked';
 var checkMarkFivePlace = 'unclicked';
 var checkMarkSixPlace = 'unclicked';
+var checkMarkSevenPlace = 'unclicked';
+var checkMarkEightPlace = 'unclicked';
+var checkMarkNinePlace = 'unclicked';
+var harded = 'unactive';
 var base64Place = 'encode';
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "";
 var special = "";
+var extnd = "";
 
 // Constants
 const checkMarkOne = document.querySelector('#checkMarkOne');
@@ -47,11 +52,14 @@ const checkMarkThree = document.querySelector('#checkMarkThree');
 const checkMarkFour = document.querySelector('#checkMarkFour');
 const checkMarkFive = document.querySelector('#checkMarkFive');
 const checkMarkSix = document.querySelector('#checkMarkSix');
+const checkMarkSeven = document.querySelector('#checkMarkSeven');
+const checkMarkEight = document.querySelector('#checkMarkEight');
 var gameSubMenuTop = document.getElementById('#gameSubMenuTop')
 const base64ConvertBtn = document.getElementById('base64ConvertButton');
 const base64Title = document.getElementById('base64Title');
 const base64Output = document.getElementById("base64EncodeTextBoxEnd");
 const base64Input = document.getElementById("base64EncodeTextBoxStart");
+const numberSlider = document.getElementById("numberSlide");
 
 /*
 ____________________________________________________________________________________
@@ -59,42 +67,9 @@ Functions
 ____________________________________________________________________________________
 */
 
-$(document).ready(function() {
-
-	$('.image-popup-vertical-fit').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		mainClass: 'mfp-img-mobile',
-		image: {
-			verticalFit: true
-		}
-
-	});
-
-	$('.image-popup-fit-width').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		image: {
-			verticalFit: false
-		}
-	});
-
-	$('.image-popup-no-margins').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: false,
-		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-		image: {
-			verticalFit: true
-		},
-		zoom: {
-			enabled: true,
-			duration: 300 // don't foget to change the duration also in CSS
-		}
-	});
-
-});
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 $(".sliding-link").click(function(e) {
   e.preventDefault();
@@ -104,6 +79,19 @@ $(".sliding-link").click(function(e) {
     scrollTop: $(aid).offset().top - 100
   }, 1500);
 });
+
+String.prototype.shuffle = function () {
+    var a = this.split(""),
+        n = a.length;
+
+    for(var i = n - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+    }
+    return a.join("");
+}
 
 function clearBox(elementID){
   document.getElementById(elementID).innerHTML = "";
@@ -131,12 +119,25 @@ function addNB() {
   var special = '!@#$%^&*()';
 }
 
+function addEA() {
+  var extnd = '€‚¢ƒÆµ„ŒÇøŠ•‡†';
+}
+
 function makeid(length) {
-  var characterTotal = upperCase + lowerCase + numbers + special;
-  console.log(characterTotal)
+  var characterTotal = upperCase + lowerCase + numbers + special + extnd;
   if (characterTotal == "") {
     document.getElementById("numberSlideTextBoxLabel").innerHTML = "You must make a selection for this to work.";
-  } else {
+  }
+  else if (harded == 'active') {
+    var characterTotal = characterTotal.shuffle();
+    var result = '';
+    document.getElementById("numberSlideTextBoxLabel").innerHTML = "";
+    var charactersLength = characterTotal.length;
+    for (var i = 0; i < length; i++) {
+      result += characterTotal.charAt(Math.floor(Math.random() * charactersLength));
+    }
+  }
+  else {
     var result = '';
     document.getElementById("numberSlideTextBoxLabel").innerHTML = "";
     var charactersLength = characterTotal.length;
@@ -616,11 +617,9 @@ window.addEventListener("scroll", function(){ // or window.addEventListener("scr
    if (st >= 850){
      gameSubMenuTop.classList.add('position-fixed');
      gameSubMenuTop.ClassList.remove('sticky-top');
-     console.log('Below')
    } else {
      gameSubMenuTop.classList.add('sticky-top');
      gameSubMenuTop.ClassList.remove('position-fixed');
-     console.log('Above')
    }
    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 }, false);
@@ -630,12 +629,10 @@ checkMarkOne.addEventListener('click', function() {
     addCheck(checkMarkOne);
     upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     checkMarkOnePlace = 'clicked';
-    console.log('True')
   } else {
     removeCheck(checkMarkOne);
     upperCase = "";
     checkMarkOnePlace = 'unclicked';
-    console.log('False')
   }
 });
 
@@ -644,12 +641,10 @@ checkMarkTwo.addEventListener('click', function() {
     addCheck(checkMarkTwo);
     lowerCase = 'abcdefghijklmnopqrstuvwxyz';
     checkMarkTwoPlace = 'clicked';
-    console.log('True')
   } else {
     removeCheck(checkMarkTwo);
     lowerCase = "";
     checkMarkTwoPlace = 'unclicked';
-    console.log('False')
   }
 });
 
@@ -658,12 +653,10 @@ checkMarkThree.addEventListener('click', function() {
     addCheck(checkMarkThree);
     numbers = '0123456789';
     checkMarkThreePlace = 'clicked';
-    console.log('True')
   } else {
     removeCheck(checkMarkThree);
     numbers = "";
     checkMarkThreePlace = 'unclicked';
-    console.log('False')
   }
 });
 
@@ -672,14 +665,50 @@ checkMarkFour.addEventListener('click', function() {
     addCheck(checkMarkFour);
     special = '!@#$%^&*()';
     checkMarkFourPlace = 'clicked';
-    console.log('True')
   } else {
     removeCheck(checkMarkFour);
     special = "";
     checkMarkFourPlace = 'unclicked';
-    console.log('False')
   }
 });
+
+checkMarkSeven.addEventListener('click', function() {
+  if (checkMarkSevenPlace == 'unclicked') {
+    addCheck(checkMarkSeven);
+    extnd = '€‚¢ƒÆµ„ŒÇøŠ•‡†'
+    checkMarkSevenPlace = 'clicked';
+  } else {
+    removeCheck(checkMarkSeven);
+    extnd = "";
+    checkMarkSevenPlace = 'unclicked';
+  }
+});
+
+checkMarkEight.addEventListener('click', function() {
+  if (checkMarkEightPlace == 'unclicked') {
+    addCheck(checkMarkEight);
+    numberSlider.max = 256;
+    checkMarkEightPlace = 'clicked';
+  } else {
+    removeCheck(checkMarkEight);
+    numberSlider.max = 64;
+    checkMarkEightPlace = 'unclicked';
+  }
+});
+
+checkMarkNine.addEventListener('click', function() {
+  if (checkMarkNinePlace == 'unclicked') {
+    addCheck(checkMarkNine);
+		harded = 'active';
+    checkMarkNinePlace = 'clicked';
+  } else {
+    removeCheck(checkMarkNine);
+		harded = 'unactive';
+    checkMarkNinePlace = 'unclicked';
+  }
+});
+
+
 
 // 5 is encode, 6 is decode
 

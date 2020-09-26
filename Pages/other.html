@@ -68,7 +68,7 @@
 
           <li class="nav-item">
             <a class="nav-link" href="poems.html">
-              Photos
+              Poems
             </a>
           </li>
 
@@ -129,36 +129,56 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <h2>Random Strand Gen</h2>
+          <h2>Password Generator</h2>
           <div id="pdwCopy" class="btn-inverted col-lg-1 mx-auto"><i class="far fa-clipboard"></i></div>
           <label id="numberSlideTextBoxLabel"></label>
           <input type="text" id="numberSlideTextBox" aria-labelledby="numberSlideTextBoxLabel" class="numberSlideTextBox">
           <input type="range" id="numberSlide" min="8" max="64" value="20" class="numberslide" oninput="slideRange()" onchange="slideRange()">
           <div id="thumb" class="mx-auto">20</div>
+        </div>Range
+      </div>
+      <div class="checkBox row">
+        <div class="col-lg-3 mx-auto">
+          <div id="checkMarkOne" class="checkMarkFull" aria-labelledby="checkMarkEmptyLabel1"></div>
+          <p id="checkMarkEmptyLabel1">Upper Case Letters</p>
+        </div>
+        <div class="col-lg-3 mx-auto">
+          <div id="checkMarkTwo" class="checkMarkFull" aria-labelledby="checkMarkEmptyLabel2"></div>
+          <p id="checkMarkEmptyLabel2">Lower Case Letters</p>
+        </div>
+        <div class="col-lg-3 mx-auto">
+          <div id="checkMarkThree" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel3"></div>
+          <p id="checkMarkEmptyLabel3">Numbers</p>
         </div>
       </div>
-      <div class="row">
-        <div class="checkBox">
-          <div class="col-lg-3">
-            <div id="checkMarkOne" class="checkMarkFull" aria-labelledby="checkMarkEmptyLabel1"></div>
-            <p id="checkMarkEmptyLabel1">Upper Case Letters</p>
-          </div>
-          <div class="col-lg-3">
-            <div id="checkMarkTwo" class="checkMarkFull" aria-labelledby="checkMarkEmptyLabel2"></div>
-            <p id="checkMarkEmptyLabel2">Lower Case Letters</p>
-          </div>
-          <div class="col-lg-3">
-            <div id="checkMarkThree" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel3"></div>
-            <p id="checkMarkEmptyLabel3">Numbers</p>
-          </div>
-          <div class="col-lg-3">
-            <div id="checkMarkFour" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel4"></div>
-            <p id="checkMarkEmptyLabel4">Special characters</p>
-          </div>
+      <div class="checkBox row">
+        <div class="col-lg-3 mx-auto">
+          <div id="checkMarkFour" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel4"></div>
+          <p id="checkMarkEmptyLabel4">Special characters</p>
+        </div>
+        <div class="col-lg-3 mx-auto">
+          <a data-toggle="tooltip" data-placement="bottom" title="More characters not commonly fount on a keyboard.">
+            <div id="checkMarkSeven" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel7"></div>
+            <p id="checkMarkEmptyLabel7">Extended ASCII</p>
+          </a>
+        </div>
+        <div class="col-lg-3 mx-auto">
+          <a data-toggle="tooltip" data-placement="bottom" title="Extends the range of the slider.">
+            <div id="checkMarkEight" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel8"></div>
+            <p id="checkMarkEmptyLabel8">Range Extender</p>
+         </a>
+        </div>
+      </div>
+      <div class="checkBox row">
+        <div class="col-lg-3 mx-auto">
+          <a data-toggle="tooltip" data-placement="bottom" title="Randomize the string before generation.">
+            <div id="checkMarkNine" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel9"></div>
+            <p id="checkMarkEmptyLabel9">Harden</p>
+         </a>
         </div>
       </div>
       <br />
-      <div class="row">
+      <div class="checkBox row">
         <div class="col-lg-8 mx-auto">
           <h2 id="base64Title">Base 64 Encoder</h2>
           <input type="text" id="base64EncodeTextBoxStart" placeholder="Enter text here!" class="base64TextBox">
@@ -171,15 +191,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="checkBox">
-          <div class="col-lg-3">
-            <div id="checkMarkFive" class="checkMarkFull" aria-labelledby="checkMarkEmptyLabel5"></div>
-            <p id="checkMarkEmptyLabel5">Encode</p>
-          </div>
-          <div class="col-lg-3">
-            <div id="checkMarkSix" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel6"></div>
-            <p id="checkMarkEmptyLabel6">Decode</p>
-          </div>
+        <div class="col-lg-3 mx-auto">
+          <div id="checkMarkFive" class="checkMarkFull" aria-labelledby="checkMarkEmptyLabel5"></div>
+          <p id="checkMarkEmptyLabel5">Encode</p>
+        </div>
+        <div class="col-lg-3 mx-auto">
+          <div id="checkMarkSix" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel6"></div>
+          <p id="checkMarkEmptyLabel6">Decode</p>
         </div>
       </div>
     </div>
@@ -195,12 +213,10 @@
 
   <!-- Custom scripts for this template -->
   <script src="../js/main.js"></script>
-  <script src="../js/pios.js"></script>
 
   <script>
     window.onload = function() {
       slideRange()
-      deviceCheck()
     }
   </script>
 </body>
