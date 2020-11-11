@@ -172,6 +172,7 @@ header.masthead p {
     display: block
   }
 }
+
 /*____________________________________________________________________________________*/
 /* Base 64 Converter */
 
@@ -183,6 +184,38 @@ header.masthead p {
   margin-top: 10px;
 }
 
+/*____________________________________________________________________________________*/
+/* Data Transfer Calculator */
+
+#dataTransferCalculator {
+  margin: 0 0 300px 0;
+}
+
+.dataAmountType {
+  margin: 15px
+}
+
+.dataTransferAmountWrapper {
+  width: 85%;
+  margin: 0 1%;
+}
+
+.dataTransferSpeed,
+.dataTransferAmount {
+  width: 100%;
+  height: 54px;
+}
+
+.estimatedTime {
+  width: 80%;
+  height: auto;
+  background-color: #a8897d;
+  margin: 0 15px;
+}
+
+.estimatedTime span {
+  font-size:
+}
 
 /*____________________________________________________________________________________*/
 .welcome, .contacts, .about, .poetry {
@@ -696,14 +729,15 @@ nav#menuTemp .dropdown-item {
   padding: 15px;
   margin: 5px 0;
   border-radius: 0;
+  border: none;
   width: auto;
   height: auto;
   text-decoration: none;
 }
 
 .btn-inverted:hover {
-  background-color: #16181b;
-  color: #f8f9fa !important;
+  background-color: #8a7167;
+  color: #0D1313;
   text-decoration: none;
   padding: 15px;
 }

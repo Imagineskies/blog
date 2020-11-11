@@ -125,7 +125,7 @@
   </header>
 
 
-  <section>
+  <section id="passwordGenerator">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
@@ -135,7 +135,7 @@
           <input type="text" id="numberSlideTextBox" aria-labelledby="numberSlideTextBoxLabel" class="numberSlideTextBox">
           <input type="range" id="numberSlide" min="8" max="64" value="20" class="numberslide" oninput="slideRange()" onchange="slideRange()">
           <div id="thumb" class="mx-auto">20</div>
-        </div>Range
+        </div>
       </div>
       <div class="checkBox row">
         <div class="col-lg-3 mx-auto">
@@ -166,7 +166,7 @@
           <a data-toggle="tooltip" data-placement="bottom" title="Extends the range of the slider.">
             <div id="checkMarkEight" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel8"></div>
             <p id="checkMarkEmptyLabel8">Range Extender</p>
-         </a>
+          </a>
         </div>
       </div>
       <div class="checkBox row">
@@ -174,13 +174,21 @@
           <a data-toggle="tooltip" data-placement="bottom" title="Randomize the string before generation.">
             <div id="checkMarkNine" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel9"></div>
             <p id="checkMarkEmptyLabel9">Harden</p>
-         </a>
+          </a>
         </div>
       </div>
-      <br />
-      <div class="checkBox row">
-        <div class="col-lg-8 mx-auto">
+    </div>
+  </section>
+
+  <section id="base64Converter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
           <h2 id="base64Title">Base 64 Encoder</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
           <input type="text" id="base64EncodeTextBoxStart" placeholder="Enter text here!" class="base64TextBox">
           <input type="text" id="base64EncodeTextBoxEnd" placeholder="End results!" class="base64TextBox">
         </div>
@@ -190,7 +198,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="checkBox row">
         <div class="col-lg-3 mx-auto">
           <div id="checkMarkFive" class="checkMarkFull" aria-labelledby="checkMarkEmptyLabel5"></div>
           <p id="checkMarkEmptyLabel5">Encode</p>
@@ -198,6 +206,72 @@
         <div class="col-lg-3 mx-auto">
           <div id="checkMarkSix" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel6"></div>
           <p id="checkMarkEmptyLabel6">Decode</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dataTransferCalculator">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>Data Transfer Calculator</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <h4>File Size</h4>
+          <div class="input-group d-flex mb-3">
+            <div class="dataTransferAmountWrapper d-flex align-items-center">
+              <input type="text" class="dataTransferAmount" placeholder="File Size" oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
+            </div>
+            <div class="input-group-prepend">
+              <button class="dataAmountType btn-inverted dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MB</button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'B'">B</li>
+                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'KB'">KB</li>
+                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'MB'">MB</li>
+                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'GB'">GB</li>
+                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'TB'">TB</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mx-auto">
+          <h4>Transfer Rate</h4>
+          <div class="input-group d-flex mb-3">
+            <div class="dataTransferAmountWrapper d-flex align-items-center">
+              <input type="text" class="dataTransferSpeed" placeholder="Transfer Rate" oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
+            </div>
+            <div class="input-group-prepend">
+              <button class="dataAmountType btn-inverted dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MB</button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'B'">B</li>
+                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'KB'">KB</li>
+                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'MB'">MB</li>
+                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'GB'">GB</li>
+                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'TB'">TB</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 d-flex mx-auto">
+          <div class="estimatedTime">
+            <h5>Days</h5>
+            <span id="estimatedTimeDays"></span>
+          </div>
+          <div class="estimatedTime">
+            <h5>Hours</h5>
+            <span id="estimatedTimeHours"></span>
+          </div>
+          <div class="estimatedTime">
+            <h5>Minutes</h5>
+            <span id="estimatedTimeMinutes"></span>
+          </div>
+          <div class="estimatedTime">
+            <h5>Seconds</h5>
+            <span id="estimatedTimeSeconds"></span>
+          </div>
         </div>
       </div>
     </div>
