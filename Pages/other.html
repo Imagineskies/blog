@@ -219,59 +219,61 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6 mx-auto">
+        <div class="col-lg-10 mx-auto">
           <h4>File Size</h4>
-          <div class="input-group d-flex mb-3">
-            <div class="dataTransferAmountWrapper d-flex align-items-center">
-              <input type="text" class="dataTransferAmount" placeholder="File Size" oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
-            </div>
-            <div class="input-group-prepend">
-              <button class="dataAmountType btn-inverted dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MB</button>
-              <ul class="dropdown-menu">
-                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'B'">B</li>
-                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'KB'">KB</li>
-                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'MB'">MB</li>
-                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'GB'">GB</li>
-                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'TB'">TB</li>
-              </ul>
-            </div>
+        </div>
+        <div class="col-md-5 align-items-center">
+          <input type="text" id="dataTransferAmount" placeholder="File Size" oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
+        </div>
+        <div class="input-group col-lg-1">
+          <div class="input-group-prepend">
+            <button class="dataAmountType btn-inverted dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MB</button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'B'">B</li>
+              <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'KB'">KB</li>
+              <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'MB'">MB</li>
+              <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'GB'">GB</li>
+              <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'TB'">TB</li>
+            </ul>
           </div>
         </div>
-        <div class="col-lg-6 mx-auto">
+      </div>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
           <h4>Transfer Rate</h4>
-          <div class="input-group d-flex mb-3">
-            <div class="dataTransferAmountWrapper d-flex align-items-center">
-              <input type="text" class="dataTransferSpeed" placeholder="Transfer Rate" oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
-            </div>
-            <div class="input-group-prepend">
-              <button class="dataAmountType btn-inverted dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MB</button>
-              <ul class="dropdown-menu">
-                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'B'">B</li>
-                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'KB'">KB</li>
-                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'MB'">MB</li>
-                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'GB'">GB</li>
-                <li class="dropdown-item" onclick="document.getElementById('dataAmountType').innerHTML= 'TB'">TB</li>
-              </ul>
-            </div>
+        </div>
+        <div class="input-group row">
+          <div class="d-flex align-items-center">
+            <input type="text" id="dataTransferSpeed" placeholder="Transfer Rate" oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
+          </div>
+          <div class="input-group-prepend">
+            <button class="dataAmountType btn-inverted dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MB</button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item" onclick="document.getElementById('dataTransferSpeed').innerHTML= 'B'">B</li>
+              <li class="dropdown-item" onclick="document.getElementById('dataTransferSpeed').innerHTML= 'KB'">KB</li>
+              <li class="dropdown-item" onclick="document.getElementById('dataTransferSpeed').innerHTML= 'MB'">MB</li>
+              <li class="dropdown-item" onclick="document.getElementById('dataTransferSpeed').innerHTML= 'GB'">GB</li>
+              <li class="dropdown-item" onclick="document.getElementById('dataTransferSpeed').innerHTML= 'TB'">TB</li>
+            </ul>
           </div>
         </div>
-        <div class="col-lg-12 d-flex mx-auto">
-          <div class="estimatedTime">
-            <h5>Days</h5>
-            <span id="estimatedTimeDays"></span>
-          </div>
-          <div class="estimatedTime">
-            <h5>Hours</h5>
-            <span id="estimatedTimeHours"></span>
-          </div>
-          <div class="estimatedTime">
-            <h5>Minutes</h5>
-            <span id="estimatedTimeMinutes"></span>
-          </div>
-          <div class="estimatedTime">
-            <h5>Seconds</h5>
-            <span id="estimatedTimeSeconds"></span>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 mx-auto estimatedTime">
+          <h5>Days</h5>
+          <span id="estimatedTimeDays"></span>
+        </div>
+        <div class="col-lg-2 mx-auto estimatedTime">
+          <h5>Hours</h5>
+          <span id="estimatedTimeHours"></span>
+        </div>
+        <div class="col-lg-2 mx-auto estimatedTime">
+          <h5>Minutes</h5>
+          <span id="estimatedTimeMinutes"></span>
+        </div>
+        <div class="col-lg-2 mx-auto estimatedTime">
+          <h5>Seconds</h5>
+          <span id="estimatedTimeSeconds"></span>
         </div>
       </div>
     </div>

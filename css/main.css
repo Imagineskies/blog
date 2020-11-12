@@ -195,22 +195,17 @@ header.masthead p {
   margin: 15px
 }
 
-.dataTransferAmountWrapper {
-  width: 85%;
-  margin: 0 1%;
-}
-
-.dataTransferSpeed,
-.dataTransferAmount {
+#dataTransferSpeed,
+#dataTransferAmount {
   width: 100%;
   height: 54px;
 }
 
 .estimatedTime {
-  width: 80%;
+  width: 100%;
   height: auto;
   background-color: #a8897d;
-  margin: 0 15px;
+  margin: 15px;
 }
 
 .estimatedTime span {
