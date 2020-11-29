@@ -247,7 +247,7 @@
             <input type="text" id="dataTransferSpeed" placeholder="Transfer Rate" oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
           </div>
           <div class="input-group-prepend">
-            <button class="dataAmountType btn-inverted dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MB</button>
+            <button class="dataTransferType btn-inverted dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MB</button>
             <ul class="dropdown-menu">
               <li class="dropdown-item" onclick="document.getElementById('dataTransferSpeed').innerHTML= 'B'">B</li>
               <li class="dropdown-item" onclick="document.getElementById('dataTransferSpeed').innerHTML= 'KB'">KB</li>
@@ -256,6 +256,16 @@
               <li class="dropdown-item" onclick="document.getElementById('dataTransferSpeed').innerHTML= 'TB'">TB</li>
             </ul>
           </div>
+        </div>
+      </div>
+      <div class="checkBox row">
+        <div class="col-lg-3 mx-auto">
+          <div id="checkMarkTen" class="checkMarkFull" aria-labelledby="checkMarkEmptyLabel10"></div>
+          <p id="checkMarkEmptyLabel10">Bits/Second</p>
+        </div>
+        <div class="col-lg-3 mx-auto">
+          <div id="checkMarkEleven" class="checkMarkEmpty" aria-labelledby="checkMarkEmptyLabel11"></div>
+          <p id="checkMarkEmptyLabel11">Bites/Second</p>
         </div>
       </div>
       <div class="row">

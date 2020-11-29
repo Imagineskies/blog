@@ -37,6 +37,8 @@ var checkMarkSixPlace = 'unclicked';
 var checkMarkSevenPlace = 'unclicked';
 var checkMarkEightPlace = 'unclicked';
 var checkMarkNinePlace = 'unclicked';
+var checkMarkTenPlace = 'unclicked';
+var checkMarkElevenPlace = 'unclicked';
 var harded = 'unactive';
 var base64Place = 'encode';
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -44,6 +46,20 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "";
 var special = "";
 var extnd = "";
+var dataTransferAmount = document.getElementById('dataTransferAmount').innerHTML;
+var dataAmountType = document.getElementsByClassName('dataAmountType').innerHTML;
+var dataTransferSpeed = document.getElementById('dataTransferSpeed').innerHTML;
+var dataTransferType = document.getElementsByClassName('dataTransferType').innerHTML;
+var estimatedTimeDays = document.getElementById('estimatedTimeDays').innerHTML;
+var estimatedTimeHours = document.getElementById('estimatedTimeHours').innerHTML;
+var estimatedTimeMinutes = document.getElementById('estimatedTimeMinutes').innerHTML;
+var estimatedTimeSeconds = document.getElementById('estimatedTimeSeconds').innerHTML;
+var kbPlaceholder;
+var mbPlaceholder;
+var gbPlaceholder;
+var tbPlaceholder;
+var factorAmount;
+
 
 // Constants
 const checkMarkOne = document.querySelector('#checkMarkOne');
@@ -54,6 +70,7 @@ const checkMarkFive = document.querySelector('#checkMarkFive');
 const checkMarkSix = document.querySelector('#checkMarkSix');
 const checkMarkSeven = document.querySelector('#checkMarkSeven');
 const checkMarkEight = document.querySelector('#checkMarkEight');
+const checkMarkEleven = document.querySelector('#checkMarkEleven');
 var gameSubMenuTop = document.getElementById('#gameSubMenuTop')
 const base64ConvertBtn = document.getElementById('base64ConvertButton');
 const base64Title = document.getElementById('base64Title');
@@ -67,6 +84,35 @@ Functions
 ____________________________________________________________________________________
 */
 
+
+
+
+
+/* Data Transfer Calculator */
+
+function dataType(datatype,operation) {
+  if (datatype == 'KB') {
+    factorAmount = ""
+  } else if (datatype == 'MB') {
+
+  } else if (datatype == 'GB') {
+
+  } else if (datatype == 'TB') {
+
+  }
+}
+
+function calculateSpeed() {
+
+  if (checkMarkTenPlace = 'clicked') {
+
+  }
+
+  if (checkMarkTenPlace = 'unclicked') {
+
+  }
+
+}
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
@@ -730,6 +776,40 @@ checkMarkSix.addEventListener('click', function() {
   base64Title.innerHTML = 'Base 64 Decoder';
   base64Place = 'decode';
 });
+
+// Data Transfer Calculator
+
+checkMarkTen.addEventListener('click', function() {
+  if (checkMarkTenPlace == 'unclicked') {
+    addCheck(checkMarkTen);
+    removeCheck(checkMarkEleven);
+
+    checkMarkTenPlace = 'clicked';
+  } else {
+    removeCheck(checkMarkTen);
+    addCheck(checkMarkEleven);
+
+    checkMarkTenPlace = 'unclicked';
+  }
+});
+
+checkMarkEleven.addEventListener('click', function() {
+  if (checkMarkElevenPlace == 'unclicked') {
+    addCheck(checkMarkEleven);
+    removeCheck(checkMarkTen);
+
+		harded = 'active';
+    checkMarkElevenPlace = 'clicked';
+  } else {
+    addCheck(checkMarkTen);
+    removeCheck(checkMarkEleven);
+
+  	harded = 'unactive';
+    checkMarkElevenPlace = 'unclicked';
+  }
+});
+
+// Password Copy Button
 
 pdwCopyBtn.addEventListener('click', function() {
   var nubContent = document.getElementById("numberSlideTextBox");
