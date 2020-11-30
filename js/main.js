@@ -54,10 +54,9 @@ var estimatedTimeDays = document.getElementById('estimatedTimeDays').innerHTML;
 var estimatedTimeHours = document.getElementById('estimatedTimeHours').innerHTML;
 var estimatedTimeMinutes = document.getElementById('estimatedTimeMinutes').innerHTML;
 var estimatedTimeSeconds = document.getElementById('estimatedTimeSeconds').innerHTML;
-var kbPlaceholder;
-var mbPlaceholder;
-var gbPlaceholder;
-var tbPlaceholder;
+var bitBite = '';
+var dataSize;
+var dataSpeed;
 var factorAmount;
 
 
@@ -90,24 +89,42 @@ ________________________________________________________________________________
 
 /* Data Transfer Calculator */
 
-function dataType(datatype,operation) {
-  if (datatype == 'KB') {
-    factorAmount = ""
-  } else if (datatype == 'MB') {
-
-  } else if (datatype == 'GB') {
-
-  } else if (datatype == 'TB') {
-
-  }
-}
-
 function calculateSpeed() {
 
+// Determin Data Size
+
+  if (dataAmountType == 'B') {
+    dataSize = dataTransferAmount;
+  } else if (dataAmountType == 'KB') {
+    dataSize = dataTransferAmount * 1024;
+  } else if (dataAmountType == 'MB') {
+    dataSize = dataTransferAmount * 1024 * 1024;
+  } else if (dataAmountType == 'GB') {
+    dataSize = dataTransferAmount * 1024 * 1024 * 1024;
+  } else if (dataAmountType == 'TB') {
+    dataSize = dataTransferAmount * 1024 * 1024 * 1024 * 1024;
+  }
+
+// Determin Data Speed
+
+if (dataTransferType == 'B') {
+  dataSpeed = dataTransferSpeed;
+} else if (dataTransferType == 'KB') {
+  dataSpeed = dataTransferSpeed * 1024;
+} else if (dataTransferType == 'MB') {
+  dataSpeed = dataTransferSpeed * 1024 * 1024;
+} else if (dataTransferType == 'GB') {
+  dataSpeed = dataTransferSpeed * 1024 * 1024 * 1024;
+} else if (dataTransferType == 'TB') {
+  dataSpeed = dataTransferSpeed * 1024 * 1024 * 1024 * 1024;
+}
+
+// Bits Per Second
   if (checkMarkTenPlace = 'clicked') {
 
   }
 
+// Bytes Per Second
   if (checkMarkTenPlace = 'unclicked') {
 
   }
@@ -779,31 +796,33 @@ checkMarkSix.addEventListener('click', function() {
 
 // Data Transfer Calculator
 
+// Bit
 checkMarkTen.addEventListener('click', function() {
   if (checkMarkTenPlace == 'unclicked') {
     addCheck(checkMarkTen);
     removeCheck(checkMarkEleven);
-
+    bitBite = 8;
     checkMarkTenPlace = 'clicked';
   } else {
     removeCheck(checkMarkTen);
     addCheck(checkMarkEleven);
-
+    bitBite = '';
     checkMarkTenPlace = 'unclicked';
   }
 });
 
+// Bites
 checkMarkEleven.addEventListener('click', function() {
   if (checkMarkElevenPlace == 'unclicked') {
     addCheck(checkMarkEleven);
     removeCheck(checkMarkTen);
-
+    bitBite = '';
 		harded = 'active';
     checkMarkElevenPlace = 'clicked';
   } else {
     addCheck(checkMarkTen);
     removeCheck(checkMarkEleven);
-
+    bitBite = 8;
   	harded = 'unactive';
     checkMarkElevenPlace = 'unclicked';
   }
