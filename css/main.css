@@ -201,6 +201,12 @@ header.masthead p {
   height: 54px;
 }
 
+#dataAmountType,
+#dataTransferType {
+width: 100%;
+height: auto;
+}
+
 .estimatedTime {
   width: 100%;
   height: auto;
@@ -662,7 +668,7 @@ section .dropdown-item {
 /* Top Menu */
 nav#menuTemp {
   position: fixed;
-  background-color: #A8897D;
+  background-color: #a87561;
   font-family: 'Allerta Stencil', sans-serif;
   width: 100%;
   height: auto;
@@ -681,7 +687,7 @@ nav#menuTemp .fab {
 }
 
 nav#menuTemp .dropdown-menu {
-  background-color: #A8897D;
+  background-color: #a87561;
 }
 
 nav#menuTemp .dropdown-item {
@@ -729,9 +735,12 @@ nav#menuTemp .dropdown-item {
   text-decoration: none;
 }
 
-.btn-inverted:hover {
-  background-color: #8a7167;
+.btn-inverted * {
   color: #0D1313;
+}
+
+.btn-inverted:hover {
+  background-color: #b08675;
   text-decoration: none;
   padding: 15px;
 }
@@ -740,6 +749,7 @@ nav#menuTemp .dropdown-item {
   background-color: #0D1313;
   color: #A8897D;
 }
+
 
 @media (max-width: 1023px) {
   .btn {
@@ -1158,7 +1168,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 25px;
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
   color: #833721;

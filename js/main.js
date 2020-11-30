@@ -46,17 +46,13 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "";
 var special = "";
 var extnd = "";
-var dataTransferAmount = document.getElementById('dataTransferAmount').innerHTML;
-var dataAmountType = document.getElementsByClassName('dataAmountType').innerHTML;
-var dataTransferSpeed = document.getElementById('dataTransferSpeed').innerHTML;
-var dataTransferType = document.getElementsByClassName('dataTransferType').innerHTML;
 var estimatedTimeDays = document.getElementById('estimatedTimeDays').innerHTML;
 var estimatedTimeHours = document.getElementById('estimatedTimeHours').innerHTML;
 var estimatedTimeMinutes = document.getElementById('estimatedTimeMinutes').innerHTML;
 var estimatedTimeSeconds = document.getElementById('estimatedTimeSeconds').innerHTML;
-var bitBite = '';
-var dataSize;
-var dataSpeed;
+var dtcStart = document.getElementById('dtcStart');
+var dataSize = '';
+var dataSpeed = '';
 var factorAmount;
 
 
@@ -89,9 +85,21 @@ ________________________________________________________________________________
 
 /* Data Transfer Calculator */
 
+function roundUp(num, precision) {
+  precision = Math.pow(10, precision)
+  return Math.ceil(num * precision) / precision
+}
+
 function calculateSpeed() {
 
-// Determin Data Size
+  var dataTransferAmount = document.getElementById('dataTransferAmount').value;
+  var dataAmountType = document.getElementById('dataAmountType').innerHTML;
+  var dataTransferSpeed = document.getElementById('dataTransferSpeed').value;
+  var dataTransferType = document.getElementById('dataTransferType').innerHTML;
+
+  console.log('starting calculateSpeed')
+
+  // Determin Data Size - Measured in Bytes
 
   if (dataAmountType == 'B') {
     dataSize = dataTransferAmount;
@@ -105,29 +113,46 @@ function calculateSpeed() {
     dataSize = dataTransferAmount * 1024 * 1024 * 1024 * 1024;
   }
 
-// Determin Data Speed
+  console.log('dataSize is ' + dataSize);
 
-if (dataTransferType == 'B') {
-  dataSpeed = dataTransferSpeed;
-} else if (dataTransferType == 'KB') {
-  dataSpeed = dataTransferSpeed * 1024;
-} else if (dataTransferType == 'MB') {
-  dataSpeed = dataTransferSpeed * 1024 * 1024;
-} else if (dataTransferType == 'GB') {
-  dataSpeed = dataTransferSpeed * 1024 * 1024 * 1024;
-} else if (dataTransferType == 'TB') {
-  dataSpeed = dataTransferSpeed * 1024 * 1024 * 1024 * 1024;
-}
+  // Determin Data Speed - Measured in Bits
 
-// Bits Per Second
-  if (checkMarkTenPlace = 'clicked') {
-
+  if (dataTransferType == 'B') {
+    dataSpeed = dataTransferSpeed;
+  } else if (dataTransferType == 'KB') {
+    dataSpeed = dataTransferSpeed * 1024;
+  } else if (dataTransferType == 'MB') {
+    dataSpeed = dataTransferSpeed * 1024 * 1024;
+  } else if (dataTransferType == 'GB') {
+    dataSpeed = dataTransferSpeed * 1024 * 1024 * 1024;
   }
 
-// Bytes Per Second
-  if (checkMarkTenPlace = 'unclicked') {
+  console.log('dataSpeed is ' + dataSpeed);
 
+  estimatedTimeSeconds = dataSize * 8 / dataSpeed;
+  estimatedTimeMinutes = estimatedTimeSeconds / 60;
+  estimatedTimeHours = estimatedTimeMinutes / 60;
+  estimatedTimeDays = estimatedTimeHours / 24;
+
+  if (estimatedTimeDays < 1) {
+    estimatedTimeDays = 0;
   }
+
+  estimatedTimeSeconds = Math.round(estimatedTimeSeconds * 100)/100;
+  estimatedTimeMinutes = Math.round(estimatedTimeMinutes * 100)/100;
+  estimatedTimeHours = Math.round(estimatedTimeHours * 100)/100;
+  estimatedTimeDays = Math.round(estimatedTimeDays * 100)/100;
+
+  console.log('estimatedTimeSeconds is ' + estimatedTimeSeconds);
+  console.log('estimatedTimeMinutes is ' + estimatedTimeMinutes);
+  console.log('estimatedTimeHours is ' + estimatedTimeHours);
+  console.log('estimatedTimeDays is ' + estimatedTimeDays);
+
+  document.getElementById('estimatedTimeDays').innerHTML = estimatedTimeDays;
+  document.getElementById('estimatedTimeHours').innerHTML = estimatedTimeHours;
+  document.getElementById('estimatedTimeMinutes').innerHTML = estimatedTimeMinutes;
+  document.getElementById('estimatedTimeSeconds').innerHTML = estimatedTimeSeconds;
+
 
 }
 
@@ -672,22 +697,6 @@ Event Listeners
 ____________________________________________________________________________________
 */
 
-
-// https://stackoverflow.com/a/31223774
-var lastScrollTop = 0;
-// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
-   var st = window.pageYOffset; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-   if (st >= 850){
-     gameSubMenuTop.classList.add('position-fixed');
-     gameSubMenuTop.ClassList.remove('sticky-top');
-   } else {
-     gameSubMenuTop.classList.add('sticky-top');
-     gameSubMenuTop.ClassList.remove('position-fixed');
-   }
-   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-}, false);
-
 checkMarkOne.addEventListener('click', function() {
   if (checkMarkOnePlace == 'unclicked') {
     addCheck(checkMarkOne);
@@ -796,36 +805,9 @@ checkMarkSix.addEventListener('click', function() {
 
 // Data Transfer Calculator
 
-// Bit
-checkMarkTen.addEventListener('click', function() {
-  if (checkMarkTenPlace == 'unclicked') {
-    addCheck(checkMarkTen);
-    removeCheck(checkMarkEleven);
-    bitBite = 8;
-    checkMarkTenPlace = 'clicked';
-  } else {
-    removeCheck(checkMarkTen);
-    addCheck(checkMarkEleven);
-    bitBite = '';
-    checkMarkTenPlace = 'unclicked';
-  }
-});
-
-// Bites
-checkMarkEleven.addEventListener('click', function() {
-  if (checkMarkElevenPlace == 'unclicked') {
-    addCheck(checkMarkEleven);
-    removeCheck(checkMarkTen);
-    bitBite = '';
-		harded = 'active';
-    checkMarkElevenPlace = 'clicked';
-  } else {
-    addCheck(checkMarkTen);
-    removeCheck(checkMarkEleven);
-    bitBite = 8;
-  	harded = 'unactive';
-    checkMarkElevenPlace = 'unclicked';
-  }
+dtcStart.addEventListener('click', function() {
+  calculateSpeed();
+  console.log('click');
 });
 
 // Password Copy Button
