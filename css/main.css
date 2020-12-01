@@ -214,7 +214,8 @@ height: auto;
   margin: 15px;
 }
 
-.estimatedTime span {
+.estimatedTime * {
+  text-align: center;
 }
 
 /*____________________________________________________________________________________*/
@@ -728,7 +729,7 @@ nav#menuTemp .dropdown-item {
   color: #0D1313;
   padding: 15px;
   margin: 5px 0;
-  border-radius: 0;
+  border-radius: 25px;
   border: none;
   width: auto;
   height: auto;
@@ -1159,7 +1160,7 @@ a, ul, ol, li {
 /*____________________________________________________________________________________*/
 /* Text */
 .h1, .h2, .h3, .h4, .h5, .h6, .p, h1, h2, h3, h4, h5, h6, p {
-  padding: 15px;
+  padding: 5px 0;
   margin: 10px;
 }
 

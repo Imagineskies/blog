@@ -46,6 +46,8 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "";
 var special = "";
 var extnd = "";
+var dataTransferAmount = document.getElementById('dataTransferAmount').value;
+var dataTransferSpeed = document.getElementById('dataTransferSpeed').value;
 var estimatedTimeDays = document.getElementById('estimatedTimeDays').innerHTML;
 var estimatedTimeHours = document.getElementById('estimatedTimeHours').innerHTML;
 var estimatedTimeMinutes = document.getElementById('estimatedTimeMinutes').innerHTML;
@@ -85,6 +87,8 @@ ________________________________________________________________________________
 
 /* Data Transfer Calculator */
 
+
+//
 function roundUp(num, precision) {
   precision = Math.pow(10, precision)
   return Math.ceil(num * precision) / precision
@@ -103,13 +107,13 @@ function calculateSpeed() {
 
   if (dataAmountType == 'B') {
     dataSize = dataTransferAmount;
-  } else if (dataAmountType == 'KB') {
+  } else if (dataAmountType == 'Kb') {
     dataSize = dataTransferAmount * 1024;
-  } else if (dataAmountType == 'MB') {
+  } else if (dataAmountType == 'Mb') {
     dataSize = dataTransferAmount * 1024 * 1024;
-  } else if (dataAmountType == 'GB') {
+  } else if (dataAmountType == 'Gb') {
     dataSize = dataTransferAmount * 1024 * 1024 * 1024;
-  } else if (dataAmountType == 'TB') {
+  } else if (dataAmountType == 'Tb') {
     dataSize = dataTransferAmount * 1024 * 1024 * 1024 * 1024;
   }
 
@@ -117,42 +121,50 @@ function calculateSpeed() {
 
   // Determin Data Speed - Measured in Bits
 
-  if (dataTransferType == 'B') {
+  if (dataTransferType == 'Bps/s') {
     dataSpeed = dataTransferSpeed;
-  } else if (dataTransferType == 'KB') {
+  } else if (dataTransferType == 'Kbps/s') {
     dataSpeed = dataTransferSpeed * 1024;
-  } else if (dataTransferType == 'MB') {
+  } else if (dataTransferType == 'Mbps/s') {
     dataSpeed = dataTransferSpeed * 1024 * 1024;
-  } else if (dataTransferType == 'GB') {
+  } else if (dataTransferType == 'Gbps/s') {
     dataSpeed = dataTransferSpeed * 1024 * 1024 * 1024;
   }
 
   console.log('dataSpeed is ' + dataSpeed);
+
+  // Calculate Estimated Time
 
   estimatedTimeSeconds = dataSize * 8 / dataSpeed;
   estimatedTimeMinutes = estimatedTimeSeconds / 60;
   estimatedTimeHours = estimatedTimeMinutes / 60;
   estimatedTimeDays = estimatedTimeHours / 24;
 
+  // Since I'm counting hours if the day is less than a full
+  // 24 hours it will say 0.
+
   if (estimatedTimeDays < 1) {
     estimatedTimeDays = 0;
   }
 
+  // Here I round up the total to the closest hundredths placec
+
   estimatedTimeSeconds = Math.round(estimatedTimeSeconds * 100)/100;
   estimatedTimeMinutes = Math.round(estimatedTimeMinutes * 100)/100;
   estimatedTimeHours = Math.round(estimatedTimeHours * 100)/100;
-  estimatedTimeDays = Math.round(estimatedTimeDays * 100)/100;
+  estimatedTimeDays = Math.round(estimatedTimeDays);
 
   console.log('estimatedTimeSeconds is ' + estimatedTimeSeconds);
   console.log('estimatedTimeMinutes is ' + estimatedTimeMinutes);
   console.log('estimatedTimeHours is ' + estimatedTimeHours);
   console.log('estimatedTimeDays is ' + estimatedTimeDays);
 
+  // The last things I do it set the page to display all estimatedTime
+
   document.getElementById('estimatedTimeDays').innerHTML = estimatedTimeDays;
   document.getElementById('estimatedTimeHours').innerHTML = estimatedTimeHours;
   document.getElementById('estimatedTimeMinutes').innerHTML = estimatedTimeMinutes;
   document.getElementById('estimatedTimeSeconds').innerHTML = estimatedTimeSeconds;
-
 
 }
 
@@ -808,6 +820,14 @@ checkMarkSix.addEventListener('click', function() {
 dtcStart.addEventListener('click', function() {
   calculateSpeed();
   console.log('click');
+});
+
+const inputElement = document.querySelector('input[class="dtc"]');
+
+dataTransferAmount.addEventListener('compositionupdate', function() {
+  if (dataTransferAmount == '') {
+
+  }
 });
 
 // Password Copy Button
