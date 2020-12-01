@@ -815,6 +815,16 @@ checkMarkSix.addEventListener('click', function() {
   base64Place = 'decode';
 });
 
+// Password Copy Button
+
+pdwCopyBtn.addEventListener('click', function() {
+  var nubContent = document.getElementById("numberSlideTextBox");
+  nubContent.select();
+  nubContent.setSelectionRange(0, 256)
+  document.execCommand("copy", );
+  alert('Text has been coppied!');
+});
+
 // Data Transfer Calculator
 
 dtcStart.addEventListener('click', function() {
@@ -828,14 +838,4 @@ dataTransferAmount.addEventListener('compositionupdate', function() {
   if (dataTransferAmount == '') {
 
   }
-});
-
-// Password Copy Button
-
-pdwCopyBtn.addEventListener('click', function() {
-  var nubContent = document.getElementById("numberSlideTextBox");
-  nubContent.select();
-  nubContent.setSelectionRange(0, 256)
-  document.execCommand("copy", );
-  alert('Text has been coppied!');
 });
