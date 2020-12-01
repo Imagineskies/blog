@@ -826,7 +826,7 @@ pdwCopyBtn.addEventListener('click', function() {
 });
 
 // Data Transfer Calculator
-
+/*
 dtcStart.addEventListener('click', function() {
   calculateSpeed();
   console.log('click');
@@ -839,3 +839,4 @@ dataTransferAmount.addEventListener('compositionupdate', function() {
 
   }
 });
+*/
