@@ -826,11 +826,12 @@ pdwCopyBtn.addEventListener('click', function() {
 });
 
 // Data Transfer Calculator
-/*
 dtcStart.addEventListener('click', function() {
   calculateSpeed();
   console.log('click');
 });
+
+/*
 
 const inputElement = document.querySelector('input[class="dtc"]');
 
