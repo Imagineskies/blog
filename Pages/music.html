@@ -13,7 +13,7 @@
   <title>Pulcherrimum Quaerere | Music</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <!-- Style Css -->
   <link href="../css/main.css" rel="stylesheet">
   <!-- Font/icon List -->
@@ -21,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 
 </head>
 
@@ -78,16 +79,10 @@
             </a>
           </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMusic" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Music
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Photos
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMusic">
-              <a class="dropdown-item sliding-link" href="#top10">Top 10</a>
-              <a class="dropdown-item sliding-link" href="#rap">Rap</a>
-              <a class="dropdown-item sliding-link" href="#edm">EDM</a>
-              <a class="dropdown-item sliding-link" href="#chill">Chill</a>
-            </div>
           </li>
 
           <li class="nav-item dropdown">
@@ -111,15 +106,40 @@
     </div> <!-- / .container -->
   </nav>
 
-  <header class="masthead">
+  <header class="masthead music">
     <div class="container">
       <div class="row">
         <div id="textOne" class="hidden col-lg-10 mx-auto textbox">
           <h2>Music</h2>
-          <p>I love music. Something super powerful and amazing. This is the music I listen to. I plan to make the layout better so bare with me. <i class="fas fa-heart"></i></p>
+          <p>I love listening to music. It's powerful, amazing, and I use it a lot to <br> express myself depending on the mood I feel. This is the music I listen to every second of my life.</p>
         </div>
-        <div id="textTwo" class="col-lg-10 mx-auto textbox">
-          <h2>Please Wait...The page is loading.</h2>
+        <div id="textTwo" class="col-lg-10 shown mx-auto textbox">
+          <h2>The page is loading.</h2>
+          <section id="loadingScreen" class="shown overhidden centerPadding">
+            <div id="container">
+              <div class="row">
+                <div class="col-lg-10 mx-auto">
+                  <!-- MUTLI SPINNER -->
+                  <div>
+                    <div class="multi-spinner-container">
+                      <div class="multi-spinner">
+                        <div class="multi-spinner">
+                          <div class="multi-spinner">
+                            <div class="multi-spinner">
+                              <div class="multi-spinner">
+                                <div class="multi-spinner">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -127,159 +147,28 @@
 
   <div id="content" class="hidden ">
 
-    <section id="top10">
+    <section id="music">
       <div class="container">
         <div class="row">
-          <div class="rowHome">
-            <div class="col-lg-10 mx-auto musicTitleBox">
-              <h1>My Top 10</h1>
-            </div>
+          <div  class="col-lg-5 musicOnRepeat mx-auto">
+            <h2>On Repeat</h2>
+            <p>The music I can't get enough of.</p>
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1EpnE4zZCcFqQY" allow="encrypted-media"></iframe>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/0Lw6aQcBFWTQ9m4MSwwwes" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/36TO60sxDduIsO3xH8IcUh" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/0J8JWQquwkGpHXqoZpMBK1" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/5sah9eLuxZlWxKTTCOk8GN" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/5sbooPcNgIE22DwO0VNGUJ" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/6IHWepcSxwLdzM38nQSrnC" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/7liIAE4VSdADhvBDgp2V6C" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/6ZSgKQs6wEXP8sY3KuL2xy" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/68Vm2W4oURsPV3121vUZgB" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="rap">
-      <div class="container">
-        <div class="rowHome">
-          <div class="col-lg-10 mx-auto musicTitleBox">
-            <h2>Rap</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/0fIFHNdJfBKZCU66TTirSP" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/6URlKrAIlJJwHnHxxXWywt" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/1F1QmI8TMHir9SUFrooq5F" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/1JTZqN0snbMSNtp59zveTs" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/2jt2WxXMCD4zjACthkJQVE" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/7whWjytFNIYch6MAnIWZTS" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/5k38wzpLb15YgncyWdTZE4" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/6WKk8l8EXiwPBYlmSlhZWx" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/68Vm2W4oURsPV3121vUZgB" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="edm">
-      <div class="container">
-        <div class="rowHome">
-          <div class="col-lg-10 mx-auto musicTitleBox">
-            <h2>EDM</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/08E0TIudwefGjA27W4zrnf" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/1y4jsQt7MjnZhiD1L6qFBC" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/0J8JWQquwkGpHXqoZpMBK1" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/1e8g8Zypak1hTK8l12olYd" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/1tiC8QJASx6lGHBMEpFawS" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/0NuKZYzWMV5xUS9DCmglqh" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/4wfQ0EygzWz2v8kbseZKOZ" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/0FigU3fBZd8gtBYR3XUx5e" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/4KymXbJweU4DZGKLy3JR0p" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="chill">
-      <div class="container">
-        <div class="rowHome">
-          <div class="col-lg-10 mx-auto musicTitleBox">
+          <div class="col-lg-5 musicChill mx-auto">
             <h2>Chill</h2>
+            <p>Something to help code or take notes.</p>
+            <iframe src="https://open.spotify.com/embed/playlist/2YDPa07TZVPlNTUfQQwPlo" allow="encrypted-media"></iframe>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/2UZtI2HUyLRzqBjodvcUmY" width="320" height="320" allow="encrypted-media"></iframe>
+          <div class="col-lg-5 musicRap mx-auto">
+            <h2>Rap</h2>
+            <p>When I'm craving fast tracks and hot bars.</p>
+            <iframe src="https://open.spotify.com/embed/playlist/2eAvc8XKU3QYQCqFvdghJP" allow="encrypted-media"></iframe>
           </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/3JvrhDOgAt6p7K8mDyZwRd" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/1pyGo7knT3LE2I1FJIrwdX" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/401WTPsvIGoaFQkWxd5Tdw" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/7EkMIQ2PzEzwQroLl6dUvw" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/3hgESJrxlX103Q78BrEAfr" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/152lZdxL1OR0ZMW6KquMif" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/1LPCxznq6ovH2s282jfzRT" width="320" height="320" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-sm-4">
-            <iframe src="https://open.spotify.com/embed/track/6jin465re80co3DeK8hsns" width="320" height="320" allow="encrypted-media"></iframe>
+          <div class="col-lg-5 musicEDM mx-auto">
+            <h2>EDM</h2>
+            <p>From gaming to joging, here is a playlist for everything.</p>
+            <iframe src="https://open.spotify.com/embed/playlist/4gS0ez2guYzg5tQWFxSGaL" allow="encrypted-media"></iframe>
           </div>
         </div>
       </div>
@@ -291,7 +180,7 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="../js/jquery.min.js"></script>
-  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
   <script src="../js/jquery.easing.min.js"></script>
@@ -301,14 +190,11 @@
 
   <script>
     window.onload = function() {
-      var content = document.getElementById('content');
-      var mainNav = document.getElementById('menuTemp');
-      var textOne = document.getElementById('textOne');
-      var textTwo = document.getElementById('textTwo');
-      content.classList.remove('hidden');
-      mainNav.classList.remove('hidden');
-      textOne.classList.remove('hidden');
-      textTwo.classList.add('hidden');
+      $('.masthead').attr('style', 'height:auto;');
+      $('#content').removeClass('hidden');
+      $('#menuTemp').removeClass('hidden');
+      $('#textOne').removeClass('hidden');
+      $('#textTwo').addClass('hidden').removeClass('shown');
     }
   </script>
 </body>

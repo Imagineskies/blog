@@ -57,7 +57,6 @@ var dataSize = '';
 var dataSpeed = '';
 var factorAmount;
 
-
 // Constants
 const checkMarkOne = document.querySelector('#checkMarkOne');
 const checkMarkTwo = document.querySelector('#checkMarkTwo');
@@ -74,6 +73,10 @@ const base64Title = document.getElementById('base64Title');
 const base64Output = document.getElementById("base64EncodeTextBoxEnd");
 const base64Input = document.getElementById("base64EncodeTextBoxStart");
 const numberSlider = document.getElementById("numberSlide");
+const content = document.getElementById('content');
+const mainNav = document.getElementById('menuTemp');
+const textOne = document.getElementById('textOne');
+const textTwo = document.getElementById('textTwo');
 
 /*
 ____________________________________________________________________________________
