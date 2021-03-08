@@ -46,17 +46,17 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "";
 var special = "";
 var extnd = "";
-var dataTransferAmount = document.getElementById('dataTransferAmount').value;
+/* var dataTransferAmount = document.getElementById('dataTransferAmount').value;
 var dataTransferSpeed = document.getElementById('dataTransferSpeed').value;
 var estimatedTimeDays = document.getElementById('estimatedTimeDays').innerHTML;
 var estimatedTimeHours = document.getElementById('estimatedTimeHours').innerHTML;
 var estimatedTimeMinutes = document.getElementById('estimatedTimeMinutes').innerHTML;
 var estimatedTimeSeconds = document.getElementById('estimatedTimeSeconds').innerHTML;
 var dtcStart = document.getElementById('dtcStart');
+*/
 var dataSize = '';
 var dataSpeed = '';
 var factorAmount;
-
 
 // Constants
 const checkMarkOne = document.querySelector('#checkMarkOne');
@@ -74,6 +74,10 @@ const base64Title = document.getElementById('base64Title');
 const base64Output = document.getElementById("base64EncodeTextBoxEnd");
 const base64Input = document.getElementById("base64EncodeTextBoxStart");
 const numberSlider = document.getElementById("numberSlide");
+const content = document.getElementById('content');
+const mainNav = document.getElementById('menuTemp');
+const textOne = document.getElementById('textOne');
+const textTwo = document.getElementById('textTwo');
 
 /*
 ____________________________________________________________________________________
