@@ -1152,7 +1152,12 @@ ul {
 }
 
 /*____________________________________________________________________________________*/
-/* Icon Controls */
+/* Standard */
+
+.fa-chevron-left,
+.fa-chevron-right {
+  padding: 0 10px;
+}
 
 .fa-angle-double-down {
   font-size: 25px;
@@ -1191,6 +1196,11 @@ a {
 }
 
 a, ul, ol, li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a:hover {
   text-decoration: none;
   list-style-type: none;
 }
