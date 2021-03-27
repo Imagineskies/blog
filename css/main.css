@@ -772,6 +772,10 @@ nav#menuTemp .dropdown-item {
   background-color: #0D1313;
 }
 
+#resorceFilter .dropdown-menu {
+  background-color: #a87561;
+}
+
 .btn-inverted {
   background-color: #A8897D;
   color: #0D1313;
