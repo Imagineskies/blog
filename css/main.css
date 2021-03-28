@@ -750,7 +750,6 @@ nav#menuTemp .dropdown-item {
   color: #A8897D;
   padding: 15px;
   margin: 5px 0;
-  border-radius: 0;
   width: auto;
   height: auto;
   text-decoration: none;
@@ -781,8 +780,8 @@ nav#menuTemp .dropdown-item {
   color: #0D1313;
   padding: 15px;
   margin: 5px 0;
-  border-radius: 25px;
-  border: none;
+  text-align: center;
+  display: block;
   width: auto;
   height: auto;
   text-decoration: none;
@@ -794,6 +793,7 @@ nav#menuTemp .dropdown-item {
 
 .btn-inverted:hover {
   background-color: #b08675;
+  color: #0D1313;
   text-decoration: none;
   padding: 15px;
 }
@@ -808,19 +808,40 @@ nav#menuTemp .dropdown-item {
     display: block;
   }
 
-  #bioshockGameDropdown {
-    padding: 0
-  }
-}
-
 .btn:focus, .btn:active {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
+}
+
 /*____________________________________________________________________________________*/
 /* Poems Page*/
+#poems {
+  margin: 100px;
+}
+
+.poemDescription {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-bottom: 2px solid white;
+}
+
+@media (max-width:719px) {
+  .poemDescription {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-bottom: 2px solid white;
+  }
+}
+
 /* Poems Menu */
 #mainPoemsMenu .btn {
   background-color: #A8897D;
@@ -971,130 +992,6 @@ iframe {
 .musicTitleBox {
   background-color: #A8897D;
   box-shadow: -1px 1px 25px 10px rgba(51%, 38%, 34%, 0.50);
-}
-
-.colHome1 {
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.colHome1 video {
-  padding-left: 15px;
-}
-
-.rowHome div iframe {
-  padding-bottom: 15px;
-}
-
-.colHome2 {
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.colHome2 p, .colHome2 a {
-  color: #833721;
-  font-size: 24px;
-}
-
-@media (min-width: 719px) {
-  .rowHome {
-    height: 350px;
-  }
-}
-
-@media (max-width: 719px) {
-  .rowHome {
-    display: block;
-  }
-
-  .rowHome div iframe {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .colHome1 {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    -ms-flex: 0 0 83.333333%;
-    flex: 0 0 83.333333%;
-    max-width: 83.333333%
-  }
-
-  .colHome2 {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    -ms-flex: 0 0 83.333333%;
-    flex: 0 0 83.333333%;
-    max-width: 83.333333%
-  }
-}
-
-/*____________________________________________________________________________________*/
-/* Star System */
-#rating-system {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#star1, #star2, #star3, #star4, #star5 {
-  padding: 10px;
-}
-
-/*
- Far = Empty
- Fas = Full
-*/
-#star1 .far {
-  visibility: visible;
-  display: block
-}
-
-#star1 .fas {
-  visibility: hidden;
-  display: none
-}
-
-#star2 .far {
-  visibility: visible;
-  display: block
-}
-
-#star2 .fas {
-  visibility: hidden;
-  display: none
-}
-
-#star3 .far {
-  visibility: visible;
-  display: block
-}
-
-#star3 .fas {
-  visibility: hidden;
-  display: none
-}
-
-#star4 .far {
-  visibility: visible;
-  display: block
-}
-
-#star4 .fas {
-  visibility: hidden;
-  display: none
-}
-
-#star5 .far {
-  visibility: visible;
-  display: block
-}
-
-#star5 .fas {
-  visibility: hidden;
-  display: none
 }
 
 /*____________________________________________________________________________________*/
