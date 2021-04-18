@@ -819,6 +819,27 @@ nav#menuTemp .dropdown-item {
 
 /*____________________________________________________________________________________*/
 /* Poems Page*/
+
+
+.resourceDiv {
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 1rem;
+}
+
+@media (max-width:719px) {
+  .resourceDiv {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/*____________________________________________________________________________________*/
+/* Poems Page*/
 #poems {
   margin-top: 100px;
 }

@@ -4,13 +4,13 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="description" content="Welcome to my blog.">
+  <meta name="description" content="Here is a page of resources. From personal interest to theraputic help, here is a little bit of everything to hopefully help you.">
   <meta name="author" content="Rayna Weeden">
   <meta name="keywords" content="blogs">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../img/background.jpg">
 
-  <title>Pulcherrimum Quaerere | Music</title>
+  <title>Pulcherrimum Quaerere | Resources</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -22,10 +22,9 @@
   <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-
 </head>
 
-<body>
+<body id="poemBody">
 
   <!-- Nav Bar -->
 
@@ -68,13 +67,13 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="poems.html">
+            <a class="nav-link" href="#">
               Poems
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="music.html">
               Music
             </a>
           </li>
@@ -86,7 +85,7 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link" href="resources.html">
+            <a class="nav-link" href="#">
               Resources
             </a>
           </li>
@@ -106,76 +105,100 @@
     </div> <!-- / .container -->
   </nav>
 
-  <header class="masthead music">
+  <header class="masthead">
     <div class="container">
       <div class="row">
-        <div id="textOne" class="hidden col-lg-10 mx-auto textbox">
-          <h2>Music</h2>
-          <p>I love listening to music. It's powerful, amazing, and I use it a lot to <br> express myself depending on the mood I feel. This is the music I listen to every second of my life.</p>
-        </div>
-        <div id="textTwo" class="col-lg-10 shown mx-auto textbox">
-          <h2>The page is loading.</h2>
-          <section id="loadingScreen" class="shown overhidden centerPadding">
-            <div id="container">
-              <div class="row">
-                <div class="col-lg-10 mx-auto">
-                  <!-- MUTLI SPINNER -->
-                  <div>
-                    <div class="multi-spinner-container">
-                      <div class="multi-spinner">
-                        <div class="multi-spinner">
-                          <div class="multi-spinner">
-                            <div class="multi-spinner">
-                              <div class="multi-spinner">
-                                <div class="multi-spinner">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+        <div class="col-lg-10 mx-auto textbox">
+          <h2>Resources</h2>
+          <p>Here is a page of resources. From personal interest to theraputic
+            help, here is a little bit of everything to hopefully help you.
+          </p>
         </div>
       </div>
     </div>
   </header>
 
-  <div id="content" class="hidden ">
+  <!-- Nav Bar -->
 
-    <section id="music">
-      <div class="container">
-        <div class="row">
-          <div  class="col-lg-5 musicOnRepeat mx-auto">
-            <h2>On Repeat</h2>
-            <p>The music I can't get enough of.</p>
-            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1EpnE4zZCcFqQY" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-lg-5 musicChill mx-auto">
-            <h2>Chill</h2>
-            <p>Something to help code or take notes.</p>
-            <iframe src="https://open.spotify.com/embed/playlist/2YDPa07TZVPlNTUfQQwPlo" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-lg-5 musicRap mx-auto">
-            <h2>Rap</h2>
-            <p>When I'm craving fast tracks and hot bars.</p>
-            <iframe src="https://open.spotify.com/embed/playlist/2eAvc8XKU3QYQCqFvdghJP" allow="encrypted-media"></iframe>
-          </div>
-          <div class="col-lg-5 musicEDM mx-auto">
-            <h2>EDM</h2>
-            <p>From gaming to joging, here is a playlist for everything.</p>
-            <iframe src="https://open.spotify.com/embed/playlist/4gS0ez2guYzg5tQWFxSGaL" allow="encrypted-media"></iframe>
-          </div>
+  <nav class="navbar navbar-expand-xl navbar-togglable fixed-top">
+    <div class="container">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTwoCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarTwoCollapse">
+
+        <!-- Heading -->
+        <ul class="nav navbar-nav mr-auto custom-navbar">
+          <li class="nav-item-divider">
+            <div class="nav-link">
+              <h4>Filters</h4>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Links -->
+        <ul class="nav navbar-nav ml-auto custom-navbar">
+
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Self-Help</a>
+              <a class="dropdown-item" href="#">Programming</a>
+              <a class="dropdown-item" href="#">Poetry</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+
+          <!-- Nav Divider -->
+
+          <li class="nav-item-divider">
+            <span class="nav-link">
+              <span></span>
+            </span>
+          </li>
+
+        </ul>
+
+      </div> <!-- / .navbar-collapse -->
+
+    </div> <!-- / .container -->
+  </nav>
+
+  <section id="poems">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+
         </div>
       </div>
-    </section>
 
-  </div>
+      <div class="row mx-auto">
 
+        <div class="resourceDiv">
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
 
 
   <!-- Bootstrap core JavaScript -->
@@ -188,15 +211,6 @@
   <!-- Custom scripts for this template -->
   <script src="../js/main.js"></script>
 
-  <script>
-    window.onload = function() {
-      $('.masthead').attr('style', 'height:auto;');
-      $('#content').removeClass('hidden');
-      $('#menuTemp').removeClass('hidden');
-      $('#textOne').removeClass('hidden');
-      $('#textTwo').addClass('hidden').removeClass('shown');
-    }
-  </script>
 </body>
 
 </html>
