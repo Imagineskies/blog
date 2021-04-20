@@ -744,6 +744,20 @@ nav#menuTemp .dropdown-item {
   color: #0D1313;
 }
 
+nav#filters .dropdown-menu {
+  background-color: #a87561;
+  text-align: center;
+}
+
+nav#filters .dropdown-item {
+  color: #0D1313;
+}
+
+nav#filters .dropdown-item:hover {
+  color: #a87561;
+  background-color: #0D1313;
+}
+
 /*____________________________________________________________________________________*/
 /* Buttons */
 .btn {
