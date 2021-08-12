@@ -543,7 +543,7 @@ header, footer, article, nav, aside {
   -webkit-appearance: none;
   width: 100%;
   height: 30px;
-  background: #A8897D;
+  background: #a87561;
   transition: opacity .2s;
   margin-top: 2px;
 }
@@ -572,7 +572,7 @@ header, footer, article, nav, aside {
   height: auto;
   text-align: center;
   font-size: 28px;
-  background-color: #A8897D;
+  background-color: #a87561;
   color: #0D1313;
   ;
 }
@@ -777,7 +777,7 @@ nav#menuTemp .dropdown-item {
 }
 
 .btn-inverted {
-  background-color: #A8897D;
+  background-color: #a87561;
   color: #0D1313;
   padding: 15px;
   margin: 5px 0;
@@ -793,7 +793,7 @@ nav#menuTemp .dropdown-item {
 }
 
 .btn-inverted:hover {
-  background-color: #b08675;
+  background-color: #8a5e51;
   color: #0D1313;
   text-decoration: none;
   padding: 15px;

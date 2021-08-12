@@ -46,12 +46,12 @@ const checkMarkSix = document.querySelector('#checkMarkSix');
 const checkMarkSeven = document.querySelector('#checkMarkSeven');
 const checkMarkEight = document.querySelector('#checkMarkEight');
 const checkMarkEleven = document.querySelector('#checkMarkEleven');
-var gameSubMenuTop = $('#gameSubMenuTop')
-const base64ConvertBtn = $('base64ConvertButton');
-const base64Title = $('base64Title');
-const base64Output = $("base64EncodeTextBoxEnd");
-const base64Input = $("base64EncodeTextBoxStart");
-const numberSlider = $("numberSlide");
+var gameSubMenuTop = $('#gameSubMenuTop');
+const base64ConvertBtn = $('#base64ConvertButton')[0];
+const base64Title = $('#base64Title')[0];
+const base64Output = $("#base64EncodeTextBoxEnd")[0];
+const base64Input = $("#base64EncodeTextBoxStart")[0];
+const numberSlider = $("#numberSlide")[0];
 const content = $('content');
 const mainNav = $('menuTemp');
 const textOne = $('textOne');
@@ -149,6 +149,7 @@ function calculateSpeed() {
   document.getElementById('estimatedTimeSeconds').innerHTML = estimatedTimeSeconds;
 
 }
+
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
@@ -356,19 +357,15 @@ checkMarkNine.addEventListener('click', function() {
 // 5 is encode, 6 is decode
 
 checkMarkFive.addEventListener('click', function() {
-  checkMarkSix.classList.remove('checkMarkFull');
-  checkMarkSix.classList.add('checkMarkEmpty');
-  checkMarkFive.classList.add('checkMarkFull');
-  checkMarkFive.classList.remove('checkMarkEmpty');
+  removeCheck(checkMarkSix);
+  addCheck(checkMarkFive);
   base64Title.innerHTML = 'Base 64 Encoder';
   base64Place = 'encode';
 });
 
 checkMarkSix.addEventListener('click', function() {
-  checkMarkSix.classList.add('checkMarkFull');
-  checkMarkSix.classList.remove('checkMarkEmpty');
-  checkMarkFive.classList.remove('checkMarkFull');
-  checkMarkFive.classList.add('checkMarkEmpty');
+  addCheck(checkMarkSix);
+  removeCheck(checkMarkFive);
   base64Title.innerHTML = 'Base 64 Decoder';
   base64Place = 'decode';
 });
