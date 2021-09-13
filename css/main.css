@@ -452,60 +452,16 @@ Zoom animation
 }
 
 /*____________________________________________________________________________________*/
-/* Individual Game Pages */
-/* Laptops/Tablets width above and/or @ 719px */
-@media (max-width: 719px) {
-  #gameSubMenuTop {
-    display: flex;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    z-index: 2;
-    top: 86px;
-  }
+/* Resources */
 
-  #gameSubMenuSide {
-    display: none;
-  }
-
-  #gameWikiBody {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    height: 1000px;
-    z-index: 2;
-  }
-
-  .sticky-top {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 86px;
-  }
+#resourcesPageLinks {
+  height:1200px;
 }
 
-/* Tablets/Phones width below 719px  */
-@media (min-width: 719px) {
-  #gameSubMenuTop {
-    display: none;
-  }
-
-  #gameSubMenuSide {
-    display: flex;
-    -ms-flex: 0 0 16.666667%;
-    flex: 0 0 16.666667%;
-    max-width: 16.666667%;
-    z-index: 2;
-    top: 86px;
-  }
-
-  #gameWikiBody {
-    -ms-flex: 0 0 83.333333%;
-    flex: 0 0 83.333333%;
-    max-width: 83.333333%;
-    height: 1000px;
-    z-index: 2;
-  }
+#resourcesPageLinks .dropdown-menu.show {
+  translate:(0px, 63px);
 }
+
 
 /*____________________________________________________________________________________*/
 /* Poem Menu */
