@@ -24,14 +24,15 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "";
 var special = "";
 var extnd = "";
-/* var dataTransferAmount = document.getElementById('dataTransferAmount').value;
+var dataTransferAmount = document.getElementById('dataTransferAmount').value;
+var dataAmountType = document.getElementById('dataAmountType').innerHTML;
 var dataTransferSpeed = document.getElementById('dataTransferSpeed').value;
+var dataTransferType = document.getElementById('dataTransferType').innerHTML;
 var estimatedTimeDays = document.getElementById('estimatedTimeDays').innerHTML;
 var estimatedTimeHours = document.getElementById('estimatedTimeHours').innerHTML;
 var estimatedTimeMinutes = document.getElementById('estimatedTimeMinutes').innerHTML;
 var estimatedTimeSeconds = document.getElementById('estimatedTimeSeconds').innerHTML;
 var dtcStart = document.getElementById('dtcStart');
-*/
 var dataSize = '';
 var dataSpeed = '';
 var factorAmount;
@@ -77,6 +78,10 @@ function roundUp(num, precision) {
 }
 
 function calculateSpeed() {
+	
+// Split the parts of the function to make things cleaner
+	
+// this needs to be in global above functions section 	
 
   var dataTransferAmount = document.getElementById('dataTransferAmount').value;
   var dataAmountType = document.getElementById('dataAmountType').innerHTML;
@@ -86,31 +91,33 @@ function calculateSpeed() {
   console.log('starting calculateSpeed')
 
   // Determin Data Size - Measured in Bytes
-
+  // Simplify this by doing 1024^X. X being the data type.
+	
   if (dataAmountType == 'B') {
     dataSize = dataTransferAmount;
   } else if (dataAmountType == 'Kb') {
-    dataSize = dataTransferAmount * 1024;
+    dataSize = dataTransferAmount * 1024; 
   } else if (dataAmountType == 'Mb') {
-    dataSize = dataTransferAmount * 1024 * 1024;
+    dataSize = dataTransferAmount * 2048;
   } else if (dataAmountType == 'Gb') {
-    dataSize = dataTransferAmount * 1024 * 1024 * 1024;
+    dataSize = dataTransferAmount * 3072;
   } else if (dataAmountType == 'Tb') {
-    dataSize = dataTransferAmount * 1024 * 1024 * 1024 * 1024;
+    dataSize = dataTransferAmount * 4096; 
   }
 
   console.log('dataSize is ' + dataSize);
 
   // Determin Data Speed - Measured in Bits
+  // Take this and shrink the math into smaller code
 
   if (dataTransferType == 'Bps/s') {
     dataSpeed = dataTransferSpeed;
   } else if (dataTransferType == 'Kbps/s') {
     dataSpeed = dataTransferSpeed * 1024;
   } else if (dataTransferType == 'Mbps/s') {
-    dataSpeed = dataTransferSpeed * 1024 * 1024;
+    dataSpeed = dataTransferSpeed * 2048;
   } else if (dataTransferType == 'Gbps/s') {
-    dataSpeed = dataTransferSpeed * 1024 * 1024 * 1024;
+    dataSpeed = dataTransferSpeed * 3072;
   }
 
   console.log('dataSpeed is ' + dataSpeed);
