@@ -55,6 +55,14 @@ body {
   background-attachment: fixed !important;
 }
 
+@font-face {
+  font-family: 'Time Clock';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/E1234-p7pER.woff) format('woff2');
+}
+
 /*____________________________________________________________________________________*/
 /*
   Load Lab
@@ -259,13 +267,6 @@ header.masthead p {
   height: auto;
 }
 
-.estimatedTime {
-  width: 100%;
-  height: auto;
-  background-color: #a8897d;
-  margin: 15px;
-}
-
 .estimatedTime * {
   text-align: center;
 }
@@ -273,7 +274,8 @@ header.masthead p {
 /*____________________________________________________________________________________*/
 .welcome, .contacts, .about, .poetry {
   text-align: center;
-}
+}  font-family: 'Time Clock';
+
 
 .poems {
   white-space: nowrap;
@@ -361,7 +363,8 @@ img.gameIcon {
   margin: 25px 0;
 }
 
-#photoIcon .col-sm-4 {
+#photoIcon .col-sm-4 {  font-family: 'Time Clock';
+
   position: relative;
   margin: 15px 0;
   width: 50%;
@@ -786,6 +789,7 @@ nav#menuTemp .dropdown-item {
   width: auto;
   height: auto;
   text-decoration: none;
+  border: none;
 }
 
 .btn-inverted * {
@@ -1125,6 +1129,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
   color: #833721;
+}
+
+.estimatedTime h5 {
+  font-family: 'Time Clock';
 }
 
 .h1, h1 {

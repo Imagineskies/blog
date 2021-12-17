@@ -24,16 +24,15 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "";
 var special = "";
 var extnd = "";
-/* var dataTransferAmount = document.getElementById('dataTransferAmount').value;
+var dataTransferAmount = document.getElementById('dataTransferAmount').value;
 var dataTransferSpeed = document.getElementById('dataTransferSpeed').value;
 var estimatedTimeDays = document.getElementById('estimatedTimeDays').innerHTML;
 var estimatedTimeHours = document.getElementById('estimatedTimeHours').innerHTML;
 var estimatedTimeMinutes = document.getElementById('estimatedTimeMinutes').innerHTML;
 var estimatedTimeSeconds = document.getElementById('estimatedTimeSeconds').innerHTML;
 var dtcStart = document.getElementById('dtcStart');
-*/
-var dataSize = '';
-var dataSpeed = '';
+var dataSize = 0;
+var dataSpeed = 0;
 var factorAmount;
 
 // Constants
@@ -72,8 +71,13 @@ ________________________________________________________________________________
 
 //
 function roundUp(num, precision) {
-  precision = Math.pow(10, precision)
-  return Math.ceil(num * precision) / precision
+  precision = Math.pow(10, precision);
+  return Math.ceil(num / precision);
+}
+
+function roundDown(num, precision) {
+  precision = Math.pow(10, precision);
+  return Math.ceil(num * precision);
 }
 
 function calculateSpeed() {
@@ -122,19 +126,30 @@ function calculateSpeed() {
   estimatedTimeHours = estimatedTimeMinutes / 60;
   estimatedTimeDays = estimatedTimeHours / 24;
 
-  // Since I'm counting hours if the day is less than a full
-  // 24 hours it will say 0.
-
-  if (estimatedTimeDays < 1) {
-    estimatedTimeDays = 0;
-  }
-
   // Here I round up the total to the closest hundredths placec
 
   estimatedTimeSeconds = Math.round(estimatedTimeSeconds * 100)/100;
   estimatedTimeMinutes = Math.round(estimatedTimeMinutes * 100)/100;
   estimatedTimeHours = Math.round(estimatedTimeHours * 100)/100;
   estimatedTimeDays = Math.round(estimatedTimeDays);
+
+  // If the amount of time is less than one then a zero will populate
+
+  if (estimatedTimeDays < 1) {
+    estimatedTimeDays = "00";
+  }
+
+  if (estimatedTimeHours < 1) {
+    estimatedTimeHours = "00";
+  }
+
+  if (estimatedTimeMinutes < 1) {
+    estimatedTimeMinutes = "00";
+  }
+
+  if (estimatedTimeSeconds < 1) {
+    estimatedTimeSeconds = "00";
+  }
 
   console.log('estimatedTimeSeconds is ' + estimatedTimeSeconds);
   console.log('estimatedTimeMinutes is ' + estimatedTimeMinutes);
@@ -148,6 +163,14 @@ function calculateSpeed() {
   document.getElementById('estimatedTimeMinutes').innerHTML = estimatedTimeMinutes;
   document.getElementById('estimatedTimeSeconds').innerHTML = estimatedTimeSeconds;
 
+  // If anything comes up as NaN, make it a number.
+
+  if (isNaN(estimatedTimeSeconds)) {
+    document.getElementById('estimatedTimeDays').innerHTML = "00";
+    document.getElementById('estimatedTimeHours').innerHTML = "00";
+    document.getElementById('estimatedTimeMinutes').innerHTML = "00";
+    document.getElementById('estimatedTimeSeconds').innerHTML = "00";
+  }
 }
 
 
