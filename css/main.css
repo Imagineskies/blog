@@ -720,7 +720,7 @@ section .dropdown-item {
 /*____________________________________________________________________________________*/
 /* Top Menu */
 nav#menuTemp {
-  position: fixed;
+  position: relative;
   background-color: #a87561;
   font-family: 'Allerta Stencil', sans-serif;
   width: 100%;
